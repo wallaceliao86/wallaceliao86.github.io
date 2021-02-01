@@ -33,7 +33,7 @@ li {
 }
 
 body {
-    background: url("/HaoGo/img/HG/background.png") center;
+    background: url("./img/HG/background.png") center;
     background-size: cover;
 }
 

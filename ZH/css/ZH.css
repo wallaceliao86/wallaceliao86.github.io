@@ -38,7 +38,7 @@ li {
 }
 
 body {
-    background: url("/HaoGo/img/ZH/background.jpg") center;
+    background: url("./img/ZH/background.jpg") center;
     background-size: cover;
 }
 
