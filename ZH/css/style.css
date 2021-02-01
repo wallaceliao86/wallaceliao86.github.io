@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 中文字體 */
+    font-family: 'Noto Serif TC', 'Microsoft Jhenghei';
+    /* 英文字體 */
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+img {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

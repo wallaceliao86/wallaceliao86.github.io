@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>職場心理學研究</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="/HaoGo/img/ZH/ZH_LOGO.png" />
+    <!-- reset.css -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- fullpage.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/vendors/easings.min.js" integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/vendors/scrolloverflow.min.js" integrity="sha512-pYyQWhzi2lV+RM4GmaUA56VPL48oLVvsHmP9tuQ8MaZMDHomVEDjXXnfSVKXayy+wLclKPte0KbsuVoFImtE7w==" crossorigin="anonymous"></script>
+    <!-- chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
+    <!-- 自用 -->
+    <link rel="stylesheet" href="css/ZH.css">
+    <!-- jQuery UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <script>
+        $(function() {
+            $('#dowebok').fullpage({
+                // 參數設定
+                navigation: true, // 顯示導行列
+                navigationPosition: "right", // 導行列位置
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                menu: '#menu',
+                css3: true,
+                // onLeave: console.log('love')
+            });
+        })
+    </script>
+    <header>
+        <div class="container-fluid row">
+            <div class="col-sm-4 col-12" id="logo">
+                <img src="/HaoGo/img/ZH/ZH_L_LOGO.png" alt="LOGO" class="img_noactive" id="logo_img">
+            </div>
+            <nav class="col-sm-8 col-12" id="menu">
+                <a class="menu-links active" data-menuanchor="firstPage" href="#firstPage">前言</a>
+                <a class="menu-links" data-menuanchor="secondPage" href="#secondPage">研究程序</a>
+                <a class="menu-links" data-menuanchor="3rdPage" href="#3rdPage">研究樣本</a>
+                <a class="menu-links" data-menuanchor="4thpage" href="#4thpage">研究結果</a>
+                <a class="menu-links" data-menuanchor="lastPage" href="#lastPage">結論</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="" id="dowebok">
+        <div class="section active" id="section1">
+            <div class="container">
+                <h1 class="col-12" id="title">員工心理健康
+                </h1>
+                <p class="col-12 col-sm-10">第⼀線服務顧客或客⼾的員⼯，可能會⾯臨<u>許多顧客／客⼾負向的對待</u>，如：質疑個⼈ 的⼯作能⼒、不尊重專業……等，且基於⼯作考量與規範，這些員⼯又必須隱忍⾃⼰的情緒，微笑對待顧客／客⼾。⽽這些不愉快的互動經驗<u>對於在第⼀線服務的員⼯的身心健康有重⼤的影響，進而對工作產⽣倦怠</u>。</p>
+                <p class="col-12 col-sm-10">可以如何幫助員⼯改善因為「<u>顧客／客⼾的負向對待</u>」產⽣的「<u>⼯作倦怠</u>」呢？</p>
+            </div>
+        </div>
+        <div class="section sectionelse" id="section2">
+            <h1>研究程序</h1>
+            <div class="container col-12">
+                <p>本研究找了106位在第⼀線服務顧客／客⼾的⼯作者進⾏研究問卷調查，並分成兩個時間點收集資料。</p>
+                <p>時間點1：請參與者評量關於對⼯作的想法、與主管互動的狀況、對⾃我的看法等問卷。</p>
+                <p>時間點2：請參與者回想3個在⼯作情境中<u>與顧客／客⼾的負向互動事件</u>，接著針對每⼀個事件評量該<u>顧客／客⼾的負向對待</u>，以及<u>經歷該事件後的個⼈感受</u>。本研究共蒐集了318個與顧客／客⼾的負向互動事件。
+                </p>
+            </div>
+        </div>
+        <div class="section sectionelse" id="section3">
+            <div class="slide" id="slide3-1">
+                <h1>研究樣本</h1>
+                <div class="container-fluid row" id="chart1">
+                    <div class="col-12 col-sm-6">
+                        <h2>性別</h2>
+                        <canvas id="genderChart"></canvas>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <h2>年齡</h2>
+                        <canvas id="oldChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide3-2">
+                <h1>研究樣本</h1>
+                <div class="container" id="chart2">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <p>26% 服務（如：客服、餐飲、櫃檯、理專等）<br>14% 業務（如：銷售、⾏銷企劃、保險、房仲等）<br>25% 醫療照護（如：醫師、護理師、⼼理師等）<br>15% 教育（如：學校、補教業等）<br>20% 其他</p>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <canvas id="jobChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section sectionelse" id="section4">
+            <div class="slide" id="slide4-1">
+                <div class="container">
+                    <h1>研究結果</h1>
+                    <p class="col-12">本研究關注的「顧客／客⼾負向對待」範圍包含：「質疑⼯作能⼒」、「不尊重個⼈專業」、「不合理的評價⼯作表現」三⽅⾯。本研究結果指出，當個⼈在⼯作中遭遇<u>顧客／客⼾的負向對待</u>時，會使個⼈對⼯作產⽣倦怠。</p>
+                    <div class="row">
+                        <div class="col-12 col-sm-6" id="result_ante">
+                            <h2>顧客負向對待</h2>
+                            <div class="row">
+                                <div class="col-3 result_antes">質疑工作能力</div>
+                                <div class="col-3 result_antes">不尊重專業</div>
+                                <div class="col-3 result_antes">不合理地評論工作表現</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3" id="result_arrow">
+                            <div class="row">
+                                <img src="/HaoGo/img/ZH/arrow.png" alt="">
+                                <p id="re_re">點我看迴歸圖</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3" id="result_result">
+                            <h2>工作倦怠</h2>
+                        </div>
+                    </div>
+                    <div class="dialog" title="迴歸圖" id="dia_result">
+                        <div class="row">
+                            <div class="col-8 cha_bg">
+                                <canvas id="resultLine"></canvas>
+                            </div>
+                            <div class="col-4">
+                                <p>從此圖中，我們可以看到：</p>
+                                <p>當員⼯遭遇顧客負向對待的程度愈⾼， ⼯作倦怠的情況就愈嚴重。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide4-2">
+                <div class="container">
+                    <h1>研究結果</h1>
+                    <p class="col-12">可以怎麼協助員工改善因「<u>顧客／客⼾的負向對待</u>」產⽣的「<u>工作倦怠</u>」？</p>
+                    <div class="row">
+                        <div class="col-5 col-sm-2 result_advice" id="re_identity">提升員工對職業的認同</div>
+                        <div class="col-5 col-sm-2 result_advice" id="re_in_motive">提升員⼯對⼯作的內在動機</div>
+                        <div class="col-5 col-sm-2 result_advice" id="re_confidence">建立員工對工作的自信</div>
+                        <div class="col-5 col-sm-2 result_advice" id="re_super_support">主管給予員工工作上的支持</div>
+                    </div>
+                </div>
+                <div class="dialog" title="提升員⼯對職業的認同" id="dia_identity">
+                    <div class="row">
+                        <p>當員⼯能夠：</p>
+                        <p>「<u>認同⾃⼰所做的⼯作</u>」</p>
+                        <p>「<u>將⼯作視為⾃⼰⼈⽣中重要的⼀部份</u>」</p>
+                        <p>⾯對顧客的負向對待則<u>不容易產⽣⼯作倦怠的狀況</u>。</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 cha_bg">
+                            <canvas id="cha_identity"></canvas>
+                        </div>
+                        <div class="col-4">
+                            <p>從此圖中，我們可以看到：</p>
+                            <p>當員⼯對職業認同「低」時，顧客負向對待的程度與⼯作倦怠的<u>預測線斜率較⼤</u>，也就是<u>顧客負向對待與⼯作倦怠有較⼤的關係</u>；但是當員⼯對職業認同「⾼」時，顧客負向對待的程度與⼯作倦怠的<u>預測線斜率會變小</u>，<u>減緩了顧客負向對待所致的⼯作倦怠</u>。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog" title="提升員⼯對⼯作的內在動機" id="dia_in_motive">
+                    <div class="row">
+                        <p>當員⼯做這份⼯作：</p>
+                        <p>「<u>是為了⾃⼰⽽做</u>」</p>
+                        <p>「<u>重視⾃⼰在⼯作上展現⾃我的機會</u>」</p>
+                        <p>「<u>想知道⾃⼰能夠在⼯作上能發揮多好</u>」</p>
+                        <p>⾯對顧客的負向對待則<u>不容易產⽣⼯作倦怠的狀況</u>。</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 cha_bg">
+                            <canvas id="cha_in_motive"></canvas>
+                        </div>
+                        <div class="col-4">
+                            <p>從此圖中，我們可以看到：</p>
+                            <p>當員⼯⼯作內在動機「低」時，顧客負向對待的程度與⼯作倦怠的<u>預測線斜率較⼤</u>，也就是<u>顧客負向對待與⼯作倦怠有較⼤的關係</u>；但是當員⼯⼯作內在動機「⾼」時，顧客負向對待的程度與⼯作倦怠的<u>預測線斜率會變小</u>，<u>減緩了顧客負向對待所致的⼯作倦怠</u>。</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>若員⼯做這份⼯作<u>僅是為了外在動機</u>，如：</p>
+                        <p>「<u>為了賺取更多報酬</u>」</p>
+                        <p>「<u>熱衷於⼯作升遷</u>」</p>
+                        <p>「<u>想要他⼈發現我的優異表現</u>」</p>
+                        <p>並<u>沒辦法改善</u>⾯對顧客負向對待所產⽣的⼯作倦怠。</p>
+                    </div>
+                </div>
+                <div class="dialog" title="建立員工對工作的自信" id="dia_confidence">
+                    <div class="row">
+                        <p>當員工能夠：</p>
+                        <p>「<u>相信⾃⼰具備⼀定⽔準的專業知識與技能</u>」</p>
+                        <p>「<u>認為⾃⼰適合從事這份⼯作</u>」</p>
+                        <p>「<u>對⾃⼰的⼯作能⼒有把握</u>」</p>
+                        <p>⾯對顧客的負向對待則<u>不容易產⽣⼯作倦怠的狀況</u>。</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 cha_bg">
+                            <canvas id="cha_confidence"></canvas>
+                        </div>
+                        <div class="col-4">
+                            <p>從此圖中，我們可以看到：</p>
+                            <p>當員⼯對⼯作的⾃信「低」時，顧客負向對待的程度與⼯作倦怠的<u>預測線斜率較⼤</u>，也就是<u>顧客負向對待與⼯作倦怠有較⼤的關係</u>；但是當員⼯對⼯作的⾃信「⾼」時，顧客負向對待的程度與⼯作倦怠的<u>預測線斜率會變小</u>，<u>減緩了顧客負向對待所致的⼯作倦怠</u>。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog" title="主管給予員⼯⼯作上的⽀持" id="dia_super_support">
+                    <div class="row">
+                        <p>當主管能夠協助：</p>
+                        <p>「<u>提升員⼯滿⾜</u>顧客／需求的能⼒」</p>
+                        <p>「<u>⽀持員⼯與顧客的互動⽅式</u>」</p>
+                        <p>「<u>不過度⼲涉或限制員⼯與顧客的互動⽅式</u>」</p>
+                        <p>⾯對顧客的負向對待則<u>不容易產⽣⼯作倦怠的狀況</u>。</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 cha_bg">
+                            <canvas id="cha_super_support"></canvas>
+                        </div>
+                        <div class="col-4">
+                            <p>從此圖中，我們可以看到：</p>
+                            <p>當主管給予員⼯⼯作上的⽀持「低」時，顧客負向對待的程度與⼯作倦怠的<u>預測線斜率較⼤</u>，也就是<u>顧客負向對待與⼯作倦怠有較⼤的關係</u>︔但是當主管給予員⼯⼯作上的⽀持「⾼」時，顧客負向對待的程度與⼯作倦怠的<u>預測線斜率會變⼩</u>，<u>減緩了顧客負向對待所致的⼯作倦怠</u>。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section sectionelse" id="section5">
+            <h1>結論</h1>
+            <div class="container col-12">
+                <p>根據以上四種可以協助改善因應顧客負向對待產⽣⼯作倦怠的⽅法中，我們可以了解到，要照顧員⼯的身⼼健康除了⽇常對員⼯的關懷、給予⼯作上的⽀持，幫助員⼯提升對職業的認同、對⼯作的內在動機等也是相當重要的！
+                </p>
+                <p>然⽽對職業的認同、動機經常會受到社會⽂化對於職業的評價影響，若要幫助員⼯增加對職業的認同、內在動機，可以協助員⼯「以不同的角度來看待職業的評價」、「多了解該職業好的⾯向」、並「專注於身為該職業的正向意義」，讓員⼯對於身為該職業更具有意義感，就算不是傳統社會價值中所推崇的職業，也能因為對⾃⼰的職業有更多的認識和意義的連結，建⽴⾼度的認同與投入。</p>
+            </div>
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-sm-4" id="footer_logo">
+                            <img src="/HaoGo/img/ZH/ZH_L_LOGO.png" alt="">
+                        </div>
+                        <div class="col-12 col-sm-4" id="footer_contact">
+                            <div class="row">TEL:(02)33663366</div>
+                            <div class="row">Email:shineleaf1296@gmail.com</div>
+                            <div class="row"></div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- <a href="#" id="gotop" class="lightSpeedInLeft animated" style="display: inline;">TOP</a> -->
+    </div>
+    <script src="js/ZH_chart.js"></script>
+    <script>
+        // 開視窗
+        let openDialog = function(button, dialog) {
+            $(button).on("click", function() {
+                $(dialog).dialog("open");
+            });
+            $(dialog).dialog({
+                autoOpen: false,
+                draggable: false,
+                show: {
+                    effect: "blind",
+                    duration: 500
+                },
+                hide: {
+                    effect: "drop",
+                    duration: 300,
+                    direction: "down"
+                },
+                resizable: true,
+                height: $(window).height() * 0.8,
+                width: $(window).width() * 0.8,
+                modal: true,
+                open: function() {
+                    $(this).dialog('widget').next('.ui-widget-overlay').css({
+                        'background': '#ccc',
+                        'opacity': '0.6'
+                    });
+                    // $(this).dialog('widget').next('.ui-widget-content').css({
+                    //     'background': '#2583A7',
+                    //     'opacity': '1'
+                    // });
+                }
+            });
+        };
+
+        openDialog('#re_re', '#dia_result');
+        openDialog('#re_identity', '#dia_identity');
+        openDialog('#re_in_motive', '#dia_in_motive');
+        openDialog('#re_confidence', '#dia_confidence');
+        openDialog('#re_super_support', '#dia_super_support');
+    </script>
+</body>
+
+</html>
