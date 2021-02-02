@@ -184,9 +184,9 @@
         var jobChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['', '25歲以下', '26歲~30歲', '31歲~35歲', '36歲~40歲', '41歲以上', ''],
+                labels: ['', '科技電子業', '金融保險業', '服務業', '資訊傳播業', '運輸倉儲業', '一般製造業', '其他', ''],
                 datasets: [{
-                    data: [, 22, 44, 24, 28, 63, ],
+                    data: [, 25, 11, 31, 11, 10, 41, 51],
                     fill: false,
                     backgroundColor: 'rgba(75,171,197,1)',
                     borderColor: 'rgba(75,171,197,1)'
@@ -201,10 +201,6 @@
                         scaleLabel: {
                             type: 'category',
                             labels: ['25歲以下', '26歲~30歲', '31歲~35歲', '36歲~40歲', '41歲以上'],
-                            // display: true,
-                            // labelString: '工作負向對待',
-                            // fontColor: '#fff',
-                            // fontSize: 18
                         },
                         gridLines: {
                             zeroLineColor: 'rgba(255,255,255,1)',
@@ -225,7 +221,7 @@
                         ticks: {
                             fontColor: 'rgba(255,255,255,1)',
                             display: true,
-                            max: 96,
+                            max: 60,
                             min: 0,
                             stepSize: 20,
                             fontSize: 18

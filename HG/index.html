@@ -35,19 +35,7 @@
 </head>
 
 <body>
-    <script>
-        $(function() {
-            $('#dowebok').fullpage({
-                // 參數設定
-                navigation: true, // 顯示導行列
-                navigationPosition: "right", // 導行列位置
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
-                menu: '#menu',
-                css3: true,
-                // onLeave: console.log('love')
-            });
-        })
-    </script>
+
     <header>
         <div class="container-fluid row">
             <div class="col-sm-4 col-12" id="logo">
@@ -89,29 +77,33 @@
                             <line class="cls-1" x1="671.16" y1="249.38" x2="677.98" y2="243.5"/>
                             <line class="cls-3" x1="683.85" y1="238.44" x2="909.81" y2="43.58"/>
                             <line class="cls-1" x1="912.74" y1="41.05" x2="919.56" y2="35.17"/>
-                            <a href="#3rdPage"><circle class="cls-4" cx="260.92" cy="119.29" r="13.87"/></a>
-                            <a href="#4thPage"><circle class="cls-4" cx="642.05" cy="261.26" r="13.87"/></a>
-                            <a href="#lastPage"><circle class="cls-4" cx="944.26" cy="13.87" r="13.87"/></a>
+                            <a href="#3rdPage"><circle class="cls-4" id="circle1" cx="260.92" cy="119.29" r="13.87"/>
+                            </a>
+                            <a href="#4thPage">分析與結果<circle class="cls-4" id="circle2" cx="642.05" cy="261.26" r="13.87"/></a>
+                            <a href="#lastPage">實務建議<circle class="cls-4" id="circle3" cx="944.26" cy="13.87" r="13.87"/></a>
                         </g>
                     </g>
                 </svg>
+                <div class="link" id="3rd">資料收集流程</div>
+                <div class="link" id="4th">分析與結果</div>
+                <div class="link" id="last">實務建議</div>
             </div>
         </div>
         <div class="section sectio  nelse" id="section3">
             <div class="slide" id="slide3-1">
                 <h1>資料收集流程</h1>
                 <div class="container-fluid row">
-                    <div class="col-12 col-sm-3">
+                    <div class="col-12 col-sm-2">
                         <h2>01 / 收集部屬問卷</h2>
                         <img src="./img/HG/coworker.png" alt="">
                         <p>邀請員工填寫問卷，收集員工在工作內外與主管相關的互動​及各種感受之資訊指標</p>
                     </div>
-                    <div class="col-12 col-sm-3">
+                    <div class="col-12 col-sm-2">
                         <h2>02 / 收集主管問卷</h2>
                         <img src="./img/HG/two_super.png" alt="">
                         <p>邀請主管填寫問卷，收集主管針對特定部屬在工作上與其互動及其職場行為</p>
                     </div>
-                    <div class="col-12 col-sm-3">
+                    <div class="col-12 col-sm-2">
                         <h2>03 / 配對 & 分析</h2>
                         <img src="./img/HG/analysis.png" alt="">
                         <p>將員工及主管資料進行資料配對，並進行統計分析</p>
@@ -210,24 +202,35 @@
                             <img src="./img/HG/HG_L_LOGO.png" alt="">
                         </div>
                         <div class="col-12 col-sm-4" id="footer_contact">
-                            <div class="row">TEL:(02)33663366</div>
-                            <div class="row">Email:shineleaf1296@gmail.com</div>
-                            <div class="row"></div>
+                            <div class="row">TEL: 0929-822-336</div>
+                            <div class="row">Email: itoyuhao@gmail.com</div>
+                            <div class="row">No.1, Sec. 4, Roosevelt Road, Taipei, 10617 Taiwan.</div>
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
-        <!-- <a href="#" id="gotop" class="lightSpeedInLeft animated" style="display: inline;">TOP</a> -->
     </div>
     <script src="js/HG_chart.js"></script>
-    <!-- <script>
+    <script>
+        $(function() {
+            $('#dowebok').fullpage({
+                // 參數設定
+                navigation: true, // 顯示導行列
+                navigationPosition: "right", // 導行列位置
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
+                menu: '#menu',
+                css3: true
+            });
+        })
+
         // 開視窗
         let openDialog = function(button, dialog) {
             $(button).on("click", function() {
                 $(dialog).dialog("open");
             });
             $(dialog).dialog({
+                position: [260.92, 125],
                 autoOpen: false,
                 draggable: false,
                 show: {
@@ -240,28 +243,22 @@
                     direction: "down"
                 },
                 resizable: true,
-                height: $(window).height() * 0.8,
-                width: $(window).width() * 0.8,
+                // height: $(window).height() * 0.8,
+                // width: $(window).width() * 0.8,
                 modal: true,
                 open: function() {
                     $(this).dialog('widget').next('.ui-widget-overlay').css({
                         'background': '#ccc',
                         'opacity': '0.6'
                     });
-                    // $(this).dialog('widget').next('.ui-widget-content').css({
-                    //     'background': '#2583A7',
-                    //     'opacity': '1'
-                    // });
                 }
             });
         };
 
-        openDialog('#re_re', '#dia_result');
-        openDialog('#re_identity', '#dia_identity');
-        openDialog('#re_in_motive', '#dia_in_motive');
-        openDialog('#re_confidence', '#dia_confidence');
-        openDialog('#re_super_support', '#dia_super_support');
-    </script> -->
+        openDialog('#circle1', '#3rd');
+        openDialog('#circle2', '#4th');
+        openDialog('#circle3', '#last');
+    </script>
 </body>
 
 </html>
