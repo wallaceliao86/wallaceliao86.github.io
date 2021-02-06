@@ -22,6 +22,12 @@
                 }],
             },
             options: {
+                title: {
+                    display: true,
+                    text: '性別分佈',
+                    position: 'bottom',
+                    fontColor: '#fff'
+                },
                 legend: {
                     display: false
                 },
@@ -54,6 +60,12 @@
                 }],
             },
             options: {
+                title: {
+                    display: true,
+                    text: '性別分佈',
+                    position: 'bottom',
+                    fontColor: '#fff'
+                },
                 legend: {
                     display: false
                 },
@@ -76,6 +88,12 @@
                 }]
             },
             options: {
+                title: {
+                    display: true,
+                    text: '年齡分佈',
+                    position: 'bottom',
+                    fontColor: '#fff'
+                },
                 legend: {
                     display: false
                 },
@@ -95,7 +113,7 @@
                         },
                         ticks: {
                             fontColor: 'rgba(255,255,255,1)',
-                            fontSize: 18
+                            fontSize: 10
                         }
                     }],
                     yAxes: [{
@@ -110,8 +128,8 @@
                             display: true,
                             max: 96,
                             min: 0,
-                            stepSize: 20,
-                            fontSize: 18
+                            stepSize: 30,
+                            fontSize: 10
                         },
                         gridLines: {
                             color: ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)']
@@ -134,6 +152,12 @@
                 }]
             },
             options: {
+                title: {
+                    display: true,
+                    text: '年齡分佈',
+                    position: 'bottom',
+                    fontColor: '#fff'
+                },
                 legend: {
                     display: false
                 },
@@ -153,7 +177,7 @@
                         },
                         ticks: {
                             fontColor: 'rgba(255,255,255,1)',
-                            fontSize: 18
+                            fontSize: 10
                         }
                     }],
                     yAxes: [{
@@ -169,7 +193,7 @@
                             max: 120,
                             min: 0,
                             stepSize: 20,
-                            fontSize: 18
+                            fontSize: 10
                         },
                         gridLines: {
                             color: ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)']
@@ -182,33 +206,35 @@
         // 產業分布
         var ctx = $('#jobChart');
         var jobChart = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
-                labels: ['', '科技電子業', '金融保險業', '服務業', '資訊傳播業', '運輸倉儲業', '一般製造業', '其他', ''],
+                labels: ['科技電子業', '金融保險業', '服務業', '資訊傳播業', '運輸倉儲業', '一般製造業', '其他'],
                 datasets: [{
-                    data: [, 25, 11, 31, 11, 10, 41, 51],
+                    data: [25, 11, 31, 11, 10, 41, 51],
                     fill: false,
                     backgroundColor: 'rgba(75,171,197,1)',
                     borderColor: 'rgba(75,171,197,1)'
                 }]
             },
             options: {
+                title: {
+                    display: true,
+                    text: '產業分佈',
+                    position: 'bottom',
+                    fontColor: '#fff'
+                },
                 legend: {
                     display: false
                 },
                 scales: {
                     xAxes: [{
-                        scaleLabel: {
-                            type: 'category',
-                            labels: ['25歲以下', '26歲~30歲', '31歲~35歲', '36歲~40歲', '41歲以上'],
-                        },
                         gridLines: {
                             zeroLineColor: 'rgba(255,255,255,1)',
                             color: ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0)']
                         },
                         ticks: {
                             fontColor: 'rgba(255,255,255,1)',
-                            fontSize: 18
+                            fontSize: 10
                         }
                     }],
                     yAxes: [{

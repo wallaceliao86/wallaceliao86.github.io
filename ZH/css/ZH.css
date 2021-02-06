@@ -344,3 +344,10 @@ footer #footer_contact {
 .cha_bg {
     background-color: #595959;
 }
+
+
+/* 左右箭頭 */
+
+.fp-controlArrow {
+    margin-top: 0;
+}

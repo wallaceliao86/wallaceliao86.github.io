@@ -31,7 +31,6 @@
     <!-- amCharts javascript sources -->
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/taiwanLow.js"></script>
-    <script type="text/javascript" src="js/HG_map.js"></script>
 </head>
 
 <body>
@@ -45,13 +44,11 @@
                 <a class="menu-links active" data-menuanchor="firstPage" href="#firstPage">前言</a>
                 <a class="menu-links" data-menuanchor="secondPage" href="#secondPage">研究流程</a>
                 <a class="menu-links" data-menuanchor="3rdPage" href="#3rdPage">資料收集流程</a>
-                <a class="menu-links" data-menuanchor="4thpage" href="#4thPage">研究結果</a>
+                <a class="menu-links" data-menuanchor="4thPage" href="#4thPage">研究結果</a>
                 <a class="menu-links" data-menuanchor="lastPage" href="#lastPage">結論與實務建議</a>
             </nav>
         </div>
     </header>
-
-
     <div class="" id="dowebok">
         <div class="section active" id="section1">
             <div class="container">
@@ -84,12 +81,12 @@
                         </g>
                     </g>
                 </svg>
-                <div class="link" id="3rd">資料收集流程</div>
+                <!-- <div class="link" id="3rd">資料收集流程</div>
                 <div class="link" id="4th">分析與結果</div>
-                <div class="link" id="last">實務建議</div>
+                <div class="link" id="last">實務建議</div> -->
             </div>
         </div>
-        <div class="section sectio  nelse" id="section3">
+        <div class="section sectionelse" id="section3">
             <div class="slide" id="slide3-1">
                 <h1>資料收集流程</h1>
                 <div class="container-fluid row">
@@ -112,29 +109,51 @@
             </div>
             <div class="slide" id="slide3-2">
                 <h1>研究樣本</h1>
-                <div class="container-fluid" id="chart1">
-                    <div class="col-sm-8">
-                        <div class="row">
-                            <div class="chart-container col-sm-8">
-                                <canvas class="item" id="sub_genderChart"></canvas>
-                            </div>
-                            <div class="chart-container col-sm-8">
-                                <canvas class="item" id="super_genderChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="chart-container col-sm-8">
-                                <canvas class="item" id="sub_ageChart"></canvas>
-                            </div>
-                            <div class="chart-container col-sm-8">
-                                <canvas class="item" id="super_ageChart"></canvas>
+                <div class="container" id="chart1">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2>主管樣本</h2>
+                            <div class="box">
+                                <div class="">
+                                    <div class="chart-container">
+                                        <canvas class="item" id="super_genderChart"></canvas>
+                                    </div>
+                                    <div class="chart-container">
+                                        <canvas class="item" id="super_ageChart"></canvas>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="chart-container col-sm-6">
-                            <canvas class="item" id="jobChart"></canvas>
+                        <div class="col-sm-6">
+                            <h2>部屬樣本</h2>
+                            <div class="box">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="chart-container">
+                                        <canvas class="item" id="sub_genderChart"></canvas>
+                                    </div>
+                                    <div class="chart-container">
+                                        <canvas class="item" id="sub_ageChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div id="map"></div>
+                </div>
+            </div>
+            <div class="slide" id="slide3-3">
+                <h1>研究樣本</h1>
+                <div class="container" id="chart2">
+                    <div class="row" style="height: 500px;">
+                        <div class="col-sm-6">
+                            <div class="">
+                                <canvas class="item" id="jobChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 iframe-rwd">
+                            <iframe src="./map.html"></iframe>
+                            <h6>縣市分佈</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -211,53 +230,62 @@
             </footer>
         </div>
     </div>
-    <script src="js/HG_chart.js"></script>
+    <script type="text/javascript" src="js/HG_chart.js"></script>
+    <script type="text/javascript" src="js/HG_map.js"></script>
     <script>
-        $(function() {
-            $('#dowebok').fullpage({
-                // 參數設定
-                navigation: true, // 顯示導行列
-                navigationPosition: "right", // 導行列位置
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
-                menu: '#menu',
-                css3: true
-            });
-        })
+        $('#dowebok').fullpage({
+            // 參數設定
+            navigation: true, // 顯示導行列
+            navigationPosition: "right", // 導行列位置
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
+            // lockAnchors: true,
+            menu: '#menu',
+            css3: true,
+            onLeave: function(index, nextIndex, direction) {
+                var leavingSection = $(this);
+                if (index == 1 && direction == 'down') {
+                    console.log('有喔');
+                    alert("Going to section 2!");
+                    // $('#logo_img').removeClass(img_inactive);
+                    // $('#logo_img').addClass(img_active);
+                }
+            }
+        });
 
         // 開視窗
-        let openDialog = function(button, dialog) {
-            $(button).on("click", function() {
-                $(dialog).dialog("open");
-            });
-            $(dialog).dialog({
-                position: [260.92, 125],
-                autoOpen: false,
-                draggable: false,
-                show: {
-                    effect: "blind",
-                    duration: 500
-                },
-                hide: {
-                    effect: "drop",
-                    duration: 300,
-                    direction: "down"
-                },
-                resizable: true,
-                // height: $(window).height() * 0.8,
-                // width: $(window).width() * 0.8,
-                modal: true,
-                open: function() {
-                    $(this).dialog('widget').next('.ui-widget-overlay').css({
-                        'background': '#ccc',
-                        'opacity': '0.6'
-                    });
-                }
-            });
-        };
+        // let openDialog = function(button, dialog) {
+        //     $(button).on("click", function() {
+        //         $(dialog).dialog("open");
+        //     });
+        //     $(dialog).dialog({
+        //         position: [260.92, 125],
+        //         autoOpen: false,
+        //         draggable: false,
+        //         show: {
+        //             effect: "blind",
+        //             duration: 500
+        //         },
+        //         hide: {
+        //             effect: "drop",
+        //             duration: 300,
+        //             direction: "down"
+        //         },
+        //         resizable: true,
+        //         // height: $(window).height() * 0.8,
+        //         // width: $(window).width() * 0.8,
+        //         modal: true,
+        //         open: function() {
+        //             $(this).dialog('widget').next('.ui-widget-overlay').css({
+        //                 'background': '#ccc',
+        //                 'opacity': '0.6'
+        //             });
+        //         }
+        //     });
+        // };
 
-        openDialog('#circle1', '#3rd');
-        openDialog('#circle2', '#4th');
-        openDialog('#circle3', '#last');
+        // openDialog('#circle1', '#3rd');
+        // openDialog('#circle2', '#4th');
+        // openDialog('#circle3', '#last');
     </script>
 </body>
 
