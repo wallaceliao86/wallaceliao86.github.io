@@ -36,22 +36,29 @@
 <body>
 
     <header>
-        <div class="container-fluid row">
-            <div class="col-sm-4 col-12" id="logo">
-                <img src="./img/HG/HG_L_LOGO.png" alt="LOGO" class="img_noactive" id="logo_img">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-10" id="logo">
+                    <img src="./img/HG/HG_L_LOGO.png" alt="LOGO" id="logo_img">
+                </div>
+                <div class="col-2" id="burger">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </a>
+                </div>
+                <nav class="col-sm-8 col-12" id="menu">
+                    <a class="menu-links active" data-menuanchor="firstPage" href="#firstPage">前言</a>
+                    <a class="menu-links" data-menuanchor="secondPage" href="#secondPage">研究流程</a>
+                    <a class="menu-links" data-menuanchor="3rdPage" href="#3rdPage">資料收集流程</a>
+                    <a class="menu-links" data-menuanchor="4thPage" href="#4thPage">研究結果</a>
+                    <a class="menu-links" data-menuanchor="lastPage" href="#lastPage">結論與實務建議</a>
+                </nav>
             </div>
-            <nav class="col-sm-8 col-12" id="menu">
-                <a class="menu-links active" data-menuanchor="firstPage" href="#firstPage">前言</a>
-                <a class="menu-links" data-menuanchor="secondPage" href="#secondPage">研究流程</a>
-                <a class="menu-links" data-menuanchor="3rdPage" href="#3rdPage">資料收集流程</a>
-                <a class="menu-links" data-menuanchor="4thPage" href="#4thPage">研究結果</a>
-                <a class="menu-links" data-menuanchor="lastPage" href="#lastPage">結論與實務建議</a>
-            </nav>
         </div>
     </header>
     <div class="" id="dowebok">
         <div class="section active" id="section1">
-            <div class="container">
+            <div class="container col-10">
                 <h1 class="col-12" id="title">跟主管關係愈好的員工愈敢提出建言嗎？</h1>
                 <p class="col-12 col-sm-10">作為一位團隊或部門的主管，有時會希望員工能提出有利於團隊的想法、發現並提出一些潛在性的問題，使團隊能持續順利地運作，而這種主動提出有益的意見與想法的行動即為建言行為。</p>
                 <p class="col-12 col-sm-10">然而建言通常指的是與自己主管不同的意見或想法，使得員工往往不願意主動提出，也因此主管如何能促進員工建言便是一項有趣而重要的問題。</p>
@@ -61,8 +68,8 @@
         </div>
         <div class="section sectionelse" id="section2">
             <h1>研究流程</h1>
-            <div class="container col-12">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 958.13 295.19">
+            <div class="container col-10 lg-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 320">
                     <g id="圖層_2" data-name="圖層 2">
                         <g id="圖層_1-2" data-name="圖層 1">
                             <line class="cls-1" x1="2.32" y1="291.93" x2="9.65" y2="286.71"/>
@@ -72,68 +79,90 @@
                             <line class="cls-3" x1="318.51" y1="133.15" x2="595.92" y2="242.99"/>
                             <line class="cls-1" x1="599.53" y1="244.42" x2="607.89" y2="247.73"/>
                             <line class="cls-1" x1="671.16" y1="249.38" x2="677.98" y2="243.5"/>
-                            <line class="cls-3" x1="683.85" y1="238.44" x2="909.81" y2="43.58"/>
-                            <line class="cls-1" x1="912.74" y1="41.05" x2="919.56" y2="35.17"/>
-                            <a href="#3rdPage"><circle class="cls-4" id="circle1" cx="260.92" cy="119.29" r="13.87"/>
+                            <line class="cls-3" x1="683.85" y1="238.44" x2="909.81" y2="38.58"/>
+                            <a href="#3rdPage"><circle class="cls-4" id="circle1" cx="260.92" cy="119.29" r="13.87"/><text x="200" y="90">資料收集流程</text>
                             </a>
-                            <a href="#4thPage">分析與結果<circle class="cls-4" id="circle2" cx="642.05" cy="261.26" r="13.87"/></a>
-                            <a href="#lastPage">實務建議<circle class="cls-4" id="circle3" cx="944.26" cy="13.87" r="13.87"/></a>
+                            <a href="#4thPage"><circle class="cls-4" id="circle2" cx="642.05" cy="261.26" r="13.87"/><text x="600" y="300">研究結果</text></a>
+                            <a href="#lastPage"><circle class="cls-4" id="circle3" cx="924.26" cy="25.87" r="13.87"/><text x="822" y="32">實務建議</text></a>
                         </g>
                     </g>
                 </svg>
-                <!-- <div class="link" id="3rd">資料收集流程</div>
-                <div class="link" id="4th">分析與結果</div>
-                <div class="link" id="last">實務建議</div> -->
+            </div>
+            <div class="container col-10 sm-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236.13 450.03">
+                    <g data-name="圖層 2">
+                        <g data-name="圖層 1">
+                            <line class="cls-2" x1="40" y1="253" x2="195" y2="156"/>
+                            <line class="cls-3" x1="40" y1="277" x2="195" y2="377"/>
+                            <line class="cls-3" x1="40" y1="33" x2="195" y2="133"/>
+                            <circle class="cls-4" cx="20.84" cy="20" r="10.2"/>
+                            <a href="#3rdPage"><circle class="cls-4" cx="215.29" cy="143" r="10.2"/><text x="50" y="150">資料收集流程</text></a>
+                            <a href="#4thPage"><circle class="cls-4" cx="20.84" cy="266" r="10.2"/><text x="65" y="272">研究結果</text></a>
+                            <a href="#lastPage"><circle class="cls-4" cx="215.29" cy="389" r="10.2"/><text x="75" y="398">實務建議</text></a>                            
+                        </g>
+                    </g>
+                </svg>
             </div>
         </div>
         <div class="section sectionelse" id="section3">
             <div class="slide" id="slide3-1">
                 <h1>資料收集流程</h1>
-                <div class="container-fluid row">
-                    <div class="col-12 col-sm-2">
-                        <h2>01 / 收集部屬問卷</h2>
-                        <img src="./img/HG/coworker.png" alt="">
-                        <p>邀請員工填寫問卷，收集員工在工作內外與主管相關的互動​及各種感受之資訊指標</p>
+                <div class="container-fluid col-10 col-sm-11 align-items-center">
+                    <div class="row" style="height: 60vh">
+                        <div class="col-10 col-sm-3 row">
+                            <div class="col-4 col-sm-12 s3_img">
+                                <img src="./img/HG/coworker.png" alt="">
+                            </div>
+                            <div class="col-8 col-sm-12">
+                                <h3>01 / 收集部屬問卷</h3>
+                                <p>邀請員工填寫問卷，收集員工在工作內外與主管相關的互動​及各種感受之資訊指標</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 row">
+                            <div class="col-4 col-sm-12 s3_img">
+                                <img src="./img/HG/two_super.png" alt="">
+                            </div>
+                            <div class="col-8 col-sm-12">
+                                <h3>02 / 收集主管問卷</h3>
+                                <p>邀請主管填寫問卷，收集主管針對特定部屬在工作上與其互動及其職場行為</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 row">
+                            <div class="col-4 col-sm-12 s3_img">
+                                <img src="./img/HG/analysis.png" alt="">
+                            </div>
+                            <div class="col-8 col-sm-12">
+                                <h3>03 / 配對 & 分析</h3>
+                                <p>將員工及主管資料進行資料配對，並進行統計分析</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-sm-2">
-                        <h2>02 / 收集主管問卷</h2>
-                        <img src="./img/HG/two_super.png" alt="">
-                        <p>邀請主管填寫問卷，收集主管針對特定部屬在工作上與其互動及其職場行為</p>
-                    </div>
-                    <div class="col-12 col-sm-2">
-                        <h2>03 / 配對 & 分析</h2>
-                        <img src="./img/HG/analysis.png" alt="">
-                        <p>將員工及主管資料進行資料配對，並進行統計分析</p>
-                    </div>
+
                 </div>
             </div>
             <div class="slide" id="slide3-2">
-                <h1>研究樣本</h1>
-                <div class="container" id="chart1">
+                <h2>研究樣本</h2>
+                <div class="container col-10 col-sm-10" id="chart1">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-12 col-lg-5 box">
                             <h2>主管樣本</h2>
-                            <div class="box">
-                                <div class="">
-                                    <div class="chart-container">
-                                        <canvas class="item" id="super_genderChart"></canvas>
-                                    </div>
-                                    <div class="chart-container">
-                                        <canvas class="item" id="super_ageChart"></canvas>
-                                    </div>
+                            <div class="row">
+                                <div class="chart-container">
+                                    <canvas class="item" id="super_genderChart"></canvas>
+                                </div>
+                                <div class="chart-container">
+                                    <canvas class="item" id="super_ageChart"></canvas>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-12 col-lg-5 box">
                             <h2>部屬樣本</h2>
-                            <div class="box">
-                                <div class="row align-items-center justify-content-center">
-                                    <div class="chart-container">
-                                        <canvas class="item" id="sub_genderChart"></canvas>
-                                    </div>
-                                    <div class="chart-container">
-                                        <canvas class="item" id="sub_ageChart"></canvas>
-                                    </div>
+                            <div class="row">
+                                <div class="chart-container">
+                                    <canvas class="item" id="sub_genderChart"></canvas>
+                                </div>
+                                <div class="chart-container">
+                                    <canvas class="item" id="sub_ageChart"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -142,10 +171,10 @@
             </div>
             <div class="slide" id="slide3-3">
                 <h1>研究樣本</h1>
-                <div class="container" id="chart2">
+                <div class="container col-10" id="chart2">
                     <div class="row" style="height: 500px;">
                         <div class="col-sm-6">
-                            <div class="">
+                            <div>
                                 <canvas class="item" id="jobChart"></canvas>
                             </div>
                         </div>
@@ -162,56 +191,69 @@
                 <div class="container">
                     <h1>研究結果</h1>
                     <div class="row">
-                        <div class="col-sm-3" id="result_ants">
+                        <div class="col-10 col-sm-3 result" id="result_ants">
                             <img src="./img/HG/relationship.png" alt="relationship">
-                            <h2>跟主管關係好</h2>
+                            <h4>跟主管關係好</h4>
                         </div>
-                        <div class="col-sm-1 arrow">
-                            <svg id="arrow1" data-name="arrow1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
-                                <line class="animated svg svg-line-1" x1="22.71" y1="128" x2="458.83" y2="128"/>
-                                <line class="animated2 svg svg-line-2" x1="428.17" y1="97.33" x2="458.83" y2="128"/>
-                                <line class="animated2 svg svg-line-3" x1="458.83" y1="128" x2="428.17" y2="158.67"/>
-                            </svg>
-                            <svg id="arrow2" data-name="arrow2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
-                                <line class="animated svg svg-line-1" x1="22.71" y1="128" x2="458.83" y2="128"/>
-                                <line class="animated2 svg svg-line-2" x1="428.17" y1="97.33" x2="458.83" y2="128"/>
-                                <line class="animated2 svg svg-line-3" x1="458.83" y1="128" x2="428.17" y2="158.67"/>
-                            </svg>
+                        <div class="col-10 col-sm-1 arrow">
+                            <div class="row row-cols-sm-1">
+                                <div class="reg col-2" id="rel_voice">迴歸圖</div>
+                                <div class="col-2 img_arrow1">
+                                    <img class="img_arrow" id="img_img_arrow1" src="/HG/img/HG/arrow.png" alt="">
+                                </div>
+                                <div class="col-2 img_arrow2">
+                                    <img class="img_arrow" id="img_img_arrow2" src="/HG/img/HG/arrow.png" alt="">
+                                </div>
+                                <div class="reg col-2" id="rel_sil">迴歸圖</div>
+                            </div>
                         </div>
-                        <div class="col-sm-3" id="result_mediator">
-                            <img src="./img/HG/expression.png" alt="expression">
-                            <h2>建言</h2>
-                            <img src="./img/HG/mute.png" alt="mute">
-                            <h2>沉默</h2>
+                        <div class="col-10 col-sm-3" id="result_mediator">
+                            <div class="row result">
+                                <div class="col-6 col-sm-12" id="advise">
+                                    <img src="./img/HG/expression.png" alt="expression">
+                                    <h4>建言</h4>
+                                </div>
+                                <div class="col-6 col-sm-12" id="silence">
+                                    <img src="./img/HG/mute.png" alt="mute">
+                                    <h4>沉默</h4>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-1 arrow">
-                            <svg id="arrow3" data-name="arrow3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
-                                <line class="animated3 svg svg-line-1" x1="22.71" y1="128" x2="458.83" y2="128"/>
-                                <line class="animated4 svg svg-line-2" x1="428.17" y1="97.33" x2="458.83" y2="128"/>
-                                <line class="animated4 svg svg-line-3" x1="458.83" y1="128" x2="428.17" y2="158.67"/>
-                            </svg>
-                            <svg id="arrow4" data-name="arrow4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
-                                <line class="animated3 svg svg-line-1" x1="22.71" y1="128" x2="458.83" y2="128"/>
-                                <line class="animated4 svg svg-line-2" x1="428.17" y1="97.33" x2="458.83" y2="128"/>
-                                <line class="animated4 svg svg-line-3" x1="458.83" y1="128" x2="428.17" y2="158.67"/>
-                            </svg>
-
+                        <div class="col-10 col-sm-1 arrow">
+                            <div class="row row-cols-sm-1">
+                                <div class="reg col-2" id="voice_obe">迴歸圖</div>
+                                <div class="col-2 img_arrow3">
+                                    <img class="img_arrow" id="img_img_arrow3" src="/HG/img/HG/arrow.png" alt="">
+                                </div>
+                                <div class="col-2 img_arrow4">
+                                    <img class="img_arrow" id="img_img_arrow4" src="/HG/img/HG/arrow.png" alt="">
+                                </div>
+                                <div class="reg col-2" id="sil_obe">迴歸圖</div>
+                            </div>
                         </div>
-                        <div class="col-sm-3" id="result_result">
+                        <div class="col-10 col-sm-3 result" id="result_result">
                             <img src="./img/HG/conflict.png" alt="conflict">
+                            <h4>結果</h4>
+                            <div id="conclusion">當員工和主管之間有良好的關係時……有些員工可能會更勇於表達自己的想法，但也有些員工可能也會出於對主管的尊敬而保持沉默。</div>
                         </div>
                     </div>
                 </div>
+                <div class="dialog" id="dia_rel_voice">
+                    <iframe src="./a.html" frameborder="0"></iframe>
+                </div>
+                <div class="dialog" id="dia_rel_sil"></div>
+                <div class="dialog" id="dia_voice_obe"></div>
+                <div class="dialog" id="dia_sil_obe"></div>
             </div>
         </div>
         <div class="section sectionelse" id="section5">
             <h1>實務建議</h1>
-            <div class="container col-12">
-                <h2>給主管的建議：</h2>
+            <div class="container col-10 col-sm-12">
+                <h2>給主管的建議</h2>
                 <p>身為主管的你，可能無法永遠緊盯著所有的工作細節，有時候仍需要員工幫你留意工作上的各種問題、或是主動提出新的想法，此時若留意身邊那些關係好的員工，有些人可能有非常多的想法，只是出於尊敬而保持沉默而已，適時的鼓勵員工提出自己的意見（特別是那些其實關係不錯的員工），可能是促進團隊進步的動力。</p>
             </div>
-            <div class="container col-12">
-                <h2>給員工的建議：​</h2>
+            <div class="container col-10 col-sm-12">
+                <h2>給員工的建議​</h2>
                 <p>其實有時與主管的關係就像一把雙面刃，會讓你在某些時刻既希望提出自己的意見幫助他，又怕傷了主管的心（或怕被主管討厭），理解自己是為何不想提出想法，觀察與判斷主管現在是否能接受不同的聲音，並在適當合宜的時機再講出來，其實都是讓你既能保有對主管的尊敬，又能讓工作更好的好方法。</p>
             </div>
             <footer>
@@ -231,7 +273,6 @@
         </div>
     </div>
     <script type="text/javascript" src="js/HG_chart.js"></script>
-    <script type="text/javascript" src="js/HG_map.js"></script>
     <script>
         $('#dowebok').fullpage({
             // 參數設定
@@ -252,40 +293,49 @@
             }
         });
 
+        // 漢堡
+        function myFunction() {
+            var x = document.getElementById("menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
         // 開視窗
-        // let openDialog = function(button, dialog) {
-        //     $(button).on("click", function() {
-        //         $(dialog).dialog("open");
-        //     });
-        //     $(dialog).dialog({
-        //         position: [260.92, 125],
-        //         autoOpen: false,
-        //         draggable: false,
-        //         show: {
-        //             effect: "blind",
-        //             duration: 500
-        //         },
-        //         hide: {
-        //             effect: "drop",
-        //             duration: 300,
-        //             direction: "down"
-        //         },
-        //         resizable: true,
-        //         // height: $(window).height() * 0.8,
-        //         // width: $(window).width() * 0.8,
-        //         modal: true,
-        //         open: function() {
-        //             $(this).dialog('widget').next('.ui-widget-overlay').css({
-        //                 'background': '#ccc',
-        //                 'opacity': '0.6'
-        //             });
-        //         }
-        //     });
-        // };
+        let openDialog = function(button, dialog) {
+            $(button).on("click", function() {
+                $(dialog).dialog("open");
+            });
+            $(dialog).dialog({
+                autoOpen: false,
+                draggable: false,
+                show: {
+                    effect: "blind",
+                    duration: 500
+                },
+                hide: {
+                    effect: "drop",
+                    duration: 300,
+                    direction: "down"
+                },
+                resizable: true,
+                height: $(window).height() * 0.8,
+                width: $(window).width() * 0.8,
+                modal: true,
+                open: function() {
+                    $(this).dialog('widget').next('.ui-widget-overlay').css({
+                        'background': '#ccc',
+                        'opacity': '0.6'
+                    });
+                }
+            });
+        };
 
-        // openDialog('#circle1', '#3rd');
-        // openDialog('#circle2', '#4th');
-        // openDialog('#circle3', '#last');
+        openDialog('#rel_voice', '#dia_rel_voice');
+        openDialog('#rel_sil', '#dia_rel_sil');
+        openDialog('#voice_obe', '#dia_voice_obe');
+        openDialog('#sil_obe', '#dia_sil_obe');
     </script>
 </body>
 

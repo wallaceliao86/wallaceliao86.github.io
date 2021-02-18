@@ -1,0 +1,140 @@
+<style type="text/css">
+	#arrow1 {
+    transform: rotate(-10deg);
+    margin-bottom: 80px;
+}
+
+#arrow2 {
+    transform: rotate(10deg);
+    margin-top: 80px;
+}
+
+#arrow3 {
+    transform: rotate(10deg);
+    margin-bottom: 80px;
+}
+
+#arrow4 {
+    transform: rotate(-10deg);
+    margin-top: 80px;
+}
+
+	#section4 svg {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    /* 有改的 */
+    stroke-width: 30px;
+    /* width: inherit; */
+    stroke-dasharray: 100;
+    /* stroke-dashoffset: 100; */
+}
+
+.svg-line-1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 200;
+}
+
+.animated {
+    animation: drawing-svg 2s 1;
+    /* animation-delay: 2s; */
+    animation-fill-mode: forwards;
+}
+
+.animated2 {
+    animation: drawing-svg2 1s 1;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+.animated3 {
+    animation: drawing-svg 2s 1;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+
+.animated4 {
+    animation: drawing-svg2 1s 1;
+    animation-delay: 5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes drawing-svg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes drawing-svg2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
+
+<div class="section sectionelse" id="section4">
+    <div class="slide">
+        <div class="container">
+            <h1>研究結果</h1>
+            <div class="row">
+                <div class="col-12 col-sm-3" id="result_ants">
+                    <img src="./img/HG/relationship.png" alt="relationship">
+                    <h4>跟主管關係好</h4>
+                </div>
+                <div class="col-sm-1 arrow">
+                    <div class="reg" id="rel_voice">迴歸圖</div>
+                    <svg id="arrow1" data-name="arrow1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
+                        <line class="animated svg svg-line-1" x1="22.71" y1="128" x2="458.83" y2="128"/>
+                        <line class="animated2 svg svg-line-2" x1="428.17" y1="97.33" x2="458.83" y2="128"/>
+                        <line class="animated2 svg svg-line-3" x1="458.83" y1="128" x2="428.17" y2="158.67"/>
+                    </svg>
+                    <svg id="arrow2" data-name="arrow2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
+                        <line class="animated svg svg-line-1" x1="22.71" y1="128" x2="458.83" y2="128"/>
+                        <line class="animated2 svg svg-line-2" x1="428.17" y1="97.33" x2="458.83" y2="128"/>
+                        <line class="animated2 svg svg-line-3" x1="458.83" y1="128" x2="428.17" y2="158.67"/>
+                    </svg>
+                    <div class="reg" id="rel_sil">迴歸圖</div>
+                </div>
+                <div class="col-sm-3" id="result_mediator">
+                    <img src="./img/HG/expression.png" alt="expression">
+                    <h4>建言</h4>
+                    <img src="./img/HG/mute.png" alt="mute">
+                    <h4>沉默</h4>
+                </div>
+                <div class="col-sm-1 arrow">
+                    <div class="reg" id="voice_obe">迴歸圖</div>
+                    <svg id="arrow3" data-name="arrow3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
+                        <line class="animated3 svg svg-line-1" x1="22.71" y1="128" x2="458.83" y2="128"/>
+                        <line class="animated4 svg svg-line-2" x1="428.17" y1="97.33" x2="458.83" y2="128"/>
+                        <line class="animated4 svg svg-line-3" x1="458.83" y1="128" x2="428.17" y2="158.67"/>
+                    </svg>
+                    <svg id="arrow4" data-name="arrow4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
+                        <line class="animated3 svg svg-line-1" x1="22.71" y1="128" x2="458.83" y2="128"/>
+                        <line class="animated4 svg svg-line-2" x1="428.17" y1="97.33" x2="458.83" y2="128"/>
+                        <line class="animated4 svg svg-line-3" x1="458.83" y1="128" x2="428.17" y2="158.67"/>
+                    </svg>
+                    <div class="reg" id="sil_obe">迴歸圖</div>
+                </div>
+                <div class="col-sm-3" id="result_result">
+                    <img src="./img/HG/conflict.png" alt="conflict">
+                    <h4>結果</h4>
+                    <div id="conclusion">當員工和主管之間有良好的關係時……有些員工可能會更勇於表達自己的想法，但也有些員工可能也會出於對主管的尊敬而保持沉默。</div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog" id="dia_rel_voice">
+            <iframe src="./a.html" frameborder="0"></iframe>
+        </div>
+        <div class="dialog" id="dia_rel_sil"></div>
+        <div class="dialog" id="dia_voice_obe"></div>
+        <div class="dialog" id="dia_sil_obe"></div>
+    </div>
+</div>
