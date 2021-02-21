@@ -21,8 +21,6 @@
     <!-- chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
-    <!-- 自用 -->
-    <link rel="stylesheet" href="css/HG.css">
     <!-- jQuery UI -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
@@ -31,6 +29,8 @@
     <!-- amCharts javascript sources -->
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/taiwanLow.js"></script>
+    <!-- 自用 -->
+    <link rel="stylesheet" href="css/HG.css">
 </head>
 
 <body>
@@ -142,27 +142,14 @@
             <div class="slide" id="slide3-2">
                 <h2>研究樣本</h2>
                 <div class="container col-10 col-sm-10" id="chart1">
-                    <div class="row">
-                        <div class="col-12 col-lg-5 box">
-                            <h2>主管樣本</h2>
-                            <div class="row">
-                                <div class="chart-container">
-                                    <canvas class="item" id="super_genderChart"></canvas>
-                                </div>
-                                <div class="chart-container">
-                                    <canvas class="item" id="super_ageChart"></canvas>
-                                </div>
+                    <div class="col-12 box">
+                        <h2>主管樣本</h2>
+                        <div class="row">
+                            <div class="chart-container w-50">
+                                <canvas class="item" id="super_genderChart"></canvas>
                             </div>
-                        </div>
-                        <div class="col-12 col-lg-5 box">
-                            <h2>部屬樣本</h2>
-                            <div class="row">
-                                <div class="chart-container">
-                                    <canvas class="item" id="sub_genderChart"></canvas>
-                                </div>
-                                <div class="chart-container">
-                                    <canvas class="item" id="sub_ageChart"></canvas>
-                                </div>
+                            <div class="chart-container w-50">
+                                <canvas class="item" id="super_ageChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -171,14 +158,36 @@
             <div class="slide" id="slide3-3">
                 <h2>研究樣本</h2>
                 <div class="container col-10 col-sm-10" id="chart2">
-                    <div class="row" style="height: 500px;">
-                        <div class="col-sm-6">
-                            <div class="chart-container">
-                                <canvas class="item" id="jobChart"></canvas>
+                    <div class="col-12 box">
+                        <h2>部屬樣本</h2>
+                        <div class="row">
+                            <div class="chart-container w-50">
+                                <canvas class="item" id="sub_genderChart"></canvas>
+                            </div>
+                            <div class="chart-container w-50">
+                                <canvas class="item" id="sub_ageChart"></canvas>
                             </div>
                         </div>
-                        <div class="col-sm-6 iframe-rwd">
-                            <h6>縣市分佈</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide3-4">
+                <h2>研究樣本</h2>
+                <div class="container col-10 col-sm-10" id="chart3">
+                    <div class="col-12 box">
+                        <h2>職業分佈</h2>
+                        <div class="chart-container">
+                            <canvas class="item mh-100" id="jobChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide3-5">
+                <h2>研究樣本</h2>
+                <div class="container col-10 col-sm-10" id="chart4">
+                    <div class="row" style="height: 70vh;">
+                        <div class="col-12 iframe-rwd">
+                            <h2>縣市分佈</h2>
                             <iframe src="./map.html"></iframe>
                         </div>
                     </div>
@@ -237,12 +246,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="dialog" id="dia_rel_voice">
+                <div class="dialog" title="" id="dia_rel_voice">
                     <canvas id="chart_rel_voice"></canvas>
                 </div>
-                <div class="dialog" id="dia_rel_sil"></div>
-                <div class="dialog" id="dia_voice_obe"></div>
-                <div class="dialog" id="dia_sil_obe"></div>
+                <div class="dialog" title="" id="dia_rel_sil">
+                    <canvas id="chart_rel_sil"></canvas>
+                </div>
+                <div class="dialog" title="" id="dia_voice_obe">
+                    <canvas id="chart_voice_obe"></canvas>
+                </div>
+                <div class="dialog" title="" id="dia_sil_obe">
+                    <canvas id="chart_sil_obe"></canvas>
+                </div>
             </div>
         </div>
         <div class="section sectionelse" id="section5">
