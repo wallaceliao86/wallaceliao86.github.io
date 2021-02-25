@@ -205,14 +205,14 @@
                         </div>
                         <div class="col-10 col-sm-1 arrow">
                             <div class="row row-cols-sm-1">
-                                <div class="reg col-2" id="rel_voice">迴歸圖</div>
-                                <div class="col-2 img_arrow1">
+                                <div class="reg col-2" id="status">迴歸圖</div>
+                                <div class="col-2 img_arrow1" id="status2">
                                     <img class="img_arrow" id="img_img_arrow1" src="/HG/img/HG/arrow.png" alt="">
                                 </div>
-                                <div class="col-2 img_arrow2">
+                                <div class="col-2 img_arrow2" id="obe2">
                                     <img class="img_arrow" id="img_img_arrow2" src="/HG/img/HG/arrow.png" alt="">
                                 </div>
-                                <div class="reg col-2" id="rel_sil">迴歸圖</div>
+                                <div class="reg col-2" id="obe">迴歸圖</div>
                             </div>
                         </div>
                         <div class="col-10 col-sm-3" id="result_mediator">
@@ -229,14 +229,14 @@
                         </div>
                         <div class="col-10 col-sm-1 arrow">
                             <div class="row row-cols-sm-1">
-                                <div class="reg col-2" id="voice_obe">迴歸圖</div>
+                                <div class="reg col-2" id="voice_obe"></div>
                                 <div class="col-2 img_arrow3">
                                     <img class="img_arrow" id="img_img_arrow3" src="/HG/img/HG/arrow.png" alt="">
                                 </div>
                                 <div class="col-2 img_arrow4">
                                     <img class="img_arrow" id="img_img_arrow4" src="/HG/img/HG/arrow.png" alt="">
                                 </div>
-                                <div class="reg col-2" id="sil_obe">迴歸圖</div>
+                                <div class="reg col-2" id="sil_obe"></div>
                             </div>
                         </div>
                         <div class="col-10 col-sm-3 result" id="result_result">
@@ -246,17 +246,57 @@
                         </div>
                     </div>
                 </div>
-                <div class="dialog" title="" id="dia_rel_voice">
-                    <canvas id="chart_rel_voice"></canvas>
+                <div class="dialog" title="主管部屬關係→員工地位感→員工建言" id="dia_status">
+                    <div class="dia-title row justify-content-center align-content-center">
+                        <div class="col-1" style="text-align: center;">
+                            <img src="./img/HG/relationship.png" alt="relationship">
+                            <h6>跟主管關係好</h6>
+                        </div>
+                        <div class="col-1" style="text-align: center;display:flex;
+                        align-items:center;">
+                            <img class="img_arrow" id="" src="/HG/img/HG/arrow.png" alt="">
+                        </div>
+                        <div class="col-1" style="text-align: center;">
+                            <img src="./img/HG/expression.png" alt="expression">
+                            <h6>建言</h6>
+                        </div>
+                    </div>
+                    <div class="row justify-content-evenly">
+                        <div class="col-12 col-sm-5">
+                            <canvas id="chart_rel_status"></canvas>
+                            <p style="color: #fff">與主管關係好的部屬其實容易獲得主管的信任與賦權，讓部屬認為自己受到重視，因此容易產生更高的地位感(Tylor & Linds, 1992)</p>
+                        </div>
+                        <div class="col-12 col-sm-5">
+                            <canvas id="chart_status_voice"></canvas>
+                            <p style="color: #fff">擁有更高地位感的部屬愈容易擁有透過自己促進團隊成果的責任感以及影響力，因此更傾向向主管大膽地提出自己的想法(Fuller et al., 2006)</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="dialog" title="" id="dia_rel_sil">
-                    <canvas id="chart_rel_sil"></canvas>
-                </div>
-                <div class="dialog" title="" id="dia_voice_obe">
-                    <canvas id="chart_voice_obe"></canvas>
-                </div>
-                <div class="dialog" title="" id="dia_sil_obe">
-                    <canvas id="chart_sil_obe"></canvas>
+                <div class="dialog" title="主管部屬關係→員工服從感→員工建言" id="dia_obe">
+                    <div class="dia-title row justify-content-center align-content-center">
+                        <div class="col-1" style="text-align: center;">
+                            <img src="./img/HG/relationship.png" alt="relationship">
+                            <h6>跟主管關係好</h6>
+                        </div>
+                        <div class="col-1" style="text-align: center;display:flex;
+                        align-items:center;">
+                            <img class="img_arrow" id="" src="/HG/img/HG/arrow.png" alt="">
+                        </div>
+                        <div class="col-1" style="text-align: center;">
+                            <img src="./img/HG/mute.png" alt="expression">
+                            <h6>沉默</h6>
+                        </div>
+                    </div>
+                    <div class="row justify-content-evenly">
+                        <div class="col-12 col-sm-5">
+                            <canvas id="chart_rel_obe"></canvas>
+                            <p style="color: #fff">與主管關係愈好的部屬對主管愈容易透過展現自己的忠誠來維持關係，並也因為服從是忠誠的展現方式之一，部屬也往往選擇聽從主管的指示(Chen et al., 2013)</p>
+                        </div>
+                        <div class="col-12 col-sm-5">
+                            <canvas id="chart_obe_voice"></canvas>
+                            <p style="color: #fff">傾向服從主管的部屬會認為提出與主管想法不同的意見或建議是危險或挑戰權威的，也因此服從性高的部屬也容易降低自己建言的次數和意願(Davidson et al., 2017)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -321,6 +361,17 @@
                 $(dialog).dialog("open");
             });
             $(dialog).dialog({
+                create: function(event, ui) {
+                    console.log('open');
+                    $("body").css({
+                        overflow: 'hidden'
+                    })
+                },
+                close: function(event, ui) {
+                    $("body").css({
+                        overflow: 'inherit'
+                    })
+                },
                 autoOpen: false,
                 draggable: false,
                 show: {
@@ -334,21 +385,15 @@
                 },
                 resizable: true,
                 height: $(window).height() * 0.8,
-                width: $(window).width() * 0.6,
-                modal: true,
-                open: function() {
-                    $(this).dialog('widget').next('.ui-widget-overlay').css({
-                        'background': '#ccc',
-                        'opacity': '0.6'
-                    });
-                }
+                width: $(window).width() * 0.8,
+                modal: true
             });
         };
 
-        openDialog('#rel_voice', '#dia_rel_voice');
-        openDialog('#rel_sil', '#dia_rel_sil');
-        openDialog('#voice_obe', '#dia_voice_obe');
-        openDialog('#sil_obe', '#dia_sil_obe');
+        openDialog('#status', '#dia_status');
+        openDialog('#status2', '#dia_status');
+        openDialog('#obe', '#dia_obe');
+        openDialog('#obe2', '#dia_status');
     </script>
 </body>
 

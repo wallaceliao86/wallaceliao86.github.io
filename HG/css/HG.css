@@ -412,6 +412,10 @@ text {
     transform: rotate(120deg);
 }
 
+.dia-title {
+    display: none;
+}
+
 @media (min-width: 596px) {
     #section4 .row {
         padding: 0;
@@ -464,6 +468,14 @@ text {
     #silence {
         margin-top: 5vh;
     }
+    .dia-title {
+        display: flex;
+    }
+}
+
+#status,
+#obe {
+    text-decoration: underline;
 }
 
 
