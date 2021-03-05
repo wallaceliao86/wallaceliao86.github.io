@@ -360,7 +360,14 @@
             // lockAnchors: true,
             responsiveWidth: 596,
             menu: '#menu',
-            css3: true
+            css3: true,
+            afterResponsive: function(isResponsive) {
+                if (isResponsive) {
+                    document.documentElement.classList.add('force-scroll')
+                } else {
+                    document.documentElement.classList.remove('force-scroll')
+                }
+            }
         });
 
         // 漢堡
