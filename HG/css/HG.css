@@ -158,7 +158,7 @@ header #logo_img {
 
 .fp-tableCell {
     display: block;
-    padding-top: 160px;
+    padding-top: 15vh;
 }
 
 @media (min-width: 992px) {
@@ -474,31 +474,48 @@ text {
 
 /* footer */
 
-footer {
+footer,
+.footer-sm {
     width: 100%;
-    height: 18vh;
+    height: 20%;
     background-color: #000000;
     position: absolute;
-    bottom: 0;
 }
 
-footer .row {
+footer .row,
+.footer-sm .row {
     justify-content: center;
 }
 
-footer #footer_logo {
+footer #footer_logo,
+#footer-sm_logo {
     text-align: center;
 }
 
-footer #footer_logo img {
+footer #footer_logo img,
+#footer-sm_logo img {
     width: auto;
     height: 80px;
     object-fit: contain;
 }
 
-footer #footer_contact {
+footer #footer_contact,
+#footer-sm_contact {
     color: #fff;
     font-size: 0.8rem;
+}
+
+footer {
+    display: none;
+}
+
+@media (min-width: 596px) {
+    footer {
+        display: initial;
+    }
+    .footer-sm {
+        display: none;
+    }
 }
 
 @media (min-width: 992px) {
