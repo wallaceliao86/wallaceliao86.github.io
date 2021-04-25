@@ -33,21 +33,6 @@ button {
     cursor: pointer;
 }
 
-
-/* $another grid */
-.container-lg {
-    width: 1440px;
-    height: 100%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.container-md {
-    width: 1280px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 /* $style */
 /* header */
 .header {
@@ -160,13 +145,15 @@ button {
 
 /* table */
 .table {
-    height: 565px;
+    max-height: 565px;
     background-color: #eee;
 }
 
 .table-content {
     padding-top: 5%;
     padding-bottom: 5%;
+    margin-left: 110px;
+    margin-right: 110px;
 }
 
 .table-name {
@@ -214,30 +201,47 @@ tr {
 
 /* gallery */
 .gallery {
-    height: 670px;
+    max-height: 670px;
 }
 
-.gallery .row {
-    justify-content: space-between;
-}
-
-.pics {
+.gallery-inner {
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     display: grid;
-    grid-template-columns: repeat(3, 220px);
-    grid-template-rows: repeat(2, 220px);
-    grid-column-gap: 60px;
-    grid-row-gap: 50px;
+    grid-template-columns: repeat(3, 1fr) 350px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 5%;
+    grid-column-gap: 6%;
 }
+
 
 .pic-item {
-    border: 1px solid #000;
+    background-color: #000;
+    aspect-ratio: 1;
+}
+
+.pic-item:nth-child(4) {
+    grid-column-start: 1;
 }
 
 .pic-content {
-    border: 1px solid #050000;
-    width: 350px;
-    padding: 5px;
-    height: 500px;
+    border: 1px solid #000;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column-start: 4;
+    padding: 8px;
+    overflow: hidden;
+}
+
+@media (max-width:991px) {
+    .gallery-inner {
+        grid-template-columns: repeat(3, 1fr) 25%;
+    }
+    .pic-item {
+        aspect-ratio: unset;
+    }
 }
 
 /* footer */

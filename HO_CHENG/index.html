@@ -14,15 +14,15 @@
         <div class="container">
             <div class="row">
                 <div class="logo">
-                    LOGO
+                    <a href="#">LOGO</a>
                 </div>
                 <div class="nav">
                     <div class="nav-social">
                         <a class="social social-fb" href="#">
-                            <img class="img-social imgimg-fb" src="/img/icon_fb.png" alt="">
+                            <img class="img-social imgimg-fb" src="/HO_CHENG/img/icon_fb.png" alt="">
                         </a>
                         <a class="social social-line" href="#">
-                            <img class="img-social img-line"  src="/img/icon_line.png" alt="">
+                            <img class="img-social img-line"  src="/HO_CHENG/img/icon_line.png" alt="">
                         </a>
                         <button class="social-enroll">登入</button>
                     </div>
@@ -64,7 +64,7 @@
     </div>
 
     <div class="table">
-        <div class="container-lg">
+        <div class="container">
             <div class="table-content">
                 <div class="table-name">
                     <p>項目</p>
@@ -72,10 +72,10 @@
                 </div>
                 <table>
                     <tr>
-                        <th>ID</th>
-                        <th>日期</th>
-                        <th>事件</th>
-                        <th>刪除</th>
+                        <th width="10%">ID</th>
+                        <th width="15%">日期</th>
+                        <th width="65%">事件</th>
+                        <th width="10%">刪除</th>
                     </tr>
                     <tr>
                         <td>01</td>
@@ -113,23 +113,17 @@
     </div>
 
     <div class="gallery">
-        <div class="container-lg">
-            <div class="row">
-                <div class="col-8">
-                    <div class="pics">
-                        <div class="pic-item"></div>
-                        <div class="pic-item"></div>
-                        <div class="pic-item"></div>
-                        <div class="pic-item"></div>
-                        <div class="pic-item"></div>
-                        <div class="pic-item"></div>
-                    </div>
-                </div>
-                <div class="col-3 offset-1">
-                    <div class="pic-content">
-                        <h1 class="pic-title">標題</h1>
-                        <p class="pic-text">介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹</p>
-                    </div>
+        <div class="container">
+            <div class="gallery-inner">
+                <div class="pic-item"></div>
+                <div class="pic-item"></div>
+                <div class="pic-item"></div>
+                <div class="pic-item"></div>
+                <div class="pic-item"></div>
+                <div class="pic-item"></div>
+                <div class="pic-content">
+                    <h1 class="pic-title">標題</h1>
+                    <p class="pic-text">介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹</p>
                 </div>
             </div>
         </div>
@@ -140,13 +134,13 @@
     </div>
 
     <script>
-        fetch('multipleproduct.wacocolife.com/api/gallery/showClient/1')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(myJson) {
-            console.log(myJson);
-        });
+        // fetch('multipleproduct.wacocolife.com/api/gallery/showClient/1')
+        // .then(function(response) {
+        //     return response.json();
+        // })
+        // .then(function(myJson) {
+        //     console.log(myJson);
+        // });
     </script>
 </body>
 </html>
