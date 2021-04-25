@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>和承國際_切版測驗</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    LOGO
+                </div>
+                <div class="nav">
+                    <div class="nav-social">
+                        <a class="social social-fb" href="#">
+                            <img class="img-social imgimg-fb" src="/img/icon_fb.png" alt="">
+                        </a>
+                        <a class="social social-line" href="#">
+                            <img class="img-social img-line"  src="/img/icon_line.png" alt="">
+                        </a>
+                        <button class="social-enroll">登入</button>
+                    </div>
+                    <ul class="nav-items">
+                        <li class="nav-item"><a href="#">首頁</a></li>
+                        <li class="nav-item"><a href="#">關於我們</a></li>
+                        <li class="nav-item"><a href="#">最新消息</a></li>
+                        <li class="nav-item"><a href="#">服務項目</a></li>
+                        <li class="nav-item">
+                            <a href="#">Q&A活動</a>
+                            <ul class="nav-dropbox">
+                                <li class="nav-dropbox-item"><a href="#">問題一</a></li>
+                                <li class="nav-dropbox-item"><a href="#">問題二</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="item">項目一</div>
+                </div>
+                <div class="col-2">
+                    <div class="item">項目二</div>
+                </div>
+                <div class="col-2">
+                    <div class="item">項目三</div>
+                </div>
+                <div class="col-2">
+                    <div class="item">項目四</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="container-lg">
+            <div class="table-content">
+                <div class="table-name">
+                    <p>項目</p>
+                    <span></span>
+                </div>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>日期</th>
+                        <th>事件</th>
+                        <th>刪除</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>08/24</td>
+                        <td>文案一</td>
+                        <td>
+                            <button>按鈕</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>02/24</td>
+                        <td>文案二</td>
+                        <td>
+                            <button>按鈕</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>01/12</td>
+                        <td>文案三</td>
+                        <td>
+                            <button>按鈕</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp</td>
+                        <td>&nbsp</td>
+                        <td>&nbsp</td>
+                        <td>&nbsp</td>
+                    </tr>
+                </table>      
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-8">
+                    <div class="pics">
+                        <div class="pic-item"></div>
+                        <div class="pic-item"></div>
+                        <div class="pic-item"></div>
+                        <div class="pic-item"></div>
+                        <div class="pic-item"></div>
+                        <div class="pic-item"></div>
+                    </div>
+                </div>
+                <div class="col-3 offset-1">
+                    <div class="pic-content">
+                        <h1 class="pic-title">標題</h1>
+                        <p class="pic-text">介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        FOOTER
+    </div>
+
+    <script>
+        fetch('multipleproduct.wacocolife.com/api/gallery/showClient/1')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(myJson) {
+            console.log(myJson);
+        });
+    </script>
+</body>
+</html>
