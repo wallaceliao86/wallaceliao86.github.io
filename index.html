@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廖韋承 Wallace Liao | UI/UX & Frontend Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo" onclick="switchChannel('about')">
+                <div class="logo-img">
+                    <img src="img/LOGO.png" alt="" class="img-fluid">
+                </div>
+                <div class="logo-name">韋承 Wallace</div>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-btn active" onclick="switchChannel('about')">
+                    <i class="fas fa-user-astronaut"></i> 關於我
+                </button>
+                <button class="nav-btn" onclick="switchChannel('experience')">
+                    <i class="fas fa-file-alt"></i> 履歷
+                </button>
+                <button class="nav-btn" onclick="switchChannel('works')">
+                    <i class="fas fa-layer-group"></i> 我的作品
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div id="about" class="channel-section">
+            <div class="hero-section">
+                <div class="hero-text">
+                    <span class="hero-tag"><i class="fas fa-code"></i> UI/UX & Frontend Design</span>
+                    <h1>Hi!我是<span>韋承 Wallace</span></h1>
+                    <p class="hero-desc">
+                        我是擁有4年以上設計與前端經驗的網頁設計師，目前正在積極向UI/UX設計領域轉職中。期許能將心理領域所學與設計想法結合。
+                    </p>
+                    <p class="hero-desc">
+                        現職為電商的網頁設計師。擅長將感性的視覺設計，轉化為理性的程式碼。<b>熟悉 Figma、Adobe 工具與 GSAP/Canvas
+                            動畫效果</b>，為每個設計注入靈魂與創意，致力於打造兼具美感、創意與流暢互動的數位體驗。
+                    </p>
+                    <div class="hero-actions">
+                        <button onclick="switchChannel('works')" class="cta-btn">
+                            查看作品集 <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/wallace-liao-831264119/" target="_blank"
+                                class="social-btn" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.behance.net/wallace-liao" target="_blank" class="social-btn"
+                                title="Behance">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-container">
+                    <div class="photo-frame">
+                        <img src="img/wc_photo01c.jpg" class="profile-img" alt="Random Creative Image">
+                    </div>
+                    <div class="floating-icon icon-1"><i class="fab fa-figma"></i></div>
+                    <div class="floating-icon icon-2"><i class="fas fa-code"></i></div>
+                    <div class="floating-icon icon-3"><i class="fas fa-pencil-ruler"></i></div>
+                </div>
+            </div>
+
+            <div class="about-details">
+                <h2 class="channel-title">更多關於我</h2>
+                <div style="text-align: justify;">
+                    <p class="about-text">
+                        <p class="about-text">
+                            我是一名具備前端實作能力與邏輯思維的網頁設計師，期望能找到兼具邏輯思維與設計美感的UIUX職位。<br>
+
+                            曾於台大心理所與中央研究院擔任研究助理。這段看似與設計無關的學術經歷，深深鍛鍊了我對<b>數據分析</b>與<b>邏輯推演</b>的能力，而這些正是UX使用者體驗研究中不可或缺的基石。<br><br>
+
+                            帶著理性的分析思維跨足設計領域後，我先後於特力集團與家福股份有限公司擔任網頁設計師。在處理高流量活動頁面的過程中，我不僅專注於視覺的美感，更在意「如何透過介面引導使用者」、「如何用微交互
+                            (GSAP) 提升停留時間」，以及「如何兼顧商業轉換率」。同時，熟悉 HTML/CSS/JS 讓我能與工程團隊無縫溝通，確保每一份設計都具備 100% 的技術可行性
+                            (Technical Feasibility)。<br><br>
+
+                            隨著實戰經驗累積，我不再滿足於單純的介面執行，而是更渴望探究「使用者真實的痛點是什麼？」。因此，我深度投入 UI/UX 領域，參與 AAPD
+                            產品設計挑戰賽並闖入決賽。我期許自己能成為溝通商業、設計與工程的橋樑，將感性的同理心與理性的程式碼交匯，打造出真正解決問題的數位體驗。
+                        </p>
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-hourglass-half"></i></div>
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">年相關經驗</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">AAPD 決賽</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">專案執行</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience" class="channel-section active visible">
+            <div class="content-wrapper">
+                <div class="resume-top">
+                    <h2 class="resume-name">廖韋承 Wallace</h2>
+                    <div class="resume-info">
+                        <span><i class="fas fa-briefcase"></i> 網頁設計/UIUX</span>
+                        <span><i class="fas fa-envelope"></i> wallace.liao86@gmail.com</span>
+                        <span><i class="fas fa-map-marker-alt"></i> 台北市大同區</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1Z70dv8OgeScz4U9gQN5p5NI16tFKdBlv/view?usp=sharing"
+                        class="resume-pdf-btn" target="_blank">PDF 版履歷</a>
+                </div>
+
+                <div class="resume-layout">
+                    <div class="resume-sidebar">
+                        <h3 class="resume-section-title">技能</h3>
+                    </div>
+                    <div class="resume-content">
+                        <div class="resume-skills-grid">
+                            <div class="skill-item">
+                                <h4>UX研究與體驗策略</h4>
+                                <p>結合心理學背景，能進行訪談、測試與分析資料，注重研究流程，擅長收斂想法</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>UI 介面與視覺設計</h4>
+                                <p>熟練 Figma 等設計軟體，具四年電商經驗，在意使用者所視所用，設計兼顧商業轉換與視覺美感</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>前端實作與動態特效</h4>
+                                <p>熟悉前端與 GSAP 動畫，針對不同視覺搭配適當動畫特效，確保設計可行性並實作</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>導入 AI 工作流</h4>
+                                <p>將 AI 導入設計工作流，大幅提升素材生成與前期框架探索效率</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>設計營運與流程優化</h4>
+                                <p>熟悉設計系統，主動優化素材製作流程，成功提升團隊近四倍產能。</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>跨領域溝通</h4>
+                                <p>理解設計與工程語彙，能夠多方溝通</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="channel-title">職涯經歷</h2>
+
+                <div class="timeline-container">
+
+                    <div class="timeline-row left">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-role">網頁設計師 Web Designer</div>
+                            </div>
+                            <div class="timeline-info">
+                                <div class="timeline-company">家福股份有限公司</div>
+                                <div class="timeline-period">2023/2 - 現在</div>
+                            </div>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge">視覺設計</span>
+                                <span class="timeline-badge">網頁設計</span>
+                                <span class="timeline-badge">GSAP 動畫</span>
+                            </div>
+
+                            <ul class="timeline-list">
+                                <li>負責規劃與製作全站促銷活動頁面，確保在各種裝置上的瀏覽體驗</li>
+                                <li>使用 <b>Canvas</b> 與 <b>GSAP</b> 製作高互動性的網頁動畫，並運用 AI 工具加速開發，提升頁面體驗</li>
+                                <li>導入 AI 工具加速素材生成與開發流程，提升設計效率。</li>
+                            </ul>
+
+                            <div class="timeline-gallery">
+                                <img src="img/carrefour01.jpg" alt="家樂福線上商城雙11視覺">
+                                <img src="img/carrefour02.jpg" alt="家樂福Banner">
+                            </div>
+
+                            <button class="timeline-more-btn" onclick="switchChannel('detail-ecommerce')">
+                                看更多專案細節 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row right">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-role">網頁設計專員 Web Design Specialist</div>
+                            </div>
+                            <div class="timeline-info">
+                                <div class="timeline-company">特力集團(特力屋/HOLA)</div>
+                                <div class="timeline-period">2021/6 - 2022/9</div>
+                            </div>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge">視覺設計</span>
+                                <span class="timeline-badge">網頁設計</span>
+                                <span class="timeline-badge">Banner</span>
+                            </div>
+
+                            <ul class="timeline-list">
+                                <li>負責 特力屋 / HOLA 等品牌的電商大型檔期活動頁視覺設計與切版</li>
+                                <li>優化 Banner 製作流程，加快行銷素材產能，提升團隊約<b>4倍</b>產能</li>
+                                <li>優化活動頁、資訊頁體驗流程，增加互動設計、手機端優化</li>
+                                <li>協助管理電商頁面視覺，如Banner、icon設計</li>
+                            </ul>
+
+                            <div class="timeline-gallery">
+                                <img src="img/trplus01.jpg" alt="銀行頁優化">
+                                <img src="img/trplus02.jpg" alt="來+放暑假，特力暑假檔期促銷">
+                            </div>
+
+                            <button class="timeline-more-btn" onclick="switchChannel('works')">
+                                看更多設計作品 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row left">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-role">專任研究助理 Research Assistant</div>
+                            </div>
+                            <div class="timeline-info">
+                                <div class="timeline-company">中央研究院</div>
+                                <div class="timeline-period">2018/7 - 2019/8</div>
+                            </div>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge">網頁維護</span>
+                                <span class="timeline-badge">Bootstrap</span>
+                                <span class="timeline-badge">跨國交流</span>
+                            </div>
+
+                            <ul class="timeline-list">
+                                <li>建立與管理研討會網站，製作響應式網頁</li>
+                                <li>整理來自國內外稿件，協助處理研討會相關庶務</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row right">
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-role">人力資源實習生 HR Intern</div>
+                            </div>
+                            <div class="timeline-info">
+                                <div class="timeline-company">經緯智庫股份有限公司</div>
+                                <div class="timeline-period">2016/1 - 2017/1</div>
+                            </div>
+                            <div class="timeline-badges">
+                                <span class="timeline-badge">量化資料分析</span>
+                                <span class="timeline-badge">人力資源</span>
+                            </div>
+
+                            <ul class="timeline-list">
+                                <li>支援員工意見調查(EOS)量化分析，曾協助知名百大企業專案進行調查</li>
+                                <li>協助顧問於人力資源網站獵頭，提供適合人選給主管</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <h2 class="channel-title">學歷</h2>
+
+                <div class="edu-grid">
+
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <i class="fas fa-university" style="color:var(--primary);"></i> 心理所工商心理學組(肄業)
+                            </div>
+                            <span class="timeline-period">2017/09 - 2020/2</span>
+                        </div>
+                        <span class="timeline-role">國立臺灣大學</span>
+
+                        <div class="timeline-badges">
+                            <span class="timeline-badge">問卷設計</span>
+                            <span class="timeline-badge">質性研究</span>
+                        </div>
+
+                        <ul class="timeline-list">
+                            <li>參與問卷設計與質性研究專案，實際操作內容分析與資料編碼，培養主題歸納與資料轉譯能力</li>
+                            <li>修習人力資源管理、組織心理學、實驗設計與量化分析等課程，具備問卷分析與統計思維基礎</li>
+                            <li>學業平均 GPA: 3.95 / 4.3</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <i class="fas fa-university" style="color:var(--primary);"></i>生工系 雙主修 心理系
+                            </div>
+                            <span class="timeline-period">2017/09 - 2020/2</span>
+                        </div>
+                        <span class="timeline-role">國立臺灣大學</span>
+
+                        <div class="timeline-badges">
+                            <span class="timeline-badge">雙主修</span>
+                            <span class="timeline-badge">團隊協作</span>
+                            <span class="timeline-badge">課外學習</span>
+                        </div>
+
+                        <ul class="timeline-list">
+                            <li>在校期間積極參與系學會與志工社團，曾擔任學術部長與教學部員，策劃專題講
+                                座、實習分享與偏鄉育樂營等活動，累積課外學習推廣、團隊協作與溝通執行經驗</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="works" class="channel-section">
+            <div class="content-wrapper" style="max-width: 1200px;">
+                <h2 class="channel-title">我的作品</h2>
+
+                <div class="projects-grid">
+
+                    <div class="project-card" onclick="switchChannel('detail-safewatch')">
+                        <div class="p-img p-img01">
+                            <div class="ribbon-wrapper">
+                                <div class="ribbon">AAPD 挑戰賽 - 佳作</div>
+                            </div>
+                        </div>
+                        <div class="p-content">
+                            <div class="p-tags">
+                                <span class="p-tag">防詐服務</span>
+                                <span class="p-tag">UI/UX Research</span>
+                                <span class="p-tag">APP</span>
+                            </div>
+                            <h3 class="p-title">安心守望 Safe Watch</h3>
+                            <p class="p-desc">AAPD 產品設計挑戰賽決賽作品。Whoscall 家庭防詐協作系統設計。</p>
+                            <div class="p-btn">查看詳情 <i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="switchChannel('detail-cup')">
+                        <div class="p-img" style="background:linear-gradient(135deg, #E9C46A, #F4A261);">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="p-content">
+                            <div class="p-tags"><span class="p-tag">Service Design</span></div>
+                            <h3 class="p-title">循環杯系統設計</h3>
+                            <p class="p-desc">設計結合便利與環保的服務流程，解決歸還點過少的痛點。</p>
+                            <div class="p-btn">查看詳情 <i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" onclick="switchChannel('detail-ecommerce')">
+                        <div class="p-img" style="background:linear-gradient(135deg, #8E9EAB, #eef2f3); color:#666;">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="p-content">
+                            <div class="p-tags"><span class="p-tag">Frontend</span><span class="p-tag">GSAP</span></div>
+                            <h3 class="p-title">電商網頁與 Banner</h3>
+                            <p class="p-desc">高流量檔期活動頁設計與開發，運用動畫提升互動率。</p>
+                            <div class="p-btn">查看詳情 <i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="detail-safewatch" class="channel-section">
+
+            <div class="hero-banner-image-only" style="background-image: url('img/safewatchHerobanner.jpg');">
+            </div>
+
+
+            <div class="content-wrapper">
+                <div class="back-btn" onclick="switchChannel('works')"><i class="fas fa-arrow-left"></i> 返回作品列表</div>
+                <div class="project-layout">
+                    <aside class="project-sidebar">
+                        <ul class="toc-list" id="project-toc">
+                            <li><a href="#p-intro" class="toc-link">前言與競賽成績</a></li>
+                            <li><a href="#p-goal" class="toc-link">企業目標與命題</a></li>
+                            <li><a href="#p-explore" class="toc-link">問題拆解與探索</a></li>
+                            <li><a href="#p-research" class="toc-link">質化與量化驗證</a></li>
+                            <li><a href="#p-market" class="toc-link">市場現況</a></li>
+                            <li><a href="#p-ideation" class="toc-link">頭腦風暴與解法</a></li>
+                            <li><a href="#p-strategy" class="toc-link">設計策略</a></li>
+                            <li><a href="#p-testing" class="toc-link">設計驗證與迭代</a></li>
+                            <li><a href="#p-reflection" class="toc-link">學習與反思</a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="project-article">
+
+                        <div style="margin-bottom:3rem; padding-bottom:2rem; border-bottom:1px solid #eee;">
+                            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--dark);">安心守望 Safe Watch
+                            </h1>
+                            <div style="color: var(--primary); font-weight: 600;">Whoscall 家庭防詐協作系統設計</div>
+                        </div>
+
+                        <div class="role-highlight">
+                            <div class="role-item">
+                                <span class="role-label"><i class="fas fa-tasks"></i> 負責項目</span>
+                                <span class="role-value">UX 研究、吉祥物繪製、UI 設計</span>
+                            </div>
+                            <div class="role-item">
+                                <span class="role-label"><i class="far fa-clock"></i> 專案時間</span>
+                                <span class="role-value">2025/10 - 2025/12</span>
+                            </div>
+
+                            <div class="role-item" style="flex: 1.5;">
+                                <span class="role-label"><i class="fas fa-toolbox"></i> 使用工具</span>
+                                <div class="tools-list">
+                                    <img src="img/figma.png" alt="Figma" class="tool-logo" title="Figma">
+                                    <img src="img/notion.png" alt="Notion" class="tool-logo" title="Notion">
+                                    <img src="img/gemini.png" alt="Gemini" class="tool-logo" title="Gemini">
+                                    <img src="img/notebooklm.png" alt="Notebook LM" class="tool-logo"
+                                        title="Notebook LM">
+                                    <img src="img/canva.png" alt="canva" class="tool-logo" title="Canvas">
+                                    <img src="img/discord.png" alt="Discord" class="tool-logo" title="Discord">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="p-intro" class="article-section">
+                            <p>由於想培養自己 UI/UX 的實戰經驗，精進產品設計領域的各項技能，我參加了 AAPD
+                                舉辦的「第三屆產品設計挑戰賽」。此競賽與企業方合作，提供產品的願景、商業目標、目前使用者輪廓等資訊，參賽者將進行組隊合作，於兩個月不到的時間，透過設計來解決真實世界的問題。
+                            </p>
+
+                            <!-- <div class="detail-img-placeholder">
+                                <i class="fas fa-calendar-alt" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                [圖片：專案時程表或防詐情境]
+                            </div> -->
+
+                            <h4 style="margin-top: 2rem; color: var(--dark);">產品架構</h4>
+                            <p>透過「建立關係、參與、回報與成就」的循環，建立「基於信任關係的協作防護」，讓使用者們更願意參與防詐的資訊回報，在擴大社群參與度之餘，同時達成個人化的資訊體驗以及長期使用產品的成就感。
+                            </p>
+
+                            <div class="detail-img-placeholder">
+                                <img src="img/mainstructure.png" alt="安心守望主要功能" class="img-fluid">
+
+                            </div>
+
+                            <div class="highlight-box" style="margin-top: 3rem;">
+                                <div class="highlight-label"><i class="fas fa-trophy"></i> 比賽成績</div>
+                                <p style="font-weight: normal; font-size: 1.05rem; margin-bottom: 1rem;">
+                                    在約莫百人的設計挑戰賽中，我們從 16 組團隊中脫穎而出，獲得<strong>佳作（前五名）</strong>的好成績。</p>
+
+                                <img src="img/prize.jpg" alt="AAPD 挑戰賽佳作獎狀" class="award-img">
+
+                                <p style="font-weight: normal; font-size: 1.05rem; margin-bottom: 1rem;">以下為評審的部分回饋：</p>
+                                <ul class="custom-check-list"
+                                    style="font-weight: normal; font-size: 1rem; margin-bottom: 0;">
+                                    <li>不從「如何提升回報率」本身出發，而是以「守護親友」作為核心動機切入，成功將行為驅動與情感連結結合，這個策略選擇非常亮眼。</li>
+                                    <li>產品背景、市場分析和收斂出來的洞察讓 problem space 一目了然。</li>
+                                    <li>UX 研究包含量化與質化資料，以量化的方式聚焦用戶痛點「回報」。</li>
+                                    <li>迭代後的設計減少繁雜步驟，降低使用難度。</li>
+                                    <li>大量運用 Vee 吉祥物元素，讓畫面整體情緒溫暖、親近，與情感導向的提案方向一致。</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="p-goal" class="article-section">
+                            <h3>01. 企業目標與命題</h3>
+                            <p>在台灣，詐騙已成為全民威脅，電話號碼外洩率高達 62.4%。Whoscall 作為東亞暨東南亞最大防詐
+                                APP，提供陌生來電與簡訊辨識。其以協助使用者在數位生活的各種情境中維持秩序與安心，實現全方位的安全感為願景。</p>
+
+                            <div class="explore-grid">
+                                <div class="explore-card">
+                                    <div class="explore-card-title">
+                                        <div class="icon-wrapper"
+                                            style="background: rgba(42, 157, 143, 0.1); color: var(--primary);">
+                                            <i class="fas fa-bullseye"></i>
+                                        </div>
+                                        企業命題 (HMW)
+                                    </div>
+                                    <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                                        如何創造一套個人化體驗或資訊模組，讓使用者能真正感受到『自己如何被保護』，並建立長期使用產品的成就感？
+                                    </p>
+                                </div>
+
+                                <div class="explore-card">
+                                    <div class="explore-card-title">
+                                        <div class="icon-wrapper"
+                                            style="background: rgba(233, 196, 106, 0.15); color: #D4A017;">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        客群擴展
+                                    </div>
+                                    <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                                        因年輕族群詐騙事件逐年上升，企業希望能將目標客群年齡層擴展至 25 歲以下。
+                                    </p>
+                                </div>
+
+                                <div class="explore-card">
+                                    <div class="explore-card-title">
+                                        <div class="icon-wrapper"
+                                            style="background: rgba(244, 162, 97, 0.15); color: #F4A261;">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        商業目標
+                                    </div>
+                                    <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                                        擴展社群參與度，讓更多用戶主動參與檢查、回報的防詐行為循環。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="p-explore" class="article-section">
+                            <h3>02. 問題拆解與探索性研究</h3>
+                            <p>我們從企業提供的命題與目標開始發想，探索企業想要解決的問題與其所追求的商業目的，在「個人化」、「保護感」以及「成就感」列出六個次分項：介面與操作優化、更加客製化、強化心理感受、定期與即時、展示型成就感和互動性成就感。
+                            </p>
+
+                            <div class="detail-img-placeholder">
+                                <img src="img/hmwdefine.png" alt="拆解HMW，問題定義" class="img-fluid">
+                            </div>
+
+                            <p>同時，我們也收集社群與 APP 商店的評論，並進行游擊訪談，初步了解市場上使用者對於防詐的想法與 APP
+                                的使用習慣。我們發現：<strong>使用者並不主動參與防詐，而是更希望被動地防範，且追求更客製化、個人化的功能。</strong></p>
+                        </div>
+
+                        <div id="p-research" class="article-section">
+                            <h3>03. 質化訪談與量化問卷驗證</h3>
+                            <p>為了進一步探討使用者為何不主動參與回報，以及真正的痛點，我們進行了量化問卷與質化訪談。</p>
+
+                            <h4 style="color: var(--dark);">A. 量化問卷 (240份有效樣本)</h4>
+                            <p>針對使用經驗、防詐動機與功能想像進行調查，我們發現：</p>
+                            <ul class="standard-list">
+                                <li><strong>回報動機：</strong>有回報習慣者多為了「幫助他人避免受騙」與「提升資料準確度」；未回報者主要是因為「操作障礙」、「擔心回報錯誤」或「認為別人會回報」。
+                                </li>
+                                <li><strong>對象差異：</strong>超過 6 成的人擔心親近之人遭遇詐騙，高達 8
+                                    成的人曾協助過親友解決資安問題。面對親友的防詐重視度，遠高於對陌生大眾的關心。</li>
+                                <li><strong>隱私態度：</strong>超過 75% 願意提供通話與簡訊紀錄協助防詐，但針對「聯絡人」與「截圖」，僅約 50% 願意提供。</li>
+                                <li><strong>其他期待：</strong>重視個資提供的彈性（隨時撤回）、希望有懶人包教學、希望操作簡易且具備情境化提示。</li>
+                            </ul>
+                            <p
+                                style="background: #f8fcfb; padding: 15px; border-radius: 8px; border-left: 4px solid var(--primary);">
+                                <strong>💡 初步產品方向：</strong>為了親近的家人與朋友，使用者會更願意採取防詐行動。以這樣的「關係」作為驅動，能帶來更多防詐交流的互動機會。
+                            </p>
+
+                            <h4 style="color: var(--dark); margin-top: 2rem;">B. 質化訪談 (共14位受訪者)</h4>
+                            <p>我們將質化訪談重點放在使用者對防詐的參與感、家庭互助情境及隱私邊界，研究結果發現：</p>
+                            <ul class="standard-list">
+                                <li>肯定家庭協助的必要性，期望有即時通訊防護，但同時<strong>非常在意被協助者（長輩）的隱私感受</strong>，希望雙方都要互相確認與同意。</li>
+                                <li>回報動機低，需要有獎勵機制或能看見成效，且程序必須極簡。</li>
+                                <li>希望隱私與功能可高度客製化與彈性調整。</li>
+                                <li>希望有防詐快報，但對「遊戲化」學習新知的意願較低。</li>
+                            </ul>
+
+                            <p> 在確定了家庭協助的實行可能後，我們建立了使用者輪廓以及一個新的HMW，讓團隊後續有明確的行動設計方向。
+                            </p>
+
+                            <div class="detail-img-placeholder">
+                                <img src="img/persona.png" alt="守望者/被守望者人物誌" class="img-fluid">
+                            </div>
+
+                            <div class="highlight-box">
+                                <div class="highlight-label">⭐ 重塑核心命題 (New HMW)</div>
+                                「我們如何設計一個以親近的人為中心，擴散並創造群體共同守護使命，來鼓勵主動分享和回報威脅資訊，以提升長期使用產品的成就感？」
+                            </div>
+                        </div>
+
+                        <div id="p-market" class="article-section">
+                            <h3>04. 市場現況</h3>
+                            <p>我們調查了目前的競品 (以 2025 年 10
+                                月為基準)，發現在「家庭防護」層面的防詐攔截尚未完全被覆蓋，且個人化設定的程度均不高。除了競品分析外，我們也參考了具備家庭協作功能的軟體，作為隱私控制與遠程協助的設計參考。
+                            </p>
+
+                            <div class="detail-img-placeholder">
+                                <img src="img/competitiveanalysis.png" alt="守望者/被守望者人物誌" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div id="p-ideation" class="article-section">
+                            <h3>05. 頭腦風暴與設計解法</h3>
+                            <p>我們利用約 6 小時的時間，將前期的研究分析統整，並進行了
+                                <span class="tooltip-text" title="這是一種點子發想法：6個人在30分鐘內，每回合5分鐘，每人寫出3個點子，透過傳遞激發更多創意。">
+                                    6-3-5 Brainwriting <i class="far fa-question-circle"></i>
+                                </span>
+                                的頭腦風暴，最終產出了數個設計方向。</p>
+                            <p>隨後透過 影響-投入矩陣(Impact VS Effort Matrix)
+                                進行收斂，統整出兩個最終設計方案：<strong>「安心守望」</strong>與<strong>「守望成就報告」</strong>。</p>
+
+                            <div class="detail-img-placeholder">
+                                <img src="img/IxEmatrix.png" alt="Impact VS Effort Matrix" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <div id="p-strategy" class="article-section">
+                            <h3>06. 設計策略</h3>
+
+                            <h4 style="color: var(--dark);">1. 來電守望：三層守望機制</h4>
+                            <p>我們提出「三層守望機制」，多數的詐騙電話在第一層的「來電醒目畫面」以及「家人預設溫馨提示語」即可阻擋。唯有被守望者接起高風險電話，才會觸發第三層守望，避免雙方收到過多干擾。
+                            </p>
+                            <p>針對完全不明的來電，考量長輩習慣「接了再說」，我們設計了<strong>「拒絕來電並通知守望者」</strong>選項，由守望者代為查詢。查詢結果經雙方確認並由企業核可後，即可公開豐富防詐資料庫。
+                            </p>
+                            <p style="color: var(--primary); font-weight: 600;">* 隱私核心原則：守望者 (Jason) 絕對不會接收到任何被守望者 (媽媽)
+                                不希望被看見的通話資訊。</p>
+
+                            <ul class="standard-list">
+                                <li><strong>明確功能介紹：</strong>讓雙方清楚知道彼此權利與隱私，所有提醒皆建立在信任、不監控的基礎上。</li>
+                                <li><strong>暫時解除守望關係：</strong>若覺得干擾，可選擇暫時解除並設定時間，這是比直接取消授權更溫和的手段。</li>
+                                <li><strong>個人資料與溫馨提示語：</strong>可上傳照片或使用吉祥物。守望者設定的溫馨提示語，會在可疑來電時顯示，讓防詐更具人情味。</li>
+                            </ul>
+
+                            <div class="feature-split" style="margin-top: 3rem;">
+                                <div class="feature-text">
+                                    <h4 style="color: var(--dark); margin-top: 0;">2. 守望報告</h4>
+                                    <ul class="standard-list">
+                                        <li>一目了然看到近期的風險與守望成果。</li>
+                                        <li>一鍵生成精美報告圖，並能迅速把守望成就分享給親友或轉發到各個社群軟體。</li>
+                                        <li>能看到自己回報的號碼幫助了多少使用者以及阻擋了多少詐騙號碼。</li>
+                                    </ul>
+                                    <p>期望藉由感受守望的成就與力量，鼓勵使用者分享給親友，進而促使更多人成為「守望者」。</p>
+                                </div>
+
+                                <div class="feature-media">
+                                    <img src="img/prototype02.gif" alt="守望報告操作示範" class="phone-mockup-gif">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="p-testing" class="article-section">
+                            <h3>07. 設計驗證與迭代</h3>
+                            <p>為了達到更好的體驗，我們針對現有的設計流程進行測試，著重於使用者能否理解「安心守望」核心價值、對隱私與監控感的反應，以及 UI 介面的操作性。</p>
+                            <p>我們邀請了 10 位使用者 (包含 2 組親人關係) 進行測試，收到了許多正面回饋：</p>
+
+                            <div class="detail-img-placeholder">
+                                <img src="img/posfeedback.png" alt="易用性測試得到的正面回饋" class="img-fluid">
+                            </div>
+
+                            <p>根據使用者反饋，我們進行了以下迭代優化：</p>
+                            <div class="iteration-grid" style="margin-top: 1.5rem;">
+                                <div class="iteration-card">
+                                    <h5 class="iteration-title"><i class="fas fa-sync-alt"></i> 首頁重新佈局</h5>
+                                    <div class="detail-img-placeholder small-placeholder">
+                                        <img src="img/iterate01.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="iteration-card">
+                                    <h5 class="iteration-title"><i class="fas fa-sync-alt"></i> 更快速的守望建立連結</h5>
+                                    <div class="detail-img-placeholder small-placeholder">
+                                        <img src="img/iterate02.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="iteration-card">
+                                    <h5 class="iteration-title"><i class="fas fa-sync-alt"></i> 刪除 15 秒高風險來電提示 (降低干擾)
+                                    </h5>
+                                    <div class="detail-img-placeholder small-placeholder">
+                                        <img src="img/iterate03.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="iteration-card">
+                                    <h5 class="iteration-title"><i class="fas fa-sync-alt"></i> 新增新手教學步驟 (Onboarding)
+                                    </h5>
+                                    <div class="detail-img-placeholder small-placeholder">
+                                        <img src="img/iterate04.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="iteration-card">
+                                    <h5 class="iteration-title"><i class="fas fa-sync-alt"></i> 守望者自訂通知頻率</h5>
+                                    <div class="detail-img-placeholder small-placeholder">
+                                        <img src="img/iterate05.jpg" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="highlight-box" style="margin-top: 3rem;">
+                                <div class="highlight-label"><i class="fas fa-code"></i> 技術落地</div>
+
+                                <div class="tech-landing-stack">
+
+                                    <div class="tech-card">
+                                        <h4 class="tech-title brand-android">
+                                            <i class="fab fa-android"></i> Android 支援完整的即時互助
+                                        </h4>
+                                        <ul class="tech-list check-list">
+                                            <li>可偵測通話狀態</li>
+                                            <li>可在通話中顯示提醒</li>
+                                            <li>可在條件成立時通知守望者</li>
+                                        </ul>
+                                        <p>另外，也因為45-75歲年齡層超過50％的使用者手持Android裝置，因此我們會將針對被守望者的功能完整落地於Android平台上</p>
+
+                                    </div>
+
+                                    <div class="tech-card">
+                                        <h4 class="tech-title brand-apple">
+                                            <i class="fab fa-apple"></i> iOS 的限制與技術調整
+                                        </h4>
+                                        <ul class="tech-list cross-list">
+                                            <li>無法知道是否接聽</li>
+                                            <li>無法在通話中介入</li>
+                                            <li>無法疊加 UI 在原生通話畫面</li>
+                                        </ul>
+
+                                        <div class="solution-title">
+                                            <i class="fas fa-lightbulb"></i> iOS 技術調整
+                                        </div>
+                                        <p
+                                            style="margin: 0; font-size: 0.95rem; line-height: 1.7; color: var(--dark); font-weight: 500;">
+                                            通話事件結束後，以「通知」提醒被守望者，再由被守望者決定是否通知守望者幫忙查證。
+                                        </p>
+                                        <img src="img/iostech.png" alt="iOS技術限制" class="img-fluid">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="p-reflection" class="article-section">
+                            <h3>08. 學習與反思</h3>
+                            <p>相較於記帳或雲端發票等生活化 APP，我們在訪談後發現，使用者對於「防詐」這件事並沒有強烈主動的動機，普遍認為防詐應該是「默默在背後保護」的機制。</p>
+                            <p>因此，我們團隊決定不朝向「遊戲化
+                                (Gamification)」的方向發展，而是選擇<strong>「情感動機」</strong>作為核心，透過家庭與親友間的羈絆，有效且溫暖地強化大眾回報與參與防詐的意願。這也是本次專案中最讓我印象深刻的策略轉換。
+                            </p>
+                            <br>
+                            <p>除此之外，由於AI科技的進步，我們這組導入了許多AI的工具，如NotebookLM協助我們紀錄會議以及質化訪談的逐字稿產出、Gemini讓我們能夠迅速發散思想，並能即時提供我們不熟悉的產業知識，更有組員結合Adobe
+                                Firefly以及Gemini來製作AI行銷影片，讓評審們更了解我們的設計概念以及產品架構，藉由這次團隊的合作，讓我了解到AI還有許多能夠發展以及應用的空間。</p>
+                            <div class="detail-img-placeholder">
+                                <img src="img/safewatchVideo.png" alt="AI工具製作行銷影片" class="img-fluid">
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div id="detail-cup" class="channel-section">
+            <div class="content-wrapper">
+                <div class="back-btn" onclick="switchChannel('works')"><i class="fas fa-arrow-left"></i> 返回作品列表</div>
+                <div class="project-article">
+                    <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">循環杯系統設計</h1>
+                    <div style="color: var(--primary); margin-bottom: 2rem;">Service Design • User Research</div>
+                    <p>探討台灣循環杯使用率低的原因，發現「歸還點過少」與「衛生疑慮」是最大痛點...</p>
+                    <div class="detail-img-placeholder">[ 服務藍圖 ]</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="detail-ecommerce" class="channel-section">
+            <div class="content-wrapper">
+                <div class="back-btn" onclick="switchChannel('works')"><i class="fas fa-arrow-left"></i> 返回作品列表</div>
+                <div class="project-article">
+                    <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">電商網頁與 Banner</h1>
+                    <div style="color: var(--primary); margin-bottom: 2rem;">Frontend • Visual Design • GSAP</div>
+                    <p>在雙11等大型檔期，運用 GSAP ScrollTrigger 創造動態視差效果...</p>
+                    <div class="detail-img-placeholder">[ RWD 活動頁面 ]</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="放大圖片">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
