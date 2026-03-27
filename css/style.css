@@ -1804,3 +1804,24 @@ main {
     padding: 0 20px; /* 配合手機版左右留白 */
   }
 }
+
+/* ========================================== */
+/* 📱 手機版專屬：強制解鎖滾動限制與防破版補丁 */
+/* ========================================== */
+@media screen and (max-width: 900px) {
+    /* 1. 解除 body 與 html 的滾動封印 */
+    html, body {
+        overflow-y: auto !important;   /* 強制允許上下滾動 */
+        overflow-x: hidden !important; /* 防止左右不小心滑動破版 */
+        height: auto !important;       /* 讓高度由內容自然撐開，不要鎖死 100vh */
+        position: static !important;   /* 避免 fixed 或 absolute 導致的滾動失效 */
+    }
+
+    /* 2. 確保專案內容區塊也能自然伸展 */
+    .channel-section {
+        height: auto !important;
+        overflow-y: visible !important;
+        /* 3. 貼心 UX：因為手機版下方有固定的導覽列，我們在最底部多留一點空白，以免內容被選單擋住 */
+        padding-bottom: 120px !important; 
+    }
+}

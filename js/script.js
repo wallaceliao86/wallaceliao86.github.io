@@ -1,61 +1,111 @@
-// 頁面切換邏輯
+// ==========================================
+// 🚀 頁面切換與網址路由 (Hash Routing) 核心邏輯
+// ==========================================
+
+// 1. 點擊導覽列按鈕時，只負責「改變網址」，不直接換畫面
 function switchChannel(channelId) {
+    window.location.hash = channelId;
+}
+
+// 2. 真正負責「執行淡入淡出動畫與切換」的底層函數
+function renderPage(channelId) {
     let menuId = channelId.startsWith('detail-') ? 'works' : channelId;
 
     // 更新導航按鈕狀態
     document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
     const activeBtns = Array.from(document.querySelectorAll('.nav-btn'))
-        .filter(btn => btn.getAttribute('onclick').includes(menuId));
+        .filter(btn => btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(menuId));
     if (activeBtns.length > 0) activeBtns[0].classList.add('active');
 
-    // 處理頁面淡入淡出
     const currentVisible = document.querySelector('.channel-section.visible');
     const targetSection = document.getElementById(channelId);
 
-    if (currentVisible === targetSection) return;
+    // 如果找不到目標區塊，或目標已經在畫面上，就不做任何事
+    if (!targetSection || currentVisible === targetSection) return;
 
+    // 處理頁面淡入淡出
     if (currentVisible) {
-        currentVisible.classList.remove('visible');
+        currentVisible.classList.remove('visible'); // 先淡出舊畫面
         setTimeout(() => {
-            currentVisible.classList.remove('active');
-            targetSection.classList.add('active');
-            void targetSection.offsetWidth; // Force Reflow
-            targetSection.classList.add('visible');
+            currentVisible.classList.remove('active'); // 徹底隱藏舊畫面
+            targetSection.classList.add('active'); // 顯示新畫面
+            void targetSection.offsetWidth; // 強制瀏覽器重繪 (Force Reflow)
+            targetSection.classList.add('visible'); // 淡入新畫面
 
-            // 頁面切換時自動回到頂部
+            // 切換時平滑滾回頂部
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
-        }, 500); // 配合 CSS transition 時間
+        }, 500); // 配合您的 CSS transition 時間
     } else {
+        // 如果畫面是一開始載入 (全空狀態)，直接顯示目標區塊
         targetSection.classList.add('active', 'visible');
     }
 }
 
-// 平滑捲動 (用於目錄點擊)
-function smoothScroll(e, targetId) {
-    e.preventDefault();
-    const target = document.getElementById(targetId);
-    if (target) {
-        // 判斷是否為手機版 (Header 在下方，上方不需預留太多空間)
-        const isMobile = window.innerWidth <= 900;
-        const headerOffset = isMobile ? 20 : 100; // 手機留少一點，PC留Header高
+// ==========================================
+// 🧠 終極版：智慧路由與平滑滾動大總管
+// ==========================================
 
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+function handleRouting() {
+    const currentHash = window.location.hash.replace('#', '');
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
+    // 1. 如果網址沒有 Hash，預設回到履歷首頁
+    if (!currentHash) {
+        renderPage('about');
+        return;
+    }
+
+    const targetElement = document.getElementById(currentHash);
+    if (!targetElement) return;
+
+    // 2. 關鍵判斷：這是「主頁面」還是「內部小標題」？
+    if (targetElement.classList.contains('channel-section')) {
+        // 情況 A：是主頁面 -> 執行完整的淡入淡出換頁
+        renderPage(currentHash);
+    } else {
+        // 情況 B：是專案內部的小錨點
+        const parentSection = targetElement.closest('.channel-section');
+        const currentVisible = document.querySelector('.channel-section.visible');
+
+        if (parentSection && parentSection !== currentVisible) {
+            // 如果是在別的頁面點擊內部連結：先切換頁面，等動畫結束後滾動
+            renderPage(parentSection.id);
+            setTimeout(() => {
+                executeScroll(targetElement);
+            }, 550);
+        } else if (parentSection && parentSection === currentVisible) {
+            // ✨ 手機版修復核心：如果已經在同一個頁面，強制呼叫滾動小幫手！
+            executeScroll(targetElement);
+        }
     }
 }
 
+// 🚀 獨立出來的滾動小幫手 (正式取代舊的 smoothScroll)
+function executeScroll(target) {
+    const isMobile = window.innerWidth <= 900;
+    const headerOffset = isMobile ? 20 : 100; // 手機留少一點，PC留Header高
+
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+}
+
+// 替換掉原本的 hashchange 與 DOMContentLoaded，統一交給 handleRouting 處理
+window.addEventListener('hashchange', handleRouting);
+window.addEventListener('DOMContentLoaded', handleRouting);
+
+// ==========================================
 // --- ScrollSpy (捲動監聽) ---
+// ==========================================
 const observerOptions = {
     root: null,
-    rootMargin: '-100px 0px -60% 0px', // 關鍵：讓判斷線位於視窗上方區域
+    rootMargin: '-100px 0px -60% 0px',
     threshold: 0
 };
 
@@ -89,49 +139,39 @@ document.querySelectorAll('.article-section').forEach((section) => {
     observer.observe(section);
 });
 
-// --- ★★★ 新增：燈箱 (Lightbox) 控制邏輯 ★★★ ---
-
+// ==========================================
+// --- 燈箱 (Lightbox) 控制邏輯 ---
+// ==========================================
 document.addEventListener('DOMContentLoaded', function () {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    // 1. 取得網頁上所有可以被放大的圖片 (例如專案內頁的圖片佔位符)
-    // 您可以根據需求修改這個選擇器，例如改為 '.project-article img'
+    // 如果頁面上沒有燈箱元素，就停止執行以避免報錯
+    if (!lightbox || !lightboxImg) return;
+
     const images = document.querySelectorAll('.detail-img-placeholder img, .award-img, .iteration-card img');
 
     images.forEach(image => {
-        // 為每張圖片加上滑鼠指標樣式，提示可以點擊
         image.style.cursor = 'zoom-in';
-
         image.addEventListener('click', function () {
-            // A. 將燈箱設為激活狀態
             lightbox.classList.add('active');
-
-            // B. 將被點擊圖片的 src 傳給燈箱圖片
             lightboxImg.src = this.src;
-
-            // C. 取得圖片說明文字
-            // 方法一：取得圖片的 alt 屬性作為說明
-            // 方法二：(推薦) 在 HTML 圖片標籤上新增 data-caption 屬性
             const captionText = this.getAttribute('data-caption') || this.alt || '圖片樣張';
             lightboxCaption.textContent = captionText;
         });
     });
 
-    // 2. 關閉燈箱的邏輯
-    // 點擊關閉按鈕
     closeBtn.addEventListener('click', closeLightbox);
 
-    // 點擊黑色背景區域 (而非圖片本身)
     lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox || e.target === lightboxclose) {
+        // 修正了原本這裡的 e.target === lightboxclose 變數未定義錯誤
+        if (e.target === lightbox || e.target === closeBtn) {
             closeLightbox();
         }
     });
 
-    // 按下鍵盤 ESC 鍵
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             closeLightbox();
