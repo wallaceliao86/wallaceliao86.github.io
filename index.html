@@ -746,14 +746,103 @@
             </div>
         </div>
 
-        <div id="detail-cup" class="channel-section">
+<div id="detail-cup" class="channel-section">
+
+            <div class="hero-banner-image-only" style="background-image: url('img/cupHerobanner.jpg');">
+            </div>
+
             <div class="content-wrapper">
                 <div class="back-btn" onclick="switchChannel('works')"><i class="fas fa-arrow-left"></i> 返回作品列表</div>
-                <div class="project-article">
-                    <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">循環杯系統設計</h1>
-                    <div style="color: var(--primary); margin-bottom: 2rem;">Service Design • User Research</div>
-                    <p>探討台灣循環杯使用率低的原因，發現「歸還點過少」與「衛生疑慮」是最大痛點...</p>
-                    <div class="detail-img-placeholder">[ 服務藍圖 ]</div>
+                <div class="project-layout">
+                    
+                    <aside class="project-sidebar">
+                        <ul class="toc-list" id="project-toc-cup">
+                            <li><a href="#cup-intro" class="toc-link">專案背景與痛點</a></li>
+                            <li><a href="#cup-research" class="toc-link">使用者研究 (Persona & CJM)</a></li>
+                            <li><a href="#cup-analysis" class="toc-link">競品分析</a></li>
+                            <li><a href="#cup-flow" class="toc-link">服務藍圖與 User Flow</a></li>
+                            <li><a href="#cup-ui" class="toc-link">UI 介面設計</a></li>
+                            <li><a href="#cup-reflection" class="toc-link">學習與反思</a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="project-article">
+
+                        <div style="margin-bottom:3rem; padding-bottom:2rem; border-bottom:1px solid #eee;">
+                            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--dark);">循環杯系統設計</h1>
+                            <div style="color: var(--primary); font-weight: 600;">結合便利與環保的 UI/UX 服務流程設計</div>
+                        </div>
+
+                        <div class="role-highlight">
+                            <div class="role-item">
+                                <span class="role-label"><i class="fas fa-tasks"></i> 負責項目</span>
+                                <span class="role-value">UX 研究、UI 設計、Prototype</span>
+                            </div>
+                            <div class="role-item">
+                                <span class="role-label"><i class="far fa-clock"></i> 專案時間</span>
+                                <span class="role-value">2025/08 - 2025/10</span>
+                            </div>
+
+                            <div class="role-item" style="flex: 1.5;">
+                                <span class="role-label"><i class="fas fa-toolbox"></i> 使用工具</span>
+                                <div class="tools-list">
+                                    <img src="img/figma.png" alt="Figma" class="tool-logo" title="Figma">
+                                    <img src="img/notion.png" alt="Notion" class="tool-logo" title="Notion">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cup-intro" class="article-section">
+                            <h3>01. 專案背景與痛點</h3>
+                            <p>探討台灣循環杯使用率低的原因，發現「歸還點過少」與「衛生疑慮」是最大痛點。本專案旨在重新設計借用與歸還的體驗流程，降低使用者的環保門檻。</p>
+                            <div class="detail-img-placeholder">
+                                <i class="fas fa-image" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                [ 圖片：專案背景或情境圖 ]
+                            </div>
+                        </div>
+
+                        <div id="cup-research" class="article-section">
+                            <h3>02. 使用者研究 (Persona & CJM)</h3>
+                            <p>我們收斂出核心使用者的樣貌，並透過使用者旅程地圖（Customer Journey Map），找出在借用、飲用、到尋找歸還點過程中的情緒低谷與設計機會點。</p>
+                            <div class="detail-img-placeholder">
+                                <i class="fas fa-users" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                [ 圖片：Persona / User Journey Map ]
+                            </div>
+                        </div>
+
+                        <div id="cup-analysis" class="article-section">
+                            <h3>03. 競品分析</h3>
+                            <p>針對市場上現有的循環包裝服務（如 ClubZero、Muuse），分析其借還邏輯、押金機制與介面優缺點，作為我們系統架構的參考依據。</p>
+                            <div class="detail-img-placeholder">
+                                <i class="fas fa-table" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                [ 圖片：競品分析比較表 ]
+                            </div>
+                        </div>
+
+                        <div id="cup-flow" class="article-section">
+                            <h3>04. 服務藍圖與 User Flow</h3>
+                            <p>重新梳理了使用者從打開 APP、掃碼借杯、確認訂單，一直到尋找合作店家歸還的完整 User Flow，確保每一個節點都能順暢無阻。</p>
+                            <div class="detail-img-placeholder">
+                                <i class="fas fa-sitemap" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                [ 圖片：User Flow / Wireframe ]
+                            </div>
+                        </div>
+
+                        <div id="cup-ui" class="article-section">
+                            <h3>05. UI 介面設計</h3>
+                            <p>將繁瑣的流程轉化為直覺的介面。我們設計了清晰的地圖歸還指引、團購訂單總覽，以及個人化的環保成就頁面，提升使用者的成就感與持續使用的動機。</p>
+                            <div class="detail-img-placeholder">
+                                <i class="fas fa-mobile-alt" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                                [ 圖片：高保真 UI Mockups ]
+                            </div>
+                        </div>
+
+                        <div id="cup-reflection" class="article-section">
+                            <h3>06. 學習與反思</h3>
+                            <p>在這份專案中，我深入體會到服務設計不僅僅是畫出好看的介面，更需要考慮到線下實體流程（如店員操作、杯子清洗物流）的配合。如何用數位介面去彌補實體服務的斷點，是這次最大的收穫。</p>
+                        </div>
+
+                    </article>
                 </div>
             </div>
         </div>
@@ -783,6 +872,24 @@
             <img id="lightbox-img" src="" alt="放大圖片">
             <div id="lightbox-caption" class="lightbox-caption"></div>
         </div>
+    </div>
+
+    <div class="fab-container" id="fab-container">
+        <div class="mobile-toc-panel" id="mobile-toc-panel">
+            <div class="mobile-toc-header">
+                <span>專案目錄</span>
+                <i class="fas fa-times close-toc" id="close-toc-btn"></i>
+            </div>
+            <ul class="mobile-toc-list" id="mobile-toc-list"></ul>
+        </div>
+
+        <button class="fab-btn mobile-toc-btn" id="mobile-toc-btn" title="專案目錄">
+            <i class="fas fa-list-ul"></i>
+        </button>
+
+        <button class="fab-btn back-to-top-btn" id="back-to-top-btn" title="回到頂部">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </div>
 
     <script src="js/script.js"></script>

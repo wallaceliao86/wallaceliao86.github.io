@@ -75,7 +75,7 @@ header {
   max-height: var(--header-height);
 }
 
-.logo-img  {
+.logo-img {
   width: 45px;
   height: 45px;
 }
@@ -545,8 +545,6 @@ main {
   font-weight: 600;
   font-size: 0.85rem;
 }
-
-
 
 .timeline-list {
   list-style: none;
@@ -1389,7 +1387,6 @@ main {
   background-size: cover; /* 讓圖片等比例縮放，完全填滿整個區塊 */
 }
 
-
 /* --- 優化 PC 版經歷時間軸 (安全交錯疊加版) --- */
 @media (min-width: 901px) {
   .timeline-container {
@@ -1809,19 +1806,169 @@ main {
 /* 📱 手機版專屬：強制解鎖滾動限制與防破版補丁 */
 /* ========================================== */
 @media screen and (max-width: 900px) {
-    /* 1. 解除 body 與 html 的滾動封印 */
-    html, body {
-        overflow-y: auto !important;   /* 強制允許上下滾動 */
-        overflow-x: hidden !important; /* 防止左右不小心滑動破版 */
-        height: auto !important;       /* 讓高度由內容自然撐開，不要鎖死 100vh */
-        position: static !important;   /* 避免 fixed 或 absolute 導致的滾動失效 */
-    }
+  /* 1. 解除 body 與 html 的滾動封印 */
+  html,
+  body {
+    overflow-y: auto !important; /* 強制允許上下滾動 */
+    overflow-x: hidden !important; /* 防止左右不小心滑動破版 */
+    height: auto !important; /* 讓高度由內容自然撐開，不要鎖死 100vh */
+    position: static !important; /* 避免 fixed 或 absolute 導致的滾動失效 */
+  }
 
-    /* 2. 確保專案內容區塊也能自然伸展 */
-    .channel-section {
-        height: auto !important;
-        overflow-y: visible !important;
-        /* 3. 貼心 UX：因為手機版下方有固定的導覽列，我們在最底部多留一點空白，以免內容被選單擋住 */
-        padding-bottom: 120px !important; 
-    }
+  /* 2. 確保專案內容區塊也能自然伸展 */
+  .channel-section {
+    height: auto !important;
+    overflow-y: visible !important;
+    /* 3. 貼心 UX：因為手機版下方有固定的導覽列，我們在最底部多留一點空白，以免內容被選單擋住 */
+    padding-bottom: 120px !important;
+  }
+}
+
+/* ========================================== */
+/* 🚀 右下角浮動按鈕 (FAB) 與手機版目錄樣式 */
+/* ========================================== */
+.fab-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;
+  /* 預設隱藏，由 JS 控制顯示 */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* 當 JS 加上 .show 類別時才會浮現 */
+.fab-container.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* 統一的按鈕 UI */
+.fab-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(42, 157, 143, 0.4);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.fab-btn:hover {
+  transform: scale(1.1);
+  background-color: #21867a;
+}
+
+/* PC 版隱藏漢堡按鈕 */
+@media (min-width: 901px) {
+  .mobile-toc-btn {
+    display: none;
+  }
+}
+
+/* 手機版彈出式目錄面板 */
+.mobile-toc-panel {
+  position: absolute;
+  bottom: 130px; /* 位於按鈕群的上方 */
+  right: 0;
+  width: 260px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  border: 1px solid #eee;
+  /* 動畫設定 */
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  transform-origin: bottom right;
+}
+
+.mobile-toc-panel.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-toc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 1.05rem;
+}
+
+.close-toc {
+  cursor: pointer;
+  color: var(--gray);
+  font-size: 1.4rem;
+  padding: 0 5px;
+}
+
+.mobile-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.mobile-toc-list a {
+  display: block;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  margin-bottom: 5px;
+}
+
+.mobile-toc-list a:hover,
+.mobile-toc-list a.active {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* 手機版專屬覆蓋設定 */
+@media (max-width: 900px) {
+  .project-sidebar {
+    display: none !important; /* 🌟 徹底隱藏舊的水平滾動目錄 */
+  }
+  .fab-container {
+    /* 避開下方導覽列，往上推 */
+    bottom: 90px;
+    right: 20px;
+  }
+  .mobile-toc-panel {
+    bottom: 130px;
+  }
 }
