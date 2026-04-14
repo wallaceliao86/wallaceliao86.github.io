@@ -151,6 +151,28 @@ main {
   transform: translateY(0);
 }
 
+.channel-section[id^="detail-"] .project-title {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.channel-section[id^="detail-"] .project-title h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.channel-section[id^="detail-"] .project-title .project-titledescription {
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.role-highlight .role-item-tool {
+  flex: 1.5;
+}
+
 .hero-section {
   min-height: calc(100vh - var(--header-height));
   display: grid;
@@ -683,6 +705,10 @@ main {
   background-image: url("../img/thumbnail01.jpg");
 }
 
+.p-img03::after {
+  background-image: url("../img/thumbnail03.jpg");
+}
+
 .p-img i {
   position: relative;
   z-index: 2;
@@ -845,6 +871,18 @@ main {
   border-radius: 4px;
 }
 
+.article-section h4 {
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin-top: 10px;
+}
+
+.article-section h5 {
+  font-size: 1.2rem;
+  color: var(--dark);
+  padding-left: 10px;
+}
+
 .role-highlight {
   display: flex;
   gap: 20px;
@@ -943,15 +981,15 @@ main {
 .custom-check-list {
   list-style: none;
   padding-left: 0;
+  font-size: 1.05rem;
   margin-bottom: 2rem;
 }
 
 .custom-check-list li {
   position: relative;
-  padding-left: 30px;
+  padding-left: 40px;
   margin-bottom: 12px;
   line-height: 1.7;
-  color: #444;
 }
 
 .custom-check-list li::before {
@@ -960,7 +998,7 @@ main {
   font-weight: 900;
   color: var(--primary);
   position: absolute;
-  left: 0;
+  left: 10px;
   top: 2px;
 }
 
@@ -986,7 +1024,7 @@ main {
   border-left: 5px solid var(--primary);
   margin: 2.5rem 0;
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--dark);
   line-height: 1.8;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
@@ -1000,6 +1038,11 @@ main {
   color: var(--primary);
   margin-bottom: 12px;
   font-weight: 800;
+}
+
+.highlight-box p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
 }
 
 .award-img {
@@ -1054,6 +1097,13 @@ main {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
   border-color: #e0f2f1;
+}
+
+.explore-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .explore-card-title {
@@ -1132,18 +1182,17 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .iteration-card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .iteration-title {
-  font-size: 1.15rem;
-  color: var(--dark);
   margin: 0;
   display: flex;
   align-items: center;
@@ -1203,18 +1252,17 @@ main {
 
 .tech-list {
   list-style: none;
+  margin: 10px 10px 0;
   padding: 0;
-  margin: 0 0 25px 0;
 }
 
 .tech-list li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 15px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #444;
+  gap: 5px;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .tech-list li::before {
@@ -1232,13 +1280,13 @@ main {
 
 .check-list li::before {
   content: "\f00c";
-  background: rgba(164, 198, 57, 0.15);
-  color: #a4c639;
+  /* background: rgba(164, 198, 57, 0.15); */
+  color: #2cdc0d;
 }
 
 .cross-list li::before {
   content: "\f00d";
-  background: rgba(230, 57, 70, 0.1);
+  /* background: rgba(230, 57, 70, 0.1); */
   color: #e63946;
 }
 
@@ -1387,6 +1435,10 @@ main {
   background-size: cover; /* 讓圖片等比例縮放，完全填滿整個區塊 */
 }
 
+#detail-safewatch .hero-banner-image-only {
+  background-image: url("../img/safewatchHerobanner.jpg");
+}
+
 /* --- 優化 PC 版經歷時間軸 (安全交錯疊加版) --- */
 @media (min-width: 901px) {
   .timeline-container {
@@ -1519,7 +1571,7 @@ main {
     display: none;
   }
   .channel-section {
-    padding: 40px 0 20px;
+    padding: 0 0 20px;
     justify-content: flex-start;
   }
   .hero-section {
@@ -1544,6 +1596,60 @@ main {
   .hero-tag {
     margin-bottom: 1rem;
   }
+
+  .channel-section[id^="detail-"] .project-title {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .channel-section[id^="detail-"] .project-title h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+
+  .channel-section[id^="detail-"] .project-title .project-titledescription {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .article-section h5 {
+    font-size: 1.1rem ;
+  }
+
+  .highlight-box {
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    border-left: unset;
+    border-top: 4px solid var(--primary);
+    margin: 2.5rem 0;
+    font-size: 1.15rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+  }
+
+  .highlight-label {
+    gap: 8px;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-weight: 800;
+  }
+
+  .highlight-box p {
+    font-size: 1rem;
+  }
+
+  .article-section {
+    scroll-margin-top: 140px;
+    margin-bottom: 2rem;
+  }
+
+  .article-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
   .timeline-container {
     padding: 20px 0;
   }
@@ -1749,6 +1855,10 @@ main {
   line-height: 1.7;
 }
 
+#works .content-wrapper {
+  max-width: 1200px;
+}
+
 /* --- 手機版 RWD (請將這段放入現有的 @media (max-width: 900px) 內) --- */
 @media (max-width: 900px) {
   .resume-top {
@@ -1821,6 +1931,36 @@ main {
     overflow-y: visible !important;
     /* 3. 貼心 UX：因為手機版下方有固定的導覽列，我們在最底部多留一點空白，以免內容被選單擋住 */
     padding-bottom: 120px !important;
+  }
+
+  /* ========================================== */
+  /* 📱 手機版：專案內頁專屬寬度/邊距控制 */
+  /* ========================================== */
+  /* 1. 將最外層 main 容器的預設邊距 (20px) 歸零，解除全站封印 */
+  main.container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 2. 把標準邊距 (20px) 還給「非專案」的一般頁面，保持原本的排版 */
+  #about,
+  #experience,
+  #works {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* 3. 🎯 針對所有「專案詳細資訊頁」(ID 開頭為 detail- 的區塊) 單獨設定寬度！ */
+  .channel-section[id^="detail-"] {
+    /* 您可以在這裡自由調整！數值越小，專案內容撐得越寬 */
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* 💡 貼心優化：把專案白底卡片本身的內距也調小一點，讓手機版能塞下更多文字與圖片 */
+  .project-article {
+    padding: 1.5rem 1rem !important;
+    border-radius: 16px !important; /* 卡片變寬了，圓角稍微縮小一點會更好看 */
   }
 }
 
@@ -1971,4 +2111,77 @@ main {
   .mobile-toc-panel {
     bottom: 130px;
   }
+}
+
+/* ========================================== */
+/* ✨ 現代化客製化 Tooltip */
+/* ========================================== */
+.custom-tooltip {
+  position: relative;
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px dashed var(--primary);
+  cursor: help;
+}
+
+.custom-tooltip i {
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+/* Tooltip 的黑色對話框本體 */
+.custom-tooltip::after {
+  content: attr(data-tooltip); /* 自動抓取 HTML 裡的文字 */
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: var(--dark);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 260px; /* 限制寬度，讓長文字自動換行 */
+  white-space: normal;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* 預設隱藏與動畫過場 */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  z-index: 100;
+  pointer-events: none; /* 避免滑鼠干擾 */
+}
+
+/* Tooltip 的向下小三角形 */
+.custom-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  border-width: 7px;
+  border-style: solid;
+  border-color: var(--dark) transparent transparent transparent;
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  z-index: 100;
+}
+
+/* 滑鼠移入時，觸發動畫顯示 */
+.custom-tooltip:hover::after,
+.custom-tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
