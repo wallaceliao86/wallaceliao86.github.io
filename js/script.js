@@ -252,27 +252,49 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ==========================================
-// --- 燈箱 (Lightbox) 控制邏輯 ---
+// --- 燈箱 (Lightbox) 控制邏輯 (支援圖片與影片) ---
 // ==========================================
 document.addEventListener("DOMContentLoaded", function () {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxVideo = document.getElementById("lightbox-video");
   const lightboxCaption = document.getElementById("lightbox-caption");
   const closeBtn = document.querySelector(".lightbox-close");
 
-  if (!lightbox || !lightboxImg) return;
+  if (!lightbox) return;
 
-  const images = document.querySelectorAll(
-    ".detail-img-placeholder img, .award-img, .iteration-card img",
+  // 1. 抓取所有可以放大的媒體 (加上了 .demo-video)
+  const mediaElements = document.querySelectorAll(
+    ".detail-img-placeholder img, .award-img, .iteration-card img, .demo-video",
   );
 
-  images.forEach((image) => {
-    image.style.cursor = "zoom-in";
-    image.addEventListener("click", function () {
+  mediaElements.forEach((media) => {
+    media.style.cursor = "zoom-in";
+
+    media.addEventListener("click", function () {
       lightbox.classList.add("active");
-      lightboxImg.src = this.src;
+
+      // 判斷點擊的是影片 (VIDEO) 還是圖片 (IMG)
+      if (this.tagName.toLowerCase() === "video") {
+        // 隱藏圖片，顯示影片
+        lightboxImg.style.display = "none";
+        lightboxVideo.style.display = "block";
+
+        // 抓取影片網址 (從 <source> 標籤或 src 屬性)
+        const sourceTag = this.querySelector("source");
+        const videoSrc = sourceTag ? sourceTag.src : this.src;
+
+        lightboxVideo.src = videoSrc;
+        lightboxVideo.play(); // 自動播放
+      } else {
+        // 隱藏影片，顯示圖片
+        lightboxVideo.style.display = "none";
+        lightboxImg.style.display = "block";
+        lightboxImg.src = this.src;
+      }
+
       const captionText =
-        this.getAttribute("data-caption") || this.alt || "圖片樣張";
+        this.getAttribute("data-caption") || this.alt || "放大檢視";
       lightboxCaption.textContent = captionText;
     });
   });
@@ -293,6 +315,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function closeLightbox() {
     lightbox.classList.remove("active");
+
+    // 💡 關鍵：關閉燈箱時，必須把影片暫停並清空來源，否則背景會有幽靈聲音或佔用效能
+    if (lightboxVideo) {
+      lightboxVideo.pause();
+      lightboxVideo.src = "";
+    }
   }
 });
 

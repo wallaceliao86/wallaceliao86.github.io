@@ -136,7 +136,6 @@ header {
 /* 03. 主佈局與通用區塊 (Main Layout & Sections) */
 /* ========================================== */
 main {
-  min-height: 100vh;
   position: relative;
 }
 
@@ -144,13 +143,17 @@ main {
   display: none;
   min-height: calc(100vh - var(--header-height));
   flex-direction: column;
-  padding: 0 0 80px 0;
+  padding: 0 0 40px 0;
   opacity: 0;
   transform: translateY(20px);
   transition:
     opacity 0.5s ease,
     transform 0.5s ease;
   width: 100%;
+}
+
+#works.channel-section {
+  min-height: calc(70vh - var(--header-height));
 }
 
 .channel-section.active {
@@ -459,7 +462,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 1000px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 2rem auto;
 }
 .edu-grid .timeline-card {
   width: 100%;
@@ -528,10 +531,10 @@ main {
   text-align: left;
   pointer-events: auto;
 }
-.timeline-card:hover {
+/* .timeline-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .timeline-row.left .timeline-card::before {
   content: " ";
@@ -806,6 +809,11 @@ main {
   background-image: url("../img/safewatchHerobanner.jpg");
 }
 
+#detail-ecommerce .hero-banner-image-only {
+  height: 0;
+  min-height: unset;
+}
+
 .project-layout {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -813,9 +821,10 @@ main {
   align-items: start;
   position: relative;
 }
+/* 尋找原本的 .project-sidebar，將 top 改為 160px */
 .project-sidebar {
   position: sticky;
-  top: 120px;
+  top: 160px; /* 🎯 原本是 120px，往下退一點，把空間讓給返回按鈕 */
   background: white;
   padding: 20px 15px;
   border-radius: 12px;
@@ -859,8 +868,9 @@ main {
   line-height: 1.9;
   color: #444;
 }
+/* 尋找原本的 .article-section，將 scroll-margin-top 改為 180px */
 .article-section {
-  scroll-margin-top: 140px;
+  scroll-margin-top: 180px; /* 🎯 原本是 140px，讓點擊目錄跳轉時，標題不會被返回按鈕蓋住 */
   margin-bottom: 4rem;
 }
 .article-section h3 {
@@ -981,20 +991,45 @@ main {
   /* min-height: 320px; */
   margin: 0;
 }
+/* ========================================== */
+/* 📌 專案內頁：黏性「返回列表」膠囊按鈕 */
+/* ========================================== */
 .back-btn {
+  position: sticky;
+  top: 100px; /* 閃過 PC 版 80px 的上方導覽列，留 20px 呼吸空間 */
+  z-index: 900; /* 確保浮在內文與圖片之上 */
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 1rem;
-  color: var(--gray);
-  text-decoration: none;
-  cursor: pointer;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
   font-weight: 600;
-  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  /* ✨ 升級為毛玻璃膠囊，避免滑動時跟底下的文字重疊打架 */
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 8px 18px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  align-self: flex-start; /* 確保按鈕不會被拉伸 */
 }
+
 .back-btn:hover {
   color: var(--primary);
-  transform: translateX(-5px);
+  transform: translateY(-3px); /* 改成微微向上漂浮，取代原本的往左移 */
+  box-shadow: 0 8px 20px rgba(42, 157, 143, 0.15);
+  border-color: var(--primary-light);
+}
+
+/* 📱 手機版：因為導覽列在最下方，所以要把 top 貼齊螢幕頂端 */
+@media (max-width: 900px) {
+  .back-btn {
+    top: 20px;
+  }
 }
 
 /* 文章內文常用列表與卡片 */
@@ -1279,12 +1314,22 @@ main {
   align-items: center;
   gap: 15px;
 }
-#lightbox-img {
+/* 燈箱內的圖片與影片樣式共用設定 */
+#lightbox-img,
+#lightbox-video {
   max-width: 100%;
   max-height: 80vh;
   border-radius: 8px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
   object-fit: contain;
+  outline: none; /* 移除影片點擊時的預設藍框 */
+}
+
+/* 讓網頁內的展示影片，滑鼠移過去也有放大鏡提示 */
+.demo-video {
+  cursor: zoom-in;
+  width: 100%;
+  border-radius: 8px;
 }
 .lightbox-caption {
   color: #9d9d9d;
@@ -1609,24 +1654,27 @@ main {
 
   /* 區塊與容器調整 */
   .channel-section {
-    padding: 0 0 120px !important;
+    padding: 0 0 80px !important;
     justify-content: flex-start;
     height: auto !important;
     overflow-y: visible !important;
   }
-  main.container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+
   #about,
   #experience,
   #works {
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .channel-section[id^="detail-"] {
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .channel-title {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
   }
 
   /* Hero 首頁 */
@@ -1636,6 +1684,7 @@ main {
     height: auto;
     padding-top: 2rem;
     gap: 2rem;
+    justify-content: center;
   }
   .hero-actions {
     justify-content: center;
@@ -1645,12 +1694,16 @@ main {
     width: 260px;
     height: 260px;
   }
+  .hero-text {
+    text-align: center;
+  }
   .hero-text h1 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
   }
   .hero-tag {
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   /* 履歷與學歷 */
@@ -1706,6 +1759,7 @@ main {
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
+
   .timeline-gallery img {
     height: 100px;
   }
@@ -1734,7 +1788,7 @@ main {
     font-weight: 600;
   }
   .article-section {
-    scroll-margin-top: 140px;
+    scroll-margin-top: 80px; /* 手機版返回按鈕在最上方，留 80px 剛剛好 */
     margin-bottom: 2rem;
   }
   .article-section h3 {
@@ -1782,6 +1836,22 @@ main {
   }
 }
 
+@media (max-width: 900px) and (min-width: 769px) {
+  .projects-grid {
+    /* 確保在這個區間內是嚴格的兩欄排版 */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 🎯 關鍵魔法：選取「剛好是第三個，且是最後一個」的卡片 */
+  .project-card:last-child:nth-child(3) {
+    grid-column: 1 / -1; /* 1. 叫它跨越兩欄，佔滿整行 */
+    justify-self: center; /* 2. 在佔滿的整行中，把自己水平置中 */
+
+    /* 3. 寬度計算：50% 減去 gap (40px) 的一半，確保它跟上面的卡片一模一樣寬！ */
+    width: calc(50% - 20px);
+  }
+}
+
 /* ========================================== */
 /* 11. Media Queries: 小手機 (Max-width: 768px) */
 /* ========================================== */
@@ -1815,6 +1885,14 @@ main {
   .role-highlight {
     border-radius: 12px;
     padding: 20px;
+  }
+
+  .timeline-info {
+    flex-direction: column !important;
+  }
+
+  .channel-section {
+    padding: 0 0 20px !important;
   }
 }
 
@@ -1879,10 +1957,10 @@ main {
   height: 100%;
 }
 
-.expertise-card:hover {
+/* .expertise-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .expertise-img {
   height: 180px; /* 控制圖片高度 */
@@ -1924,11 +2002,11 @@ main {
   .expertise-grid {
     /* 🎯 手機版：二排一列 */
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 30px 20px;
   }
 
   .expertise-img {
-    height: 140px; /* 手機版圖片高度稍微縮小 */
+    height: 160px; /* 手機版圖片高度稍微縮小 */
   }
 
   .expertise-content {
@@ -1936,12 +2014,12 @@ main {
   }
 
   .expertise-title {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 
   .expertise-desc {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
 
@@ -2051,14 +2129,9 @@ main {
   font-weight: 500;
 }
 
-.email {
+.contact-email {
   color: var(--primary);
   font-size: 2rem;
-}
-
-.contact-email {
-  color: var(--dark);
-  font-size: 1.3rem;
   font-weight: 700;
   text-decoration: none;
   transition: color 0.3s;
@@ -2101,17 +2174,27 @@ main {
     border-radius: 20px;
     padding: 25px 20px;
     gap: 12px;
-    width: 100%;
-    max-width: 320px;
+    width: 90%;
   }
-  .say-hi {
-    font-size: 1rem;
-  }
+
   .contact-email {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
   .copy-email-btn {
     width: 100%; /* 手機版按鈕滿版比較好按 */
     padding: 10px 0;
   }
+}
+
+/* ========================================== */
+/* 📱 手機版專案目錄按鈕：智慧顯示控制 */
+/* ========================================== */
+/* 1. 預設在所有頁面都先隱藏目錄按鈕 */
+#mobile-toc-btn {
+  display: none !important;
+}
+
+/* 2. 🎯 核心魔法：只有當畫面上的 active 區塊，其 ID 是以 detail- 開頭時，才顯示按鈕 */
+body:has(.channel-section[id^="detail-"].active) #mobile-toc-btn {
+  display: flex !important;
 }

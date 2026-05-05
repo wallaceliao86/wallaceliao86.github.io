@@ -28,7 +28,7 @@
       <div class="container header-content">
         <div class="logo" onclick="switchChannel('about')">
           <div class="logo-img">
-            <img src="img/LOGO.png" alt="" class="img-fluid" />
+            <img src="img/LOGO.png" alt="Wallace Liao" class="img-fluid" />
           </div>
           <div class="logo-name">韋承 Wallace</div>
         </div>
@@ -39,12 +39,14 @@
           <button class="nav-btn" onclick="switchChannel('works')">
             <i class="fas fa-layer-group"></i> 我的作品
           </button>
-          <a
-            href="https://drive.google.com/file/d/1Z70dv8OgeScz4U9gQN5p5NI16tFKdBlv/view?usp=sharing"
-            target="_blank"
-            class="nav-resume-btn">
-            <i class="fas fa-download"></i> 下載履歷
-          </a>
+          <button class="nav-btn">
+            <a
+              href="https://drive.google.com/file/d/1Z70dv8OgeScz4U9gQN5p5NI16tFKdBlv/view?usp=sharing"
+              target="_blank"
+              class="nav-resume-btn">
+              <i class="fas fa-download"></i> 下載履歷
+            </a>
+          </button>
         </nav>
       </div>
     </header>
@@ -308,11 +310,11 @@
                   <img src="img/trplus01.jpg" alt="特力專案1" />
                   <img src="img/trplus02.jpg" alt="特力專案2" />
                 </div>
-                <button
+                <!-- <button
                   class="timeline-more-btn"
                   onclick="switchChannel('works')">
                   看更多設計作品 <i class="fas fa-arrow-right"></i>
-                </button>
+                </button> -->
               </div>
             </div>
             <div class="timeline-row left">
@@ -374,7 +376,7 @@
               </div>
               <ul class="timeline-list">
                 <li>參與問卷設計與質性研究專案，培養資料轉譯能力</li>
-                <li>具備問卷分析與統計思維基礎，GPA: 3.95 / 4.3</li>
+                <li>具備問卷分析與統計思維基礎</li>
               </ul>
             </div>
             <div class="timeline-card">
@@ -1511,6 +1513,7 @@
       </div>
 
       <div id="detail-ecommerce" class="channel-section">
+        <div class="hero-banner-image-only"></div>
         <div class="content-wrapper">
           <div class="back-btn" onclick="switchChannel('works')">
             <i class="fas fa-arrow-left"></i> 返回作品列表
@@ -1547,7 +1550,8 @@
                     loop
                     muted
                     playsinline
-                    style="width: 100%; border-radius: 8px">
+                    class="demo-video"
+                    data-caption="味旅義大利DEMO">
                     <source src="img/web-italy-pc.mp4" type="video/mp4" />
                     您的瀏覽器不支援影片播放
                   </video>
@@ -1559,7 +1563,8 @@
                     loop
                     muted
                     playsinline
-                    style="width: 100%; border-radius: 8px">
+                    class="demo-video"
+                    data-caption="世界地球日DEMO">
                     <source src="img/web-earthday-pc.mp4" type="video/mp4" />
                     您的瀏覽器不支援影片播放
                   </video>
@@ -1571,7 +1576,8 @@
                     loop
                     muted
                     playsinline
-                    style="width: 100%; border-radius: 8px">
+                    class="demo-video"
+                    data-caption="雙11慶DEMO">
                     <source src="img/web-mk1111-pc.mp4" type="video/mp4" />
                     您的瀏覽器不支援影片播放
                   </video>
@@ -1583,7 +1589,8 @@
                     loop
                     muted
                     playsinline
-                    style="width: 100%; border-radius: 8px">
+                    class="demo-video"
+                    data-caption="聖誕風銀行資訊DEMO">
                     <source src="img/web-bankxmas-pc.mp4" type="video/mp4" />
                     您的瀏覽器不支援影片播放
                   </video>
@@ -1639,7 +1646,7 @@
     <footer class="site-footer">
       <div class="contact-box">
         <!-- <span class="say-hi">Say hi</span> -->
-        <span class="email">wallace.liao86@gmail.com</span>
+        <div class="contact-email">wallace.liao86@gmail.com</div>
         <button
           class="copy-email-btn"
           id="copyEmailBtn"
@@ -1653,7 +1660,16 @@
       <span class="lightbox-close">&times;</span>
 
       <div class="lightbox-content">
-        <img id="lightbox-img" src="" alt="放大圖片" />
+        <img id="lightbox-img" src="" alt="放大圖片" style="display: none" />
+
+        <video
+          id="lightbox-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          style="display: none"></video>
+
         <div id="lightbox-caption" class="lightbox-caption"></div>
       </div>
     </div>
