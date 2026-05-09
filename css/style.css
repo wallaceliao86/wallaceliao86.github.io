@@ -1,10 +1,7 @@
-/* ========================================== */
-/* 01. 基礎設定 (Variables & Reset) */
-/* ========================================== */
 :root {
   --primary: #2a9d8f;
   --primary-light: rgba(42, 157, 143, 0.1);
-  --secondary: #e9c46a;
+  --secondary: #ff521f;
   --dark: #264653;
   --light: #f8f9fa;
   --gray: #6c757d;
@@ -12,7 +9,6 @@
   --font-main:
     "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +16,6 @@
   font-family: var(--font-main);
   scroll-behavior: smooth;
 }
-
 body {
   background-color: var(--light);
   color: #444;
@@ -29,28 +24,21 @@ body {
   font-size: 16px;
   padding-top: var(--header-height);
 }
-
 .img-fluid {
   width: 100%;
   max-width: 100%;
 }
-
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
 .content-wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* ========================================== */
-/* 02. 導覽列與 Header (Navigation) */
-/* ========================================== */
 header {
   position: fixed;
   top: 0;
@@ -64,14 +52,12 @@ header {
   display: flex;
   align-items: center;
 }
-
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: auto;
 }
-
 .logo {
   font-size: 1.6rem;
   font-weight: 800;
@@ -86,7 +72,6 @@ header {
   gap: 8px;
   max-height: var(--header-height);
 }
-
 .logo-img {
   width: 45px;
   height: 45px;
@@ -97,8 +82,8 @@ header {
 .nav-menu {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
-
 .nav-btn {
   background: none;
   border: none;
@@ -113,7 +98,6 @@ header {
   align-items: center;
   gap: 6px;
 }
-
 .nav-btn:hover {
   color: var(--primary);
 }
@@ -131,14 +115,30 @@ header {
   background: var(--primary);
   border-radius: 4px 4px 0 0;
 }
-
-/* ========================================== */
-/* 03. 主佈局與通用區塊 (Main Layout & Sections) */
-/* ========================================== */
+.nav-resume-btn {
+  background-color: var(--primary);
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  margin-left: 10px;
+}
+.nav-resume-btn:hover {
+  transform: translateY(2px);
+  background-color: #21867a;
+}
 main {
   position: relative;
 }
-
 .channel-section {
   display: none;
   min-height: calc(100vh - var(--header-height));
@@ -151,11 +151,9 @@ main {
     transform 0.5s ease;
   width: 100%;
 }
-
 #works.channel-section {
   min-height: calc(70vh - var(--header-height));
 }
-
 .channel-section.active {
   display: flex;
 }
@@ -163,7 +161,6 @@ main {
   opacity: 1;
   transform: translateY(0);
 }
-
 .channel-title {
   font-size: 2.5rem;
   color: var(--dark);
@@ -173,7 +170,6 @@ main {
   font-weight: 700;
   position: relative;
 }
-
 .channel-title::after {
   content: "";
   display: block;
@@ -183,10 +179,6 @@ main {
   margin: 15px auto 0;
   border-radius: 2px;
 }
-
-/* ========================================== */
-/* 04. 關於我 (About & Hero) */
-/* ========================================== */
 .hero-section {
   min-height: calc(80vh - var(--header-height));
   display: grid;
@@ -196,7 +188,6 @@ main {
   width: 100%;
   margin-bottom: 1rem;
 }
-
 .hero-text h1 {
   font-size: 3.5rem;
   line-height: 1.2;
@@ -212,7 +203,6 @@ main {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
 .hero-tag {
   background: rgba(42, 157, 143, 0.1);
   color: var(--primary);
@@ -225,14 +215,12 @@ main {
   align-items: center;
   gap: 8px;
 }
-
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
-
 .cta-btn {
   background: var(--dark);
   color: white;
@@ -247,11 +235,9 @@ main {
   align-items: center;
   gap: 10px;
 }
-
 .cta-btn:hover {
   transform: translateY(-3px);
 }
-
 .social-links {
   display: flex;
   gap: 15px;
@@ -277,7 +263,6 @@ main {
   color: var(--primary);
   border-color: var(--primary);
 }
-
 .photo-container {
   width: 100%;
   display: flex;
@@ -301,7 +286,6 @@ main {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 30px 80px rgba(42, 157, 143, 0.35);
 }
-
 .profile-img {
   width: 100%;
   height: 100%;
@@ -309,7 +293,6 @@ main {
   filter: brightness(1.05) contrast(1.05);
   transition: 0.5s;
 }
-
 .floating-icon {
   position: absolute;
   background: white;
@@ -348,7 +331,6 @@ main {
   animation-delay: 4s;
   color: #e76f51;
 }
-
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -360,10 +342,56 @@ main {
     transform: translateY(0px);
   }
 }
-
-/* ========================================== */
-/* 05. 履歷與學歷 (Experience & Resume) */
-/* ========================================== */
+.about-expertise {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+.expertise-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.expertise-img {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+.expertise-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.expertise-content {
+  padding: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.expertise-title {
+  font-size: 1.2rem;
+  color: var(--dark);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+.expertise-desc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+}
 .resume-top {
   text-align: center;
   padding: 2rem 0 3rem;
@@ -397,7 +425,6 @@ main {
   color: var(--primary);
   font-size: 1.1rem;
 }
-
 .resume-pdf-btn {
   display: inline-block;
   background-color: var(--primary);
@@ -413,7 +440,6 @@ main {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(143, 160, 201, 0.4);
 }
-
 .resume-layout {
   display: flex;
   gap: 60px;
@@ -433,16 +459,12 @@ main {
 .resume-content {
   flex: 1;
 }
-
 .resume-content i {
   color: var(--primary);
 }
-
 .resume-skills-grid {
   display: grid;
-  /* 🎯 將原本的 1fr 1fr 改為 repeat(3, 1fr) 也就是三等份 */
   grid-template-columns: repeat(3, 1fr);
-  /* 將原本 40px 的間距稍微縮小一點，讓三張卡片排起來更緊湊好看 */
   gap: 30px;
 }
 .skill-item h4 {
@@ -456,7 +478,6 @@ main {
   font-size: 0.95rem;
   line-height: 1.7;
 }
-
 .edu-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -470,8 +491,6 @@ main {
 .edu-grid .timeline-card::before {
   display: none !important;
 }
-
-/* --- 職涯時間軸 (Timeline) --- */
 .timeline-container {
   position: relative;
   max-width: 1000px;
@@ -519,7 +538,6 @@ main {
   transform: translateX(-50%);
   box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.2);
 }
-
 .timeline-card {
   width: calc(50% - 40px);
   background: white;
@@ -531,11 +549,6 @@ main {
   text-align: left;
   pointer-events: auto;
 }
-/* .timeline-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-} */
-
 .timeline-row.left .timeline-card::before {
   content: " ";
   position: absolute;
@@ -560,7 +573,6 @@ main {
   border-width: 10px 10px 10px 0;
   border-right-color: white;
 }
-
 .timeline-header {
   margin-bottom: 0.5rem;
 }
@@ -613,7 +625,6 @@ main {
   left: 0;
   font-weight: bold;
 }
-
 .timeline-badges {
   display: flex;
   flex-wrap: wrap;
@@ -664,10 +675,6 @@ main {
 .timeline-more-btn:hover {
   color: var(--primary);
 }
-
-/* ========================================== */
-/* 06. 作品列表 (Projects Grid) */
-/* ========================================== */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -691,7 +698,6 @@ main {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
-
 .p-img {
   height: 240px;
   background-size: cover;
@@ -728,7 +734,6 @@ main {
   opacity: 0.9;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-
 .ribbon-wrapper {
   position: absolute;
   top: -20px;
@@ -742,7 +747,7 @@ main {
 .ribbon {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #ff521f;
+  background-color: var(--secondary);
   color: white;
   font-size: 0.85rem;
   font-weight: 700;
@@ -750,7 +755,6 @@ main {
   border-radius: 6px;
   box-shadow: 0 5px 15px rgba(255, 82, 31, 0.3);
 }
-
 .p-content {
   padding: 2rem;
   flex: 1;
@@ -788,10 +792,6 @@ main {
   align-items: center;
   gap: 5px;
 }
-
-/* ========================================== */
-/* 07. 專案詳細資訊 (Project Article & Sidebar) */
-/* ========================================== */
 .hero-banner-image-only {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -804,16 +804,13 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #detail-safewatch .hero-banner-image-only {
   background-image: url("../img/safewatchHerobanner.jpg");
 }
-
 #detail-ecommerce .hero-banner-image-only {
   height: 0;
   min-height: unset;
 }
-
 .project-layout {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -821,10 +818,9 @@ main {
   align-items: start;
   position: relative;
 }
-/* 尋找原本的 .project-sidebar，將 top 改為 160px */
 .project-sidebar {
   position: sticky;
-  top: 160px; /* 🎯 原本是 120px，往下退一點，把空間讓給返回按鈕 */
+  top: 160px;
   background: white;
   padding: 20px 15px;
   border-radius: 12px;
@@ -859,7 +855,6 @@ main {
   font-weight: 700;
   border-left: 3px solid var(--primary);
 }
-
 .project-article {
   background: white;
   padding: 3rem;
@@ -868,9 +863,8 @@ main {
   line-height: 1.9;
   color: #444;
 }
-/* 尋找原本的 .article-section，將 scroll-margin-top 改為 180px */
 .article-section {
-  scroll-margin-top: 180px; /* 🎯 原本是 140px，讓點擊目錄跳轉時，標題不會被返回按鈕蓋住 */
+  scroll-margin-top: 180px;
   margin-bottom: 4rem;
 }
 .article-section h3 {
@@ -899,7 +893,6 @@ main {
   color: var(--dark);
   padding-left: 10px;
 }
-
 .channel-section[id^="detail-"] .project-title {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
@@ -915,7 +908,6 @@ main {
   color: var(--primary);
   font-weight: 600;
 }
-
 .role-highlight {
   display: flex;
   gap: 20px;
@@ -967,11 +959,9 @@ main {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
-
 .detail-img-placeholder {
   width: 100%;
   height: auto;
-  /* min-height: 350px; */
   background: #ffffff;
   border-radius: 12px;
   margin: 2rem 0;
@@ -980,7 +970,6 @@ main {
   justify-content: center;
   color: var(--gray);
   font-size: 1rem;
-  /* border: 2px solid var(--primary-light); */
   padding: 12px;
   flex-direction: column;
   gap: 12px;
@@ -988,16 +977,12 @@ main {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
 }
 .detail-img-placeholder.small-placeholder {
-  /* min-height: 320px; */
   margin: 0;
 }
-/* ========================================== */
-/* 📌 專案內頁：黏性「返回列表」膠囊按鈕 */
-/* ========================================== */
 .back-btn {
   position: sticky;
-  top: 100px; /* 閃過 PC 版 80px 的上方導覽列，留 20px 呼吸空間 */
-  z-index: 900; /* 確保浮在內文與圖片之上 */
+  top: 100px;
+  z-index: 900;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1007,32 +992,20 @@ main {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
-
-  /* ✨ 升級為毛玻璃膠囊，避免滑動時跟底下的文字重疊打架 */
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   padding: 8px 18px;
   border-radius: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border: 1px solid #eee;
-  align-self: flex-start; /* 確保按鈕不會被拉伸 */
+  align-self: flex-start;
 }
-
 .back-btn:hover {
   color: var(--primary);
-  transform: translateY(-3px); /* 改成微微向上漂浮，取代原本的往左移 */
+  transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(42, 157, 143, 0.15);
   border-color: var(--primary-light);
 }
-
-/* 📱 手機版：因為導覽列在最下方，所以要把 top 貼齊螢幕頂端 */
-@media (max-width: 900px) {
-  .back-btn {
-    top: 20px;
-  }
-}
-
-/* 文章內文常用列表與卡片 */
 .custom-check-list {
   list-style: none;
   padding-left: 0;
@@ -1063,7 +1036,6 @@ main {
   line-height: 1.7;
   color: #444;
 }
-
 .highlight-box {
   background: linear-gradient(
     135deg,
@@ -1093,7 +1065,6 @@ main {
   font-size: 1.05rem;
   margin-bottom: 1rem;
 }
-
 .award-img {
   width: 100%;
   max-width: 550px;
@@ -1108,7 +1079,6 @@ main {
 .award-img:hover {
   transform: translateY(-3px);
 }
-
 .explore-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1156,7 +1126,6 @@ main {
   justify-content: center;
   font-size: 1.1rem;
 }
-
 .feature-split {
   display: flex;
   align-items: flex-start;
@@ -1177,7 +1146,6 @@ main {
   height: auto;
   border-radius: 35px;
 }
-
 .iteration-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1201,7 +1169,6 @@ main {
   color: var(--primary);
   font-size: 1.05rem;
 }
-
 .tech-landing-stack {
   display: flex;
   flex-direction: column;
@@ -1269,7 +1236,6 @@ main {
   content: "\f00d";
   color: #e63946;
 }
-
 .solution-title {
   font-weight: 800;
   color: var(--dark);
@@ -1282,10 +1248,6 @@ main {
 .solution-title i {
   color: var(--secondary);
 }
-
-/* ========================================== */
-/* 08. 元件：燈箱、FAB 與 Tooltip */
-/* ========================================== */
 .lightbox {
   display: none;
   position: fixed;
@@ -1314,7 +1276,6 @@ main {
   align-items: center;
   gap: 15px;
 }
-/* 燈箱內的圖片與影片樣式共用設定 */
 #lightbox-img,
 #lightbox-video {
   max-width: 100%;
@@ -1322,10 +1283,8 @@ main {
   border-radius: 8px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
   object-fit: contain;
-  outline: none; /* 移除影片點擊時的預設藍框 */
+  outline: none;
 }
-
-/* 讓網頁內的展示影片，滑鼠移過去也有放大鏡提示 */
 .demo-video {
   cursor: zoom-in;
   width: 100%;
@@ -1354,7 +1313,6 @@ main {
 .lightbox-close:hover {
   color: var(--secondary);
 }
-
 .fab-container {
   position: fixed;
   bottom: 30px;
@@ -1397,7 +1355,6 @@ main {
   transform: scale(1.1);
   background-color: #21867a;
 }
-
 .mobile-toc-panel {
   position: absolute;
   bottom: 130px;
@@ -1464,7 +1421,6 @@ main {
   color: var(--primary);
   font-weight: 700;
 }
-
 .custom-tooltip {
   position: relative;
   display: inline-block;
@@ -1524,10 +1480,73 @@ main {
   visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
+.site-footer {
+  text-align: center;
+  padding: 3rem 20px 6rem;
+  background-color: var(--light);
+}
+.contact-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eee;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.say-hi {
+  color: var(--gray);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.contact-email {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contact-email:hover {
+  color: var(--primary);
+}
+.copy-email-btn {
+  background-color: #8e9eab;
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s,
+    width 0.3s;
+}
+.copy-email-btn:hover {
+  transform: translateY(-2px);
+  background-color: var(--primary);
+}
+.copy-email-btn.copied {
+  background-color: #2cdc0d;
+  pointer-events: none;
+}
+#mobile-toc-btn {
+  display: none !important;
+}
 
-/* ========================================== */
-/* 09. Media Queries: 桌機版覆寫 (Min-width: 901px) */
-/* ========================================== */
+.show-pc {
+  display: block;
+}
+.show-mobile {
+  display: none;
+}
+
 @media (min-width: 901px) {
   .timeline-container {
     display: flex;
@@ -1591,17 +1610,12 @@ main {
     border-left-color: transparent;
     top: 32px;
   }
-
   .mobile-toc-btn {
     display: none;
   }
 }
 
-/* ========================================== */
-/* 10. Media Queries: 手機與平板 (Max-width: 900px) */
-/* ========================================== */
 @media (max-width: 900px) {
-  /* 解除滾動限制 */
   html,
   body {
     overflow-y: auto !important;
@@ -1614,8 +1628,6 @@ main {
     padding-top: 0;
     padding-bottom: 80px;
   }
-
-  /* 導覽列靠下 */
   header {
     top: auto;
     bottom: 0;
@@ -1651,33 +1663,51 @@ main {
   .nav-btn::after {
     display: none;
   }
-
-  /* 區塊與容器調整 */
+  .nav-resume-btn {
+    padding: 0;
+    background-color: transparent;
+    color: var(--gray) !important;
+    border-radius: 0;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-left: 0;
+    height: 100%;
+    justify-content: center;
+    box-shadow: none;
+    transition: color 0.3s;
+  }
+  .nav-resume-btn i {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+  }
+  .nav-resume-btn:hover {
+    transform: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--primary) !important;
+  }
   .channel-section {
     padding: 0 0 80px !important;
     justify-content: flex-start;
     height: auto !important;
     overflow-y: visible !important;
   }
-
   #about,
   #experience,
   #works {
     padding-left: 20px;
     padding-right: 20px;
   }
-
   .channel-section[id^="detail-"] {
     padding-left: 12px;
     padding-right: 12px;
   }
-
   .channel-title {
     margin-bottom: 2rem;
     margin-top: 3rem;
   }
-
-  /* Hero 首頁 */
   .hero-section {
     display: flex;
     flex-direction: column-reverse;
@@ -1705,8 +1735,27 @@ main {
     margin-bottom: 1rem;
     text-align: center;
   }
-
-  /* 履歷與學歷 */
+  .about-expertise {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+  .expertise-img {
+    height: 160px;
+  }
+  .expertise-content {
+    padding: 1rem;
+  }
+  .expertise-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .expertise-desc {
+    font-size: 1rem;
+  }
   .resume-top {
     padding: 2rem 1rem;
     margin-bottom: 3rem;
@@ -1727,14 +1776,12 @@ main {
   }
   .resume-skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* 手機螢幕較小，間距再稍微縮小一點 */
+    gap: 20px;
   }
   .edu-grid {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
-
-  /* 時間軸 */
   .timeline-container {
     padding: 20px 0;
   }
@@ -1759,12 +1806,9 @@ main {
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
-
   .timeline-gallery img {
     height: 100px;
   }
-
-  /* 專案內文排版 */
   .project-layout {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1788,7 +1832,7 @@ main {
     font-weight: 600;
   }
   .article-section {
-    scroll-margin-top: 80px; /* 手機版返回按鈕在最上方，留 80px 剛剛好 */
+    scroll-margin-top: 80px;
     margin-bottom: 2rem;
   }
   .article-section h3 {
@@ -1822,8 +1866,6 @@ main {
     gap: 5px;
     align-items: flex-start;
   }
-
-  /* FAB 與側邊目錄取代 */
   .project-sidebar {
     display: none !important;
   }
@@ -1834,27 +1876,25 @@ main {
   .mobile-toc-panel {
     bottom: 130px;
   }
+  body:has(.channel-section[id^="detail-"].active) #mobile-toc-btn {
+    display: flex !important;
+  }
+  .back-btn {
+    top: 20px;
+  }
 }
 
 @media (max-width: 900px) and (min-width: 769px) {
   .projects-grid {
-    /* 確保在這個區間內是嚴格的兩欄排版 */
     grid-template-columns: repeat(2, 1fr);
   }
-
-  /* 🎯 關鍵魔法：選取「剛好是第三個，且是最後一個」的卡片 */
   .project-card:last-child:nth-child(3) {
-    grid-column: 1 / -1; /* 1. 叫它跨越兩欄，佔滿整行 */
-    justify-self: center; /* 2. 在佔滿的整行中，把自己水平置中 */
-
-    /* 3. 寬度計算：50% 減去 gap (40px) 的一半，確保它跟上面的卡片一模一樣寬！ */
+    grid-column: 1 / -1;
+    justify-self: center;
     width: calc(50% - 20px);
   }
 }
 
-/* ========================================== */
-/* 11. Media Queries: 小手機 (Max-width: 768px) */
-/* ========================================== */
 @media (max-width: 768px) {
   .feature-split {
     flex-direction: column;
@@ -1875,8 +1915,6 @@ main {
   .lightbox-caption {
     font-size: 1rem;
   }
-
-  /* 關閉手機版的視差滾動，確保滑動順暢 */
   .hero-banner-image-only {
     height: 40vh;
     min-height: 250px;
@@ -1886,39 +1924,28 @@ main {
     border-radius: 12px;
     padding: 20px;
   }
-
   .timeline-info {
     flex-direction: column !important;
   }
-
   .channel-section {
     padding: 0 0 20px !important;
   }
-}
-
-/* ========================================== */
-/* 📱 極小螢幕手機防破版 (Max-width: 480px) */
-/* ========================================== */
-@media (max-width: 480px) {
-  .resume-skills-grid {
-    /* 在極窄的螢幕上，強迫退回一排一列，確保文字易讀性 */
-    grid-template-columns: 1fr;
+  .contact-box {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 25px 20px;
+    gap: 12px;
+    width: 90%;
+  }
+  .contact-email {
+    font-size: 1.3rem;
+  }
+  .copy-email-btn {
+    width: 100%;
+    padding: 10px 0;
   }
 }
 
-/* ========================================== */
-/* 📱 裝置專屬顯示控制類別 (PC vs Mobile) */
-/* ========================================== */
-
-/* 預設 (PC 版)：顯示 PC 元素，隱藏手機元素 */
-.show-pc {
-  display: block;
-}
-.show-mobile {
-  display: none;
-}
-
-/* 當螢幕寬度小於等於 767px (手機版) 時發生反轉 */
 @media (max-width: 767px) {
   .show-pc {
     display: none !important;
@@ -1928,273 +1955,11 @@ main {
   }
 }
 
-/* ========================================== */
-/* ✨ 我的擅長與優勢 (Expertise Cards) */
-/* ========================================== */
-.about-expertise {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.expertise-grid {
-  display: grid;
-  /* 🎯 PC 版：四排一列 */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  width: 100%;
-}
-
-.expertise-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* .expertise-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-} */
-
-.expertise-img {
-  height: 180px; /* 控制圖片高度 */
-  width: 100%;
-  overflow: hidden;
-}
-
-.expertise-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 確保圖片不變形，填滿區域 */
-}
-
-.expertise-content {
-  padding: 1.2rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.expertise-title {
-  font-size: 1.2rem;
-  color: var(--dark);
-  margin-bottom: 0.8rem;
-  font-weight: 700;
-}
-
-.expertise-desc {
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-/* ========================================== */
-/* 📱 響應式調整 (RWD) */
-/* ========================================== */
-@media (max-width: 900px) {
-  .expertise-grid {
-    /* 🎯 手機版：二排一列 */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px 20px;
-  }
-
-  .expertise-img {
-    height: 160px; /* 手機版圖片高度稍微縮小 */
-  }
-
-  .expertise-content {
-    padding: 1rem;
-  }
-
-  .expertise-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .expertise-desc {
-    font-size: 1rem;
-  }
-}
-
-/* 針對極小螢幕 (如舊款 iPhone) 的防破版優化 */
 @media (max-width: 480px) {
-  .expertise-grid {
-    /* 如果螢幕真的很窄，才考慮變回一欄，否則二欄會太擠 */
+  .resume-skills-grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* 確保導覽列的項目垂直置中對齊 */
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-/* 🚀 導覽列：下載履歷 CTA 按鈕 */
-.nav-resume-btn {
-  background-color: var(--primary);
-  color: white !important; /* 蓋過 a 標籤預設顏色 */
-  padding: 8px 20px;
-  border-radius: 50px; /* 膠囊形狀 */
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
-  margin-left: 10px; /* 與左邊的「我的作品」稍微拉開一點距離 */
-}
-
-.nav-resume-btn:hover {
-  transform: translateY(2px);
-  background-color: #21867a; /* 滑鼠移入時稍微加深顏色 */
-  /* box-shadow: 0 4px 12px rgba(42, 157, 143, 0.3); */
-}
-
-/* 📱 手機版調整：如果是手機版，讓這個按鈕的樣式簡化，或者維持膠囊狀但稍微縮小 */
-@media (max-width: 900px) {
-  .nav-resume-btn {
-    padding: 0;
-    background-color: transparent;
-    color: var(--gray) !important;
-    border-radius: 0;
-    flex-direction: column;
-    gap: 4px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    margin-left: 0;
-    height: 100%;
-    justify-content: center;
-    box-shadow: none;
-    transition: color 0.3s;
+  .expertise-grid {
+    grid-template-columns: 1fr;
   }
-
-  .nav-resume-btn i {
-    font-size: 1.4rem;
-    margin-bottom: 2px;
-  }
-
-  .nav-resume-btn:hover {
-    transform: none;
-    background-color: transparent;
-    box-shadow: none;
-    color: var(--primary) !important;
-  }
-}
-
-/* ========================================== */
-/* 聯絡我 Footer (Contact) */
-/* ========================================== */
-.site-footer {
-  text-align: center;
-  padding: 3rem 20px 6rem; /* 底部留白多一點，避免被手機版導覽列或右下角按鈕擋住 */
-  background-color: var(--light);
-}
-
-.contact-box {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  background: white;
-  padding: 15px 35px;
-  border-radius: 50px; /* 膠囊狀外觀 */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
-  border: 1px solid #eee;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-/* .contact-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-} */
-
-.say-hi {
-  color: var(--gray);
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.contact-email {
-  color: var(--primary);
-  font-size: 2rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.contact-email:hover {
-  color: var(--primary);
-}
-
-.copy-email-btn {
-  background-color: #8e9eab; /* 預設為穩重的灰藍色 */
-  color: white;
-  border: none;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    background-color 0.3s,
-    transform 0.2s,
-    width 0.3s;
-}
-
-.copy-email-btn:hover {
-  transform: translateY(-2px);
-  background-color: var(--primary); /* 移入時變回品牌主色 */
-}
-
-/* 複製成功時的狀態 */
-.copy-email-btn.copied {
-  background-color: #2cdc0d; /* 成功綠色 */
-  pointer-events: none; /* 防止連點 */
-}
-
-/* 手機版排版調整 */
-@media (max-width: 768px) {
-  .contact-box {
-    flex-direction: column;
-    border-radius: 20px;
-    padding: 25px 20px;
-    gap: 12px;
-    width: 90%;
-  }
-
-  .contact-email {
-    font-size: 1.3rem;
-  }
-  .copy-email-btn {
-    width: 100%; /* 手機版按鈕滿版比較好按 */
-    padding: 10px 0;
-  }
-}
-
-/* ========================================== */
-/* 📱 手機版專案目錄按鈕：智慧顯示控制 */
-/* ========================================== */
-/* 1. 預設在所有頁面都先隱藏目錄按鈕 */
-#mobile-toc-btn {
-  display: none !important;
-}
-
-/* 2. 🎯 核心魔法：只有當畫面上的 active 區塊，其 ID 是以 detail- 開頭時，才顯示按鈕 */
-body:has(.channel-section[id^="detail-"].active) #mobile-toc-btn {
-  display: flex !important;
 }
