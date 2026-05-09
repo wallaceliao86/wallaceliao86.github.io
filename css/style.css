@@ -1963,3 +1963,21 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================== */
+/* ✨ 兩欄式功能特色網格 */
+/* ========================================== */
+.feature-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 強制兩欄等寬 */
+  gap: 25px;
+  margin: 2.5rem 0;
+}
+
+/* 📱 手機版調整為單欄 */
+@media (max-width: 768px) {
+  .feature-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 15px; /* 手機版讓間距稍微緊湊一點 */
+  }
+}
