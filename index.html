@@ -52,6 +52,7 @@
     </header>
 
     <main class="container">
+      <!-- 關於 -->
       <div id="about" class="channel-section active visible">
         <div class="hero-section">
           <div class="hero-text">
@@ -399,6 +400,7 @@
         </div>
       </div>
 
+      <!-- 我的作品 -->
       <div id="works" class="channel-section">
         <div class="content-wrapper">
           <h2 class="channel-title">我的作品</h2>
@@ -468,6 +470,7 @@
         </div>
       </div>
 
+      <!-- 安心守望 -->
       <div id="detail-safewatch" class="channel-section">
         <div class="hero-banner-image-only"></div>
 
@@ -1147,6 +1150,7 @@
         </div>
       </div>
 
+      <!-- 循環杯 -->
       <div id="detail-cup" class="channel-section">
         <div class="hero-banner-image-only banner-cup"></div>
 
@@ -1175,7 +1179,6 @@
             </aside>
 
             <article class="project-article">
-
               <div class="project-title">
                 <h1>循環杯系統設計</h1>
                 <div class="project-titledescription">
@@ -1192,9 +1195,9 @@
                 </div>
                 <div class="role-item">
                   <span class="role-label"
-                    ><i class="far fa-clock"></i> 專案時間</span
+                    ><i class="far fa-clock"></i> 專案時長</span
                   >
-                  <span class="role-value">2025/08 - 2025/10</span>
+                  <span class="role-value">約莫3個月</span>
                 </div>
 
                 <div class="role-item tools-flex-item">
@@ -1212,82 +1215,162 @@
                       alt="Notion"
                       class="tool-logo"
                       title="Notion" />
+                    <img
+                      src="img/gemini.png"
+                      alt="Gemini"
+                      class="tool-logo"
+                      title="Gemini" />
+                    <img
+                      src="img/claude.png"
+                      alt="claude"
+                      class="tool-logo"
+                      title="claude" />
                   </div>
                 </div>
               </div>
 
               <div id="cup-intro" class="article-section">
-                <h3>01. 專案背景與現況</h3>
                 <p>
-                  台灣一年使用的塑膠及紙類一次性飲料杯高達 40 億個。儘管政府於
-                  2023
-                  年起要求連鎖超商與速食業者必須提供循環杯服務，但經過一年的推廣，曾使用過的消費者僅約
-                  3 成，實際活躍使用率更被評估不到 1%。
+                  在投入 UI/UX 領域後，我開始會仔細觀察日常所使用的 APP
+                  的操作流程。同時，基於自身的生物環境背景，以及平時頻繁購買咖啡與手搖飲的習慣，我自然而然地關注到了『循環杯』這項環保服務。我發現，這個機制雖然立意良善，但在實際的推廣與使用者體驗上，仍有很大的進步空間。因此，我選擇循環杯作為本次的研究主題，期望能進一步探討並優化其使用流程。
                 </p>
+              </div>
 
-                <h4 class="section-subtitle mt-2rem">
-                  為什麼大家不用循環杯？ (桌面研究)
-                </h4>
+              <div id="cup-overview" class="article-section">
+                <h3>產品架構</h3>
                 <p>
-                  透過初步的文獻與現況調查，我們歸納出推廣受阻的兩大核心鴻溝：
+                  <span style="text-decoration: underline"
+                    >介紹這個設計的幾個功能</span
+                  >
                 </p>
-                <div class="explore-grid mt-1-5rem">
+                <div class="detail-img-placeholder">
+                  <img
+                    src="img/xxxx.png"
+                    class="show-pc img-fluid"
+                    alt="循環杯主要架構" />
+
+                  <img
+                    src="img/xxxx-mb.png"
+                    class="show-mobile img-fluid"
+                    alt="循環杯主要架構" />
+                </div>
+              </div>
+
+              <div id="cup-market" class="article-section">
+                <h3>01. 為什麽大家不用循環杯？</h3>
+                <!-- <p>
+                  由於逐年提升的禁塑規範與環境意識，除了開始禁用一次性塑膠杯外，政府於 2023 年要求特定業者，如星巴克、7-11等連鎖店開始提供循環杯服務，業者被規定至少 5% 門市需提供循環杯服務，且必須逐年提升。然而，時至今日，卻也僅有少數的消費者 3 成消費者使用過循環杯服務，更有專家評估可能實際使用率不到 1%。
+                </p> -->
+                <br />
+                <p>
+                  透過初步的文獻與現況調查，我們歸納出推廣受阻的核心原因為：
+                </p>
+                <div class="explore-grid">
                   <div class="explore-card">
                     <div class="explore-card-title">
                       <div class="icon-wrapper wrapper-primary">
-                        <i class="fas fa-biohazard"></i>
+                        <i class="fa-solid fa-hand-sparkles"></i>
                       </div>
-                      根深蒂固的衛生疑慮
+                      衛生清潔疑慮
                     </div>
-                    <p class="explore-desc">
+                    <p>
                       高達 61%
                       的民眾因擔憂與他人共用或清洗不淨而拒絕使用。即使業者已具備
-                      <span
-                        class="custom-tooltip"
-                        data-tooltip="符合《衛福部食品良好衛生規範》，包含高溫高壓沖洗、烘乾殺菌與無塵封裝。"
-                        >SGS 認證與五大清洗全淨程
-                        <i class="far fa-question-circle"></i></span
-                      >，單靠數據報告仍難以消除心理上的不信任感。
+                      <span>SGS 認證與五大清洗全淨程</span
+                      >，卻無法弭平心中的不信任感
                     </p>
                   </div>
                   <div class="explore-card">
                     <div class="explore-card-title">
                       <div class="icon-wrapper wrapper-warning">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fa-solid fa-shoe-prints"></i>
                       </div>
-                      借還系統的空間不平等
+                      擔心借還不方便
                     </div>
-                    <p class="explore-desc">
-                      政策要求是基於「全國總門市比例」，導致站點多集中於都會區。無法「隨借隨還、甲租乙還」的痛點，大幅增加了消費者的勞力成本，成為普及化的最大阻礙。
+                    <p>
+                      政策要求連鎖業者逐年提高循環杯門市覆蓋率(於2025年應達至門店30%)，但遠遠還不及能讓使用者可以輕鬆歸還的程度，另外，還要額外攜帶杯體這件事情也會造成不方便
+                    </p>
+                  </div>
+                  <div class="explore-card">
+                    <div class="explore-card-title">
+                      <div class="icon-wrapper wrapper-warning">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                      </div>
+                      習慣的調整
+                    </div>
+                    <p>
+                      過去習慣使用一次性杯子的人來說，需要轉換成借用、清洗及歸還循環杯，需要一定的時間來培養習慣
                     </p>
                   </div>
                 </div>
+
+                <h4>團訂飲料</h4>
+                <p>
+                  針對團訂飲料的狀況，foodpanda與好盒器於 2020
+                  年開始於台南、台北等各大城市開始實施，雖然提供了相當的經濟誘因（如
+                  foodpanda
+                  滿額折抵券以及好盒器點數），然而其繁瑣的登記過程（系統未整合，需要一直切換
+                  foodpanda 以及好盒器 LINE
+                  官方帳號，並需自己登記杯子編號）成為一大痛點，也是能夠改進優化的地方
+                </p>
               </div>
 
               <div id="cup-research" class="article-section">
                 <h3>02. 深度訪談與洞察</h3>
                 <p>
                   為了挖出數據背後真實的情緒，我針對「具備重度手搖飲 /
-                  外帶咖啡需求」的潛在使用者進行深度質化訪談，探討在個人與「團購」情境下的使用意願。
+                  外帶咖啡需求」的潛在使用者進行深度質化訪談，針對過去經驗、潛在使用動機與「個人」與「團購」情境下的使用意願進行探討，並將資料以親和圖法進行分類與歸納。
                 </p>
-
-                <h4 class="section-subtitle mt-2rem">訪談痛點萃取</h4>
-                <ul class="custom-check-list text-normal mb-2rem mt-1-5rem">
+                <div class="detail-img-placeholder">
+                  <img
+                    src="img/cup-qualdata.jpg"
+                    class="img-fluid"
+                    alt="循環杯訪談質化分析" />
+                </div>
+                <h4>訪談痛點萃取</h4>
+                <p>如桌面研究所知，衛生感與方便性是使用者最在意的痛點</p>
+                <ul class="standard-list">
                   <li>
-                    <strong>眼見為憑的衛生感：</strong>
+                    <strong>眼見為憑的衛生感</strong>
                     <i
                       >「無法事先知道杯子狀況...
                       希望櫃檯有真空殺菌機，讓我看到真的洗得很乾淨。」</i
                     >
                   </li>
                   <li>
-                    <strong>順路即正義：</strong>
+                    <strong>不用額外付出的方便性</strong>
                     <i
-                      >「如果在公司樓下，日常順路就會用。如果買咖啡只有五分鐘，還要多掃條碼借杯子，我就會放棄。」</i
+                      >「如果是在公司附近的話也許會（使用），因為我就是下樓就可以處理的.....他在一個日常的順路上面的話可能會用......」</i
                     >
                   </li>
+                </ul>
+                <p>除了與桌面研究一致的發現外，我們還發現......</p>
+                <ul class="standard-list">
                   <li>
-                    <strong>團訂情境的究極麻煩：</strong>
+                    <strong>不願付出多於勞力成本</strong>
+                    <i
+                      >「希望可以綁在他們的 POS
+                      機或者是直接綁在行動支付，我一刷的時候就會記錄有一個循環杯」</i
+                    >
+                    <i
+                      >「早上買咖啡，我可能要多掃一個條碼，多花時間，那我就乾脆用我本來習慣做」</i
+                    >
+                  </li>
+                  <!-- <li>
+                    <strong>沒有發現其存在</strong>
+                    <i>######</i>
+                  </li> -->
+                </ul>
+                <p>
+                  除上之外，受訪者也有提到<strong>流程不夠清楚</strong>、<strong>不願付出額外成本</strong>等痛點
+                </p>
+                <h5>團訂的痛點</h5>
+                <ul class="standard-list">
+                  <li>
+                    <strong>團訂情境的究極麻煩</strong>
+                    <p>
+                      受訪者們則多提及回收杯子費工費時（包含費用、人力等）以及不願意負擔統整大量循環杯的借用歸還問題
+                    </p>
                     <i
                       >「幫部門 50 個人訂，我要先墊 500
                       塊押金？如果同事不還我要幫他賠嗎？去督促大家太麻煩了，乾脆不訂。」</i
@@ -1295,62 +1378,104 @@
                   </li>
                 </ul>
 
-                <h4 class="section-subtitle mt-2rem">觸發使用的動機切入點</h4>
-                <p>
-                  除了環保自覺，研究發現要推動行為改變，需要依賴更直接的催化劑：
-                </p>
-                <div class="feature-split mt-1-5rem">
-                  <div class="feature-text">
-                    <ul class="standard-list">
-                      <li>
-                        <strong>經濟誘因的即時性：</strong> 當下買飲料能立刻折抵
-                        5 元，是推動無環保意識者最有效的手段。
-                      </li>
-                      <li>
-                        <strong>免成本的便利：</strong>
-                        「反正有得選，對我也沒什麼困擾，那我就選循環杯。」
-                      </li>
-                      <li>
-                        <strong>社群與潮流驅動：</strong>
-                        從過去的循環餐盒經驗發現，當周遭人都在使用，或成為一種「網美打卡」的潮流時，接受度會大幅提升。
-                      </li>
-                    </ul>
+                <h4>觸發使用的動機切入點</h4>
+                <p>除了環境意識以及經濟折扣誘因外，還包含了社群潮流等因素</p>
+                <div class="explore-grid">
+                  <div class="explore-card">
+                    <div class="explore-card-title">
+                      <div class="icon-wrapper wrapper-primary">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                      </div>
+                      環境意識
+                    </div>
+                    <p>
+                      因爲不想要製造過多的垃圾或者是因為對於環境破壞的罪惡感，但通常會自己攜帶環保杯。
+                    </p>
+                    <i
+                      >「.....我自己像是從小就有環保意識，很早以前就開始關注這方面，我會覺得當你一直製造垃圾時，這會對許多生物，或者對人類造成很大的擔憂，而且這些影響往往難以彌補......」</i
+                    >
+                  </div>
+                  <div class="explore-card">
+                    <div class="explore-card-title">
+                      <div class="icon-wrapper wrapper-warning">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                      </div>
+                      經濟/折扣誘因
+                    </div>
+                    <p>
+                      保證了經濟誘因的即時性與有效性，吸引了不少消費者因為折扣而開始使用環保杯，但也有人認為折扣可以再更多
+                    </p>
+                    <i
+                      >「.....(家人)他們環保意識比較沒有那麼高。但他們對省錢的意識蠻高的，他們會為了省錢而努力去做這件事情......」</i
+                    >
+                  </div>
+                  <div class="explore-card">
+                    <div class="explore-card-title">
+                      <div class="icon-wrapper wrapper-warning">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                      </div>
+                      社群動機
+                    </div>
+                    <p>
+                      受訪者提及社群與週遭人的影響，也會讓他們想要使用循環杯
+                    </p>
+                    <i
+                      >......(過去使用循環餐盒)那應該是因為大家那時候都有在用，所以想說用用看......</i
+                    >
                   </div>
                 </div>
-
-                <div class="detail-img-placeholder">
-                  <i class="fas fa-user-circle icon-placeholder"></i>
-                  [ 圖片：環保自覺者 王瑾綠 - Persona & 使用者旅程地圖 CJM ]
+                <h5>阻礙與催化劑</h5>
+                <p>
+                  除了上述發現外，我還發現當循環杯服務若能達成<strong>便利/免成本</strong>與<strong>政府/制度支持B端(包含福利等)</strong>，才能更加推廣循環杯的使用
+                </p>
+                <div class="highlight-box">
+                  綜上所述，我發現若要促進循環杯的使用率，不能單單只是反覆地強調環境保護的重要性，而是需要依靠其他的條件（如金錢/折扣誘因，或者仰賴社群/潮流來促進），更能增強消費者使用循環杯的意願
                 </div>
 
-                <div class="highlight-box mt-3rem">
+                <div class="highlight-box">
                   <div class="highlight-label">
                     <i class="fas fa-search-location"></i> 定義核心問題 (HMW)
                   </div>
-                  <ul
-                    class="standard-list mb-0"
-                    style="font-size: 1.05rem; font-weight: 600">
+                  <ul class="standard-list">
                     <li>
                       如何
-                      <strong>提升心理衛生安全感</strong
-                      >，而不再只是強調物理上的乾淨？
+                      <strong>提升使用者心理衛生安全感</strong>？
                     </li>
                     <li>
                       如何
-                      <strong>無縫融入日常結帳流程</strong
-                      >，讓借還杯子與買咖啡一樣快？
+                      <strong>增加借還循環杯的便利性</strong>？
                     </li>
                     <li>
                       如何
-                      <strong>降低團購主(主揪)的壓力</strong
-                      >，解決押金與催收杯子的痛點？
+                      <strong>減少團訂情境時的負擔</strong>？
                     </li>
                   </ul>
                 </div>
               </div>
 
+              <div id="cup-user" class="article-section">
+                <h3>03.人物誌與使用者旅程地圖</h3>
+                <p>依據上述研究，我定義出了以下人物誌與使用者旅程地圖</p>
+                <div class="detail-img-placeholder">
+                  <img
+                    src="img/cup-personajourney01.jpg"
+                    class="img-fluid" loading="lazy"
+                    alt="王瑾綠人物誌與使用者旅程地圖" />
+                </div>
+              </div>
+
               <div id="cup-analysis" class="article-section">
-                <h3>03. 競品分析</h3>
+                <div class="detail-img-placeholder">
+                  <img
+                    src="img/cup-personajourney02.jpg"
+                    class="img-fluid" loading="lazy"
+                    alt="追財人物誌與使用者旅程地圖" />
+                </div>
+
+              </div>
+
+              <div id="cup-compete" class="article-section">
+                                <h3>03. 競品分析</h3>
                 <p>
                   我們檢視了台灣主要的循環杯服務，並參考了國外的 ClubZero 與
                   Muuse，針對借還流程與押金機制進行拆解：
@@ -1514,6 +1639,7 @@
         </div>
       </div>
 
+      <!-- 電商相關 -->
       <div id="detail-ecommerce" class="channel-section">
         <div class="hero-banner-image-only"></div>
         <div class="content-wrapper">
