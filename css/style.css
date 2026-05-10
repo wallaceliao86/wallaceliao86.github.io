@@ -30,13 +30,13 @@ body {
 }
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
 }
 .content-wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 header {
@@ -1979,5 +1979,34 @@ main {
   .feature-grid-2col {
     grid-template-columns: 1fr;
     gap: 15px; /* 手機版讓間距稍微緊湊一點 */
+  }
+}
+
+/* ========================================== */
+/* ✨ 雙欄圖片展示區塊 (PC 2欄 / Mobile 1欄) */
+/* ========================================== */
+.detail-img-placeholder.grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* PC版：強制兩欄等寬 */
+  flex-direction: unset; /* 取消原本的 flex 設定 */
+  gap: 15px;
+  padding: 15px;
+  align-items: start; /* 讓兩張高度不同的圖片頂部對齊 */
+}
+
+/* 確保裡面的圖片乖乖填滿自己的格子 */
+.detail-img-placeholder.grid-2col img,
+.detail-img-placeholder.grid-2col video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* 讓圖片有微圓角，搭配外框更好看 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* 增加一點層次感 */
+}
+
+/* 📱 手機版調整為單欄向下排列 */
+@media (max-width: 768px) {
+  .detail-img-placeholder.grid-2col {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
