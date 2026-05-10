@@ -1161,19 +1161,25 @@
           <div class="project-layout">
             <aside class="project-sidebar">
               <ul class="toc-list" id="project-toc-cup">
-                <li>
+                <!-- <li>
                   <a href="#cup-intro" class="toc-link">專案背景與痛點</a>
+                </li> -->
+                <li>
+                  <a href="#cup-overview" class="toc-link">產品架構</a>
+                </li>
+                <li><a href="#cup-market" class="toc-link">市場現況</a></li>
+                <li>
+                  <a href="#cup-research" class="toc-link">訪談與洞察</a>
+                </li>
+                <li><a href="#cup-user" class="toc-link">人物誌</a></li>
+                <li>
+                  <a href="#cup-compete" class="toc-link">競業分析</a>
                 </li>
                 <li>
-                  <a href="#cup-research" class="toc-link">使用者研究與洞察</a>
+                  <a href="#cup-strategy" class="toc-link">設計策略</a>
                 </li>
-                <li><a href="#cup-analysis" class="toc-link">競品分析</a></li>
                 <li>
-                  <a href="#cup-strategy" class="toc-link">設計策略與解法</a>
-                </li>
-                <li><a href="#cup-ui" class="toc-link">UI 介面與原型</a></li>
-                <li>
-                  <a href="#cup-reflection" class="toc-link">未來展望與反思</a>
+                  <a href="#cup-test" class="toc-link">迅速測試與驗證</a>
                 </li>
               </ul>
             </aside>
@@ -1472,7 +1478,7 @@
               </div>
 
               <div id="cup-compete" class="article-section">
-                <h3>03. 競品分析</h3>
+                <h3>04. 競品分析</h3>
                 <p>
                   我檢視了台灣主要的循環杯服務，並參考了國外提供類似服務的廠商 -
                   ClubZero 與
@@ -1488,7 +1494,7 @@
               </div>
 
               <div id="cup-strategy" class="article-section">
-                <h3>04. 設計策略與解法</h3>
+                <h3>05. 設計策略與解法</h3>
                 <p>
                   從HMW出發，進行頭腦風暴，並在多個策略中，考量硬體成本與跨品牌合作的問題，最終選擇了幾個策略
                 </p>
@@ -1565,7 +1571,7 @@
               </div>
 
               <div id="cup-test" class="article-section">
-                <h3>05. 迅速測試與驗證</h3>
+                <h3>06. 迅速測試與驗證</h3>
                 <p>
                   我先用claude迅速產出簡易的app畫面，針對以上設計策略，特別是團購場景，進行快速的概念測試。使用情境故事法，準備腳本與任務，讓受試者們進行操作並完成任務。
                 </p>
@@ -1581,10 +1587,49 @@
                     loading="lazy"
                     alt="循環杯腳本任務" />
                 </div>
+                <p>
+                  在測試過程中，得到<strong>環境與金錢影響力很直觀</strong>、<strong>延長借用時限與掛失很方便</strong>等正向訊息，同時我也整理了以下可以改善的方向。
+                </p>
+                <div class="explore-grid">
+                  <div class="explore-card">
+                    <div class="explore-card-title">
+                      <div
+                        class="icon-wrapper"
+                        style="
+                          background: rgba(244, 162, 97, 0.15);
+                          color: #f46161;
+                        ">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                      </div>
+                      循環杯資訊的呈現
+                    </div>
+                    <p>
+                      對於循環次數呈現反而有反感，可以呈現如何清洗
+                    </p>
+                  </div>
+
+                  <div class="explore-card">
+                    <div class="explore-card-title">
+                      <div
+                        class="icon-wrapper"
+                        style="
+                          background: rgba(244, 162, 97, 0.15);
+                          color: #f46161;
+                        ">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                      </div>
+                      團購困境
+                    </div>
+                    <p>
+                      很難團進團出、有些消費者會想喝比較久、循環杯回收箱感覺笨重
+                    </p>
+                  </div>
+                </div>
+                <p>根據概念測試結果，團購機制高度依賴線下回收桶的廣泛設置（讓任何使用者可以隨時喝完即還）與高昂的物流人力成本（可以分階段歸還），因此本專案將優先聚焦於『個人借還流程』的核心體驗設計，團購功能則作為未來階段的儲備藍圖。</p>
               </div>
 
               <div id="cup-ui" class="article-section">
-                <h3>05. UI 介面與原型</h3>
+                <h3>07. UI 介面與原型</h3>
                 <p>
                   將上述策略轉化為直覺的介面，我們設計了清晰的地圖歸還指引、團購訂單總覽，以及個人化的環保成就頁面，提升使用者的成就感與持續使用的動機。
                 </p>

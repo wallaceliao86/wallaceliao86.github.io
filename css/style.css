@@ -493,7 +493,7 @@ main {
 }
 .timeline-container {
   position: relative;
-  max-width: 1000px;
+  max-width: 1350px;
   margin: 0 auto;
   padding: 40px 0;
   display: flex;
@@ -1624,7 +1624,7 @@ main {
     position: static !important;
   }
   body {
-    font-size: 15px;
+    font-size: 14px;
     padding-top: 0;
     padding-bottom: 80px;
   }
@@ -1895,7 +1895,7 @@ main {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .feature-split {
     flex-direction: column;
     gap: 25px;
@@ -1944,9 +1944,6 @@ main {
     width: 100%;
     padding: 10px 0;
   }
-}
-
-@media (max-width: 767px) {
   .show-pc {
     display: none !important;
   }
