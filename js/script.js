@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 1. 抓取所有可以放大的媒體 (加上了 .demo-video)
   const mediaElements = document.querySelectorAll(
-    ".detail-img-placeholder img, .award-img, .iteration-card img, .demo-video",
+    ".detail-img-placeholder img, .award-img, .iteration-card img, .demo-video, .feature-media img",
   );
 
   mediaElements.forEach((media) => {

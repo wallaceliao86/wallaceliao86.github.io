@@ -1137,9 +1137,14 @@ main {
 }
 .feature-media {
   flex-shrink: 0;
-  width: 260px;
+  width: 25%;
+  max-width: 260px;
   display: flex;
   justify-content: center;
+}
+.feature-media.feature-media50 {
+  width: 50%;
+  max-width: 50%;
 }
 .phone-mockup-gif {
   width: 100%;
@@ -1545,6 +1550,15 @@ main {
 }
 .show-mobile {
   display: none;
+}
+
+@media (max-width: 1599px) {
+  .container {
+    max-width: 1200px;
+  }
+  .timeline-container {
+    max-width: 1200px;
+  }
 }
 
 @media (min-width: 901px) {
