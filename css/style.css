@@ -723,7 +723,11 @@ main {
   background-repeat: no-repeat;
 }
 .p-img01::after {
-  background-image: url("../img/safewatchthumbnail.jpg");
+  background-image: url("../img/thumbnail01.jpg");
+}
+
+.p-img02::after {
+  background-image: url("../img/thumbnail02.jpg");
 }
 .p-img03::after {
   background-image: url("../img/thumbnail03.jpg");
@@ -807,6 +811,11 @@ main {
 #detail-safewatch .hero-banner-image-only {
   background-image: url("../img/safewatchHerobanner.jpg");
 }
+#detail-cup .hero-banner-image-only {
+  background-image: url("../img/cup-herobanner.jpg");
+  background-position: -10px center;
+}
+
 #detail-ecommerce .hero-banner-image-only {
   height: 0;
   min-height: unset;
@@ -1125,6 +1134,36 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+}
+
+/* ========================================== */
+/* 💬 訪談引言區塊 (Interview Quote) */
+/* ========================================== */
+.interview-quote {
+  position: relative;
+  background-color: var(--primary-light);
+  border-left: 4px solid var(--primary-light);
+  padding: 12px 15px 12px 40px; /* 左側留出 40px 的空間給引號圖示 */
+  margin: 15px 0 0 0; /* 與上方的描述文字拉開一點距離 */
+  border-radius: 0 8px 8px 0;
+  color: var(--dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* 利用偽元素自動生成引號，保持 HTML 乾淨 */
+.interview-quote::before {
+  content: "\f10d"; /* FontAwesome fa-quote-left 的代碼 */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: var(--primary);
+  opacity: 0.35; /* 降低透明度作為背景點綴 */
+  font-size: 1.2rem;
 }
 .feature-split {
   display: flex;
@@ -1550,6 +1589,11 @@ main {
 }
 .show-mobile {
   display: none;
+}
+
+.font-italic {
+  font-style: italic;
+  color: #9c9c9c;
 }
 
 @media (max-width: 1599px) {
