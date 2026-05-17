@@ -293,55 +293,6 @@ main {
   filter: brightness(1.05) contrast(1.05);
   transition: 0.5s;
 }
-.floating-icon {
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  z-index: 3;
-  animation: float 6s ease-in-out infinite;
-}
-.icon-1 {
-  width: 60px;
-  height: 60px;
-  top: 20px;
-  right: 20px;
-  font-size: 1.5rem;
-  animation-delay: 0s;
-}
-.icon-2 {
-  width: 50px;
-  height: 50px;
-  bottom: 40px;
-  left: 0px;
-  font-size: 1.2rem;
-  animation-delay: 2s;
-  color: var(--secondary);
-}
-.icon-3 {
-  width: 40px;
-  height: 40px;
-  top: 100px;
-  left: -20px;
-  font-size: 1rem;
-  animation-delay: 4s;
-  color: #e76f51;
-}
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 .about-expertise {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1038,7 +989,7 @@ main {
 }
 .standard-list {
   padding-left: 25px;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 .standard-list li {
   margin-bottom: 10px;
@@ -1185,7 +1136,7 @@ main {
   width: 50%;
   max-width: 50%;
 }
-.phone-mockup-gif {
+.phone-mockup {
   width: 100%;
   height: auto;
   border-radius: 35px;
@@ -1959,7 +1910,7 @@ main {
     gap: 25px;
     align-items: flex-start;
   }
-  .feature-media {
+  .feature-media, .feature-media.feature-media50 {
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
@@ -2047,6 +1998,7 @@ main {
   gap: 15px;
   padding: 15px;
   align-items: start; /* 讓兩張高度不同的圖片頂部對齊 */
+  justify-content: center;
 }
 
 /* 確保裡面的圖片乖乖填滿自己的格子 */
