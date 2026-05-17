@@ -56,17 +56,22 @@
       <div id="about" class="channel-section active visible">
         <div class="hero-section">
           <div class="hero-text">
-            <span class="hero-tag"
+            <!-- <span class="hero-tag"
               ><i class="fas fa-code"></i> UI/UX & Frontend Design</span
-            >
-            <h1>Hi!我是<span>韋承 Wallace</span></h1>
+            > -->
+            <h1>Hi! 我是<span>韋承 Wallace</span></h1>
+            <h2 class="show-pc">
+              專注於數位體驗的<span> UI/UX 與前端設計師</span>
+            </h2>
+            <h2 class="show-mobile">
+              專注於數位體驗的<br /><span>UI/UX 與前端設計師</span>
+            </h2>
+
             <p class="hero-desc">
-              我是擁有4年以上設計與前端經驗的網頁設計師，目前正在積極向UI/UX設計領域轉職中。期許能將心理領域所學與設計想法結合。
+              歷經 4 年高壓電商實戰，我深信設計的價值在於解決真實問題。
             </p>
             <p class="hero-desc">
-              現職為電商的網頁設計師。擅長將感性的視覺設計，轉化為理性的程式碼。<b
-                >熟悉 Figma、Adobe 工具與 GSAP/Canvas 動畫效果</b
-              >，為每個設計注入靈魂與創意，致力於打造兼具美感、創意與流暢互動的數位體驗。
+              擅長<span>洞悉使用者需求</span>、理解<span>前端技術</span>並確保設計落地、透過<span>動態特效</span>昇華互動體驗。期許能成為商業與工程間的完美橋樑。
             </p>
             <div class="hero-actions">
               <button onclick="switchChannel('works')" class="cta-btn">
@@ -96,6 +101,7 @@
               <img
                 src="img/wc_photo.jpg"
                 class="profile-img"
+                loading="lazy"
                 alt="廖韋承 Wallace" />
             </div>
           </div>
@@ -106,7 +112,7 @@
           <div class="expertise-grid">
             <div class="expertise-card">
               <div class="expertise-img">
-                <img src="img/expertise01.png" alt="兼顧商業與美感的視覺傳達" />
+                <img src="img/expertise01.png" alt="兼顧商業與美感的視覺傳達" class="img-fluid" loading="lazy" />
               </div>
               <div class="expertise-content">
                 <h3 class="expertise-title">兼顧商業與美感的視覺傳達</h3>
@@ -117,7 +123,7 @@
             </div>
             <div class="expertise-card">
               <div class="expertise-img">
-                <img src="img/expertise02.png" alt="具備邏輯思維的體驗研究" />
+                <img src="img/expertise02.png" alt="具備邏輯思維的體驗研究" class="img-fluid" loading="lazy" />
               </div>
               <div class="expertise-content">
                 <h3 class="expertise-title">具備邏輯思維的體驗研究</h3>
@@ -128,7 +134,7 @@
             </div>
             <div class="expertise-card">
               <div class="expertise-img">
-                <img src="img/expertise03.png" alt="跨領域知識與經驗" />
+                <img src="img/expertise03.png" alt="跨領域知識與經驗" class="img-fluid" loading="lazy" />
               </div>
               <div class="expertise-content">
                 <h3 class="expertise-title">跨領域知識與經驗</h3>
@@ -140,7 +146,7 @@
             </div>
             <div class="expertise-card">
               <div class="expertise-img">
-                <img src="img/expertise04.png" alt="效率驅動的流程優化" />
+                <img src="img/expertise04.png" alt="效率驅動的流程優化" class="img-fluid" loading="lazy" />
               </div>
               <div class="expertise-content">
                 <h3 class="expertise-title">效率驅動的流程優化</h3>
@@ -265,14 +271,14 @@
                     負責規劃與製作全站促銷活動頁面，確保在各種裝置上的瀏覽體驗
                   </li>
                   <li>
-                    使用 <b>Canvas</b> 與
-                    <b>GSAP</b> 製作高互動性動畫，提升頁面體驗
+                    使用 <strong>Canvas</strong> 與
+                    <strong>GSAP</strong> 製作高互動性動畫，提升頁面體驗
                   </li>
                   <li>導入 AI 工具加速素材生成與開發流程，提升設計效率。</li>
                 </ul>
                 <div class="timeline-gallery">
-                  <img src="img/carrefour01.jpg" alt="家樂福專案1" />
-                  <img src="img/carrefour02.jpg" alt="家樂福專案2" />
+                  <img src="img/carrefour01.jpg" alt="家樂福專案1" loading="lazy" />
+                  <img src="img/carrefour02.jpg" alt="家樂福專案2" loading="lazy" />
                 </div>
                 <button
                   class="timeline-more-btn"
@@ -299,12 +305,14 @@
                 </div>
                 <ul class="timeline-list">
                   <li>負責電商大型檔期活動頁視覺設計與切版</li>
-                  <li>優化 Banner 製作流程，提升團隊約<b>4倍</b>產能</li>
+                  <li>
+                    優化 Banner 製作流程，提升團隊約<strong>4倍產能</strong>
+                  </li>
                   <li>優化活動頁體驗流程與手機端視覺佈局</li>
                 </ul>
                 <div class="timeline-gallery">
-                  <img src="img/trplus01.jpg" alt="特力專案1" />
-                  <img src="img/trplus02.jpg" alt="特力專案2" />
+                  <img src="img/trplus01.jpg" alt="特力專案1" loading="lazy" />
+                  <img src="img/trplus02.jpg" alt="特力專案2" loading="lazy" />
                 </div>
                 <!-- <button
                   class="timeline-more-btn"
@@ -326,7 +334,6 @@
                 </div>
                 <div class="timeline-badges">
                   <span class="timeline-badge">網頁維護</span>
-                  <span class="timeline-badge">Bootstrap</span>
                   <span class="timeline-badge">跨國交流</span>
                 </div>
                 <ul class="timeline-list">
@@ -509,7 +516,13 @@
                   <span class="role-label"
                     ><i class="fas fa-tasks"></i> 負責項目</span
                   >
-                  <span class="role-value">UX 研究、吉祥物繪製、UI 設計</span>
+                  <span class="role-value">
+                    UX 研究<span class="detail"> (問卷編制/易用性測試)</span
+                    ><br />
+                    UI 設計<span class="detail">
+                      (吉祥物繪製/部分介面設計)</span
+                    >
+                  </span>
                 </div>
                 <div class="role-item">
                   <span class="role-label"
@@ -527,31 +540,37 @@
                       src="img/figma.png"
                       alt="Figma"
                       class="tool-logo"
+                      loading="lazy"
                       title="Figma" />
                     <img
                       src="img/notion.png"
                       alt="Notion"
                       class="tool-logo"
+                      loading="lazy"
                       title="Notion" />
                     <img
                       src="img/gemini.png"
                       alt="Gemini"
                       class="tool-logo"
+                      loading="lazy"
                       title="Gemini" />
                     <img
                       src="img/notebooklm.png"
                       alt="Notebook LM"
                       class="tool-logo"
+                      loading="lazy"
                       title="Notebook LM" />
                     <img
                       src="img/canva.png"
                       alt="canva"
                       class="tool-logo"
+                      loading="lazy"
                       title="Canvas" />
                     <img
                       src="img/discord.png"
                       alt="Discord"
                       class="tool-logo"
+                      loading="lazy"
                       title="Discord" />
                   </div>
                 </div>
@@ -574,11 +593,13 @@
                   <img
                     src="img/safewatchmainstructure.png"
                     class="show-pc img-fluid"
+                    loading="lazy"
                     alt="安心守望主要功能" />
 
                   <img
                     src="img/safewatchmainstructure-mb.png"
                     class="show-mobile img-fluid"
+                    loading="lazy"
                     alt="安心守望主要功能" />
                 </div>
 
@@ -691,7 +712,8 @@
                   <img
                     src="img/safewatchhmwdefine.png"
                     alt="拆解HMW，問題定義"
-                    class="img-fluid" />
+                    class="img-fluid"
+                    loading="lazy" />
                 </div>
 
                 <p>
@@ -788,11 +810,13 @@
                   <img
                     src="img/safewatchcompet.png"
                     class="show-pc img-fluid"
+                    loading="lazy"
                     alt="競業分析/家庭協作軟體分析" />
 
                   <img
                     src="img/safewatchcompet-mb.png"
                     class="show-mobile img-fluid"
+                    loading="lazy"
                     alt="競業分析/家庭協作軟體分析" />
                 </div>
               </div>
@@ -817,11 +841,13 @@
                   <img
                     src="img/safewatchIxEmatrix.png"
                     class="show-pc img-fluid"
+                    loading="lazy"
                     alt="Impact VS Effort Matrix" />
 
                   <img
                     src="img/safewatchIxEmatrix-mb.png"
                     class="show-mobile img-fluid"
+                    loading="lazy"
                     alt="Impact VS Effort Matrix" />
                 </div>
               </div>
@@ -858,6 +884,18 @@
                     >可上傳照片或使用吉祥物。守望者設定的溫馨提示語，會在可疑來電時顯示，讓防詐更具人情味。
                   </li>
                 </ul>
+                <div class="detail-img-placeholder small-placeholder">
+                  <img
+                    src="img/safewatchprototype01.png"
+                    class="img-fluid show-pc"
+                    loading="lazy"
+                    alt="來電守望：三層守望機制" />
+                  <img
+                    src="img/safewatchprototype01-mb.png"
+                    class="img-fluid show-mobile"
+                    loading="lazy"
+                    alt="來電守望：三層守望機制" />
+                </div>
 
                 <div class="feature-split">
                   <div class="feature-text">
@@ -880,6 +918,7 @@
                     <img
                       src="img/safewatchprototype02.gif"
                       alt="守望報告操作示範"
+                      loading="lazy"
                       class="phone-mockup" />
                   </div>
                 </div>
@@ -900,11 +939,13 @@
                   <img
                     src="img/safewatchposfeedback.png"
                     class="show-pc img-fluid"
+                    loading="lazy"
                     alt="易用性測試得到的正面回饋" />
 
                   <img
                     src="img/safewatchposfeedback-mb.png"
                     class="show-mobile img-fluid"
+                    loading="lazy"
                     alt="易用性測試得到的正面回饋" />
                 </div>
 
@@ -922,10 +963,12 @@
                       <img
                         src="img/safewatchiterate01.jpg"
                         class="img-fluid show-pc"
+                        loading="lazy"
                         alt="首頁重新佈局" />
                       <img
                         src="img/safewatchiterate01-mb.png"
                         class="img-fluid show-mobile"
+                        loading="lazy"
                         alt="首頁重新佈局" />
                     </div>
                   </div>
@@ -942,10 +985,12 @@
                       <img
                         src="img/safewatchiterate02.jpg"
                         class="img-fluid show-pc"
+                        loading="lazy"
                         alt="更快速的守望建立連結" />
                       <img
                         src="img/safewatchiterate02-mb.png"
                         class="img-fluid show-mobile"
+                        loading="lazy"
                         alt="更快速的守望建立連結" />
                     </div>
                   </div>
@@ -963,10 +1008,12 @@
                       <img
                         src="img/safewatchiterate03.jpg"
                         class="img-fluid show-pc"
+                        loading="lazy"
                         alt="刪除 15 秒高風險來電提示(降低干擾)" />
                       <img
                         src="img/safewatchiterate03-mb.png"
                         class="img-fluid show-mobile"
+                        loading="lazy"
                         alt="刪除 15 秒高風險來電提示(降低干擾)" />
                     </div>
                   </div>
@@ -1003,10 +1050,12 @@
                       <img
                         src="img/safewatchiterate05.jpg"
                         class="img-fluid show-pc"
+                        loading="lazy"
                         alt="守望者自訂通知頻率" />
                       <img
                         src="img/safewatchiterate05-mb.png"
                         class="img-fluid show-mobile"
+                        loading="lazy"
                         alt="守望者自訂通知頻率" />
                     </div>
                   </div>
@@ -1097,18 +1146,21 @@
                   <img
                     src="img/safewatchdesign01.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="安心守望設計系統-色彩" />
                 </div>
                 <div class="detail-img-placeholder">
                   <img
                     src="img/safewatchdesign02.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="安心守望設計系統-文字" />
                 </div>
                 <div class="detail-img-placeholder">
                   <img
                     src="img/safewatchdesign03.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="安心守望設計系統-元件規範" />
                 </div>
               </div>
@@ -1132,11 +1184,8 @@
                   <img
                     src="img/safewatchVideo.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="安心守望宣傳影片" />
-                  <!-- <img
-                    src="img/safewatchVideo-mb.png"
-                    class="show-mobile img-fluid"
-                    alt="安心守望宣傳影片" /> -->
                 </div>
               </div>
             </article>
@@ -1155,9 +1204,6 @@
           <div class="project-layout">
             <aside class="project-sidebar">
               <ul class="toc-list" id="project-toc-cup">
-                <!-- <li>
-                  <a href="#cup-intro" class="toc-link">專案背景與痛點</a>
-                </li> -->
                 <li>
                   <a href="#cup-overview" class="toc-link">產品架構</a>
                 </li>
@@ -1215,21 +1261,25 @@
                       src="img/figma.png"
                       alt="Figma"
                       class="tool-logo"
+                      loading="lazy"
                       title="Figma" />
                     <img
                       src="img/notion.png"
                       alt="Notion"
                       class="tool-logo"
+                      loading="lazy"
                       title="Notion" />
                     <img
                       src="img/gemini.png"
                       alt="Gemini"
                       class="tool-logo"
+                      loading="lazy"
                       title="Gemini" />
                     <img
                       src="img/claude.png"
                       alt="claude"
                       class="tool-logo"
+                      loading="lazy"
                       title="claude" />
                   </div>
                 </div>
@@ -1245,24 +1295,30 @@
               <div id="cup-overview" class="article-section">
                 <h3>產品架構</h3>
                 <p>
-                  以 <strong>提升使用方便</strong> 與 <strong>降低對衛生清潔的不安</strong> 為核心，架構整合四大模組：
-                  <ul class="standard-list">
-                    <li>透過地圖導航直覺租借</li>
-                    <li>AI路徑優化歸還效率</li>
-                    <li>數據看板強化環境與節省成就感</li>
-                    <li>轉場植入清潔知識消除衛生疑慮</li>
-                  </ul>
-                 將循環杯從環保口號，轉化為直覺、安心且具成就感的生活習慣。
+                  以 <strong>提升使用方便</strong> 與
+                  <strong>降低對衛生清潔的不安</strong>
+                  為核心，架構整合四大模組：
+                </p>
+                <ul class="standard-list">
+                  <li>透過地圖導航直覺租借</li>
+                  <li>AI路徑優化歸還效率</li>
+                  <li>數據看板強化環境與節省成就感</li>
+                  <li>轉場植入清潔知識消除衛生疑慮</li>
+                </ul>
+                <p>
+                  將循環杯從環保口號，轉化為直覺、安心且具成就感的生活習慣。
                 </p>
                 <div class="detail-img-placeholder">
                   <img
                     src="img/cup-mainstructure.jpg"
                     class="show-pc img-fluid"
+                    loading="lazy"
                     alt="循環杯主要架構" />
 
                   <img
                     src="img/cup-mainstructure-mb.png"
                     class="show-mobile img-fluid"
+                    loading="lazy"
                     alt="循環杯主要架構" />
                 </div>
               </div>
@@ -1279,7 +1335,12 @@
                 <div class="explore-grid">
                   <div class="explore-card">
                     <div class="explore-card-title">
-                      <div class="icon-wrapper" style="color: #15bdf0">
+                      <div
+                        class="icon-wrapper"
+                        style="
+                          background: var(--primary-light);
+                          color: var(--primary);
+                        ">
                         <i class="fa-solid fa-hand-sparkles"></i>
                       </div>
                       衛生清潔疑慮
@@ -1293,7 +1354,12 @@
                   </div>
                   <div class="explore-card">
                     <div class="explore-card-title">
-                      <div class="icon-wrapper" style="color: #ea8810">
+                      <div
+                        class="icon-wrapper"
+                        style="
+                          background: var(--primary-light);
+                          color: var(--primary);
+                        ">
                         <i class="fa-solid fa-shoe-prints"></i>
                       </div>
                       擔心借還不方便
@@ -1307,7 +1373,12 @@
                   </div>
                   <div class="explore-card">
                     <div class="explore-card-title">
-                      <div class="icon-wrapper" style="color: #e14cb0">
+                      <div
+                        class="icon-wrapper"
+                        style="
+                          background: var(--primary-light);
+                          color: var(--primary);
+                        ">
                         <i class="fa-solid fa-brain"></i>
                       </div>
                       習慣的調整
@@ -1338,6 +1409,7 @@
                   <img
                     src="img/cup-affin.jpg"
                     class="img-fluid"
+                    loading="lazy"
                     alt="循環杯訪談質化分析-親和圖法(節錄)" />
                 </div>
                 <h4>訪談痛點萃取</h4>
@@ -1417,8 +1489,13 @@
                 <div class="explore-grid">
                   <div class="explore-card">
                     <div class="explore-card-title">
-                      <div class="icon-wrapper wrapper-primary">
-                        <i class="fa-solid fa-hand-sparkles"></i>
+                      <div
+                        class="icon-wrapper"
+                        style="
+                          background: var(--primary-light);
+                          color: var(--primary);
+                        ">
+                        <i class="fa-solid fa-tree"></i>
                       </div>
                       環境意識
                     </div>
@@ -1431,8 +1508,13 @@
                   </div>
                   <div class="explore-card">
                     <div class="explore-card-title">
-                      <div class="icon-wrapper wrapper-warning">
-                        <i class="fa-solid fa-shoe-prints"></i>
+                      <div
+                        class="icon-wrapper"
+                        style="
+                          background: var(--primary-light);
+                          color: var(--primary);
+                        ">
+                        <i class="fa-solid fa-piggy-bank"></i>
                       </div>
                       經濟/折扣誘因
                     </div>
@@ -1445,8 +1527,13 @@
                   </div>
                   <div class="explore-card">
                     <div class="explore-card-title">
-                      <div class="icon-wrapper wrapper-warning">
-                        <i class="fa-solid fa-shoe-prints"></i>
+                      <div
+                        class="icon-wrapper"
+                        style="
+                          background: var(--primary-light);
+                          color: var(--primary);
+                        ">
+                        <i class="fa-solid fa-user-group"></i>
                       </div>
                       社群動機
                     </div>
@@ -1467,9 +1554,7 @@
                 </p>
 
                 <div class="highlight-box">
-                  <div class="highlight-label">
-                    <i class="fas fa-search-location"></i> 定義核心問題 (HMW)
-                  </div>
+                  <div class="highlight-label">💡 定義核心問題 (HMW)</div>
                   <ul class="standard-list">
                     <li>
                       如何
@@ -1685,7 +1770,9 @@
                   </div>
                 </div>
                 <p>
-                  根據概念測試結果，團購機制高度依賴線下回收桶的廣泛設置（讓任何使用者可以隨時喝完即還）與高昂的物流人力成本（可以分階段歸還），因此本專案將優先聚焦於 <strong>個人借還流程</strong> 的核心體驗設計，團購功能則作為未來階段的儲備藍圖。
+                  根據概念測試結果，團購機制高度依賴線下回收桶的廣泛設置（讓任何使用者可以隨時喝完即還）與高昂的物流人力成本（可以分階段歸還），因此本專案將優先聚焦於
+                  <strong>個人借還流程</strong>
+                  的核心體驗設計，團購功能則作為未來階段的儲備藍圖。
                 </p>
               </div>
 
@@ -1707,11 +1794,13 @@
                     <img
                       src="img/cup-ui01.jpg"
                       alt="個人化影響力看板"
-                      class="phone-mockup show-pc" />
+                      class="phone-mockup show-pc"
+                      loading="lazy" />
                     <img
                       src="img/cup-ui01-mb.jpg"
                       alt="個人化影響力看板"
-                      class="phone-mockup show-mobile" />
+                      class="phone-mockup show-mobile"
+                      loading="lazy" />
                   </div>
                 </div>
                 <div class="feature-split">
@@ -1726,11 +1815,13 @@
                     <img
                       src="img/cup-ui02.jpg"
                       alt="AI歸還路徑規劃"
-                      class="phone-mockup show-pc" />
+                      class="phone-mockup show-pc"
+                      loading="lazy" />
                     <img
                       src="img/cup-ui02-mb.jpg"
                       alt="AI歸還路徑規劃"
-                      class="phone-mockup show-mobile" />
+                      class="phone-mockup show-mobile"
+                      loading="lazy" />
                   </div>
                 </div>
                 <div class="feature-split">
@@ -1777,11 +1868,13 @@
                 <ul class="standard-list">
                   <li>
                     <strong>無痛歸還體驗：</strong>
-                    評估引進 RFID 智能回收箱，達成「投入即歸還」，降低使用者勞力成本，但需建立品牌間的防呆機制。
+                    評估引進 RFID
+                    智能回收箱，達成「投入即歸還」，降低使用者勞力成本，但需建立品牌間的防呆機制。
                   </li>
                   <li>
                     <strong>階段性擴展團購機制：</strong>
-                    以個人借還為核心 MVP 進行驗證，待模式成熟後再導入團購機制，並同步克服線下物流系統的整合門檻。
+                    以個人借還為核心 MVP
+                    進行驗證，待模式成熟後再導入團購機制，並同步克服線下物流系統的整合門檻。
                   </li>
                   <li>
                     <strong>系統深度整併：</strong>
@@ -1816,9 +1909,6 @@
                 <div class="project-titledescription">
                   電商活動檔期於各個媒介的行銷製作物
                 </div>
-                <p style="color: var(--primary)">
-                  Visual Design • Frontend • GSAP • Photoshop • Illustrator
-                </p>
               </div>
 
               <div class="role-highlight">
@@ -1931,6 +2021,7 @@
                   <img
                     src="img/ecbanner.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="電商活動Banner" />
                 </div>
               </div>
@@ -1942,12 +2033,14 @@
                   <img
                     src="img/ecprint03b.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="平面製作物-行銷活動頁與號碼牌" />
                 </div>
                 <div class="detail-img-placeholder">
                   <img
                     src="img/ecprint03a.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="平面製作物-市集拍貼框" />
                 </div>
                 <h4>2. DM印刷物</h4>
@@ -1955,6 +2048,7 @@
                   <img
                     src="img/ecprint02.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="平面製作物-DM印刷物" />
                 </div>
                 <h4>3. 福袋行銷小卡</h4>
@@ -1962,6 +2056,7 @@
                   <img
                     src="img/ecprint01.png"
                     class="img-fluid"
+                    loading="lazy"
                     alt="平面製作物-福袋行銷小卡" />
                 </div>
               </div>
