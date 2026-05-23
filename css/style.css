@@ -721,7 +721,6 @@ main {
   font-weight: 700;
   letter-spacing: 0.5px;
   border-radius: 6px;
-  box-shadow: 0 5px 15px rgba(255, 82, 31, 0.3);
 }
 .p-content {
   padding: 2rem;
