@@ -687,14 +687,14 @@ main {
   background-repeat: no-repeat;
 }
 .p-img01::after {
-  background-image: url("../img/thumbnail01.jpg");
+  background-image: url("../img/thumbnail01.webp");
 }
 
 .p-img02::after {
-  background-image: url("../img/thumbnail02.jpg");
+  background-image: url("../img/thumbnail02.webp");
 }
 .p-img03::after {
-  background-image: url("../img/thumbnail03.jpg");
+  background-image: url("../img/thumbnail03.webp");
 }
 .p-img i {
   position: relative;
@@ -772,10 +772,10 @@ main {
   background-size: cover;
 }
 #detail-safewatch .hero-banner-image-only {
-  background-image: url("../img/safewatchHerobanner.jpg");
+  background-image: url("../img/safewatchHerobanner.webp");
 }
 #detail-cup .hero-banner-image-only {
-  background-image: url("../img/cup-herobanner.jpg");
+  background-image: url("../img/cup-herobanner.webp");
   background-position: -10px center;
 }
 
