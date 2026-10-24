@@ -251,6 +251,52 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const video = document.querySelectorAll("video[preload='none']");
+
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         video.play(); // 進入畫面才開始請求資源與播放
+//         observer.unobserve(video); // 觸發後解除監聽，節省運算效能
+//       }
+//     });
+//   });
+
+//   observer.observe(video);
+// });
+
+// 於大螢幕上自動播放
+document.addEventListener("DOMContentLoaded", function () {
+  // 設定只在螢幕寬度大於 768px 時執行
+  if (window.innerWidth > 768) {
+    // 抓取畫面上所有帶有 lazy-video class 的影片
+    const lazyVideos = document.querySelectorAll(".demo-video");
+
+    // 使用 forEach 迴圈為每一個影片執行載入邏輯
+    lazyVideos.forEach((video) => {
+      const source = video.querySelector("source");
+
+      // 確保該影片內有 source 標籤且帶有 data-src 屬性
+      if (source && source.hasAttribute("data-src")) {
+        // 將真正的影片網址賦予 src
+        source.src = source.getAttribute("data-src");
+
+        // 觸發影片載入與播放
+        video.load();
+
+        // 使用 Promise 確保 play() 不會報錯
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((error) => {
+            console.log("自動播放被瀏覽器阻擋", error);
+          });
+        }
+      }
+    });
+  }
+});
+
 // ==========================================
 // --- 燈箱 (Lightbox) 控制邏輯 (支援圖片與影片) ---
 // ==========================================
@@ -263,7 +309,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!lightbox) return;
 
-  // 1. 抓取所有可以放大的媒體 (加上了 .demo-video)
   const mediaElements = document.querySelectorAll(
     ".detail-img-placeholder img, .award-img, .iteration-card img, .demo-video, .feature-media img",
   );
@@ -274,20 +319,39 @@ document.addEventListener("DOMContentLoaded", function () {
     media.addEventListener("click", function () {
       lightbox.classList.add("active");
 
-      // 判斷點擊的是影片 (VIDEO) 還是圖片 (IMG)
       if (this.tagName.toLowerCase() === "video") {
-        // 隱藏圖片，顯示影片
         lightboxImg.style.display = "none";
         lightboxVideo.style.display = "block";
 
-        // 抓取影片網址 (從 <source> 標籤或 src 屬性)
         const sourceTag = this.querySelector("source");
-        const videoSrc = sourceTag ? sourceTag.src : this.src;
+
+        // 💡 關鍵修正 1：優先抓取 data-src，如果沒有才退回抓 src
+        let videoSrc = "";
+        if (sourceTag) {
+          videoSrc =
+            sourceTag.getAttribute("data-src") ||
+            sourceTag.getAttribute("src") ||
+            sourceTag.src;
+        } else {
+          videoSrc =
+            this.getAttribute("data-src") ||
+            this.getAttribute("src") ||
+            this.src;
+        }
 
         lightboxVideo.src = videoSrc;
-        lightboxVideo.play(); // 自動播放
+
+        // 💡 關鍵修正 2：針對 preload="none" 的影片，強制重新載入資源
+        lightboxVideo.load();
+
+        // 💡 關鍵修正 3：捕捉 play() 可能產生的錯誤 (避免瀏覽器自動播放限制報錯)
+        let playPromise = lightboxVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((error) => {
+            console.log("燈箱影片自動播放被阻擋：", error);
+          });
+        }
       } else {
-        // 隱藏影片，顯示圖片
         lightboxVideo.style.display = "none";
         lightboxImg.style.display = "block";
         lightboxImg.src = this.src;
@@ -316,9 +380,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function closeLightbox() {
     lightbox.classList.remove("active");
 
-    // 💡 關鍵：關閉燈箱時，必須把影片暫停並清空來源，否則背景會有幽靈聲音或佔用效能
     if (lightboxVideo) {
       lightboxVideo.pause();
+      // 確保影片回到起點，下次點開才不會從中間開始播
+      lightboxVideo.currentTime = 0;
       lightboxVideo.src = "";
     }
   }

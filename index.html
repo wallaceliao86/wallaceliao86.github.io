@@ -30,7 +30,7 @@
       <div class="container header-content">
         <div class="logo" onclick="switchChannel('about')">
           <div class="logo-img">
-            <img src="img/LOGO.png" alt="Wallace Liao" class="img-fluid" />
+            <img src="img/LOGO.svg" alt="Wallace Liao" class="img-fluid" />
           </div>
           <div class="logo-name">韋承 Wallace</div>
         </div>
@@ -115,6 +115,11 @@
               <div class="expertise-img">
                 <img
                   src="img/expertise01.webp"
+                  srcset="
+                    img/expertise01-mb.webp  400w,
+                    img/expertise01.webp    1200w
+                  "
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   alt="兼顧商業與美感的視覺傳達"
                   class="img-fluid"
                   loading="lazy" />
@@ -130,6 +135,11 @@
               <div class="expertise-img">
                 <img
                   src="img/expertise02.webp"
+                  srcset="
+                    img/expertise02-mb.webp  400w,
+                    img/expertise02.webp    1200w
+                  "
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   alt="具備邏輯思維的體驗研究"
                   class="img-fluid"
                   loading="lazy" />
@@ -145,6 +155,11 @@
               <div class="expertise-img">
                 <img
                   src="img/expertise03.webp"
+                  srcset="
+                    img/expertise03-mb.webp  400w,
+                    img/expertise03.webp    1200w
+                  "
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   alt="跨領域知識與經驗"
                   class="img-fluid"
                   loading="lazy" />
@@ -161,6 +176,11 @@
               <div class="expertise-img">
                 <img
                   src="img/expertise04.webp"
+                  srcset="
+                    img/expertise04-mb.webp  400w,
+                    img/expertise04.webp    1200w
+                  "
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   alt="效率驅動的流程優化"
                   class="img-fluid"
                   loading="lazy" />
@@ -269,6 +289,54 @@
 
           <h2 class="channel-title">職涯經歷</h2>
           <div class="timeline-container">
+            <div class="timeline-row right">
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div class="timeline-role">UIUX設計師</div>
+                </div>
+                <div class="timeline-info">
+                  <div class="timeline-company">
+                    康達盛通生活事業股份有限公司
+                  </div>
+                  <div class="timeline-period">2026/7 - 現在</div>
+                </div>
+                <div class="timeline-badges">
+                  <span class="timeline-badge">Wireframe / Prototype</span>
+                  <span class="timeline-badge">Design System</span>
+                  <span class="timeline-badge">Claude</span>
+                </div>
+                <ul class="timeline-list">
+                  <li>
+                    負責跨平台 (Web/App) 產品體驗優化，從梳理 User
+                    Flow、Wireframe 到產出高保真
+                    Prototype，並依據使用者回饋持續迭代
+                  </li>
+                  <li>
+                    從 0 到 1 建置跨平台 Design
+                    System，盤點並收斂既有畫面，制定模組化 UI
+                    元件規範，確保整體視覺與操作一致性
+                  </li>
+                  <li>
+                    結合前端切版思維產出精準設計交付文件 (Design Handoff
+                    Spec)，考量跨平台呈現與 CSS
+                    邏輯限制，大幅降低與外部開發團隊的溝通成本 積極導入 Claude
+                    等 AI
+                  </li>
+                  <li>
+                    工具優化開發流程，快速生成概念模型與介面素材，有效縮短前期跨部門提案與對焦時程
+                  </li>
+                </ul>
+                <!-- <div class="timeline-gallery">
+                  <img src="img/trplus01.webp" alt="特力專案1" loading="lazy" />
+                  <img src="img/trplus02.webp" alt="特力專案2" loading="lazy" />
+                </div> -->
+                <!-- <button
+                  class="timeline-more-btn"
+                  onclick="switchChannel('works')">
+                  看更多設計作品 <i class="fas fa-arrow-right"></i>
+                </button> -->
+              </div>
+            </div>
             <div class="timeline-row left">
               <div class="timeline-card">
                 <div class="timeline-header">
@@ -276,7 +344,7 @@
                 </div>
                 <div class="timeline-info">
                   <div class="timeline-company">家福股份有限公司</div>
-                  <div class="timeline-period">2023/2 - 現在</div>
+                  <div class="timeline-period">2023/2 - 2026/6</div>
                 </div>
                 <div class="timeline-badges">
                   <span class="timeline-badge">視覺設計</span>
@@ -285,29 +353,39 @@
                 </div>
                 <ul class="timeline-list">
                   <li>
-                    負責規劃與製作全站促銷活動頁面，確保在各種裝置上的瀏覽體驗
+                    因應高頻檔期節奏，每年交付<strong> 130+ 件視覺與活動頁</strong>
                   </li>
                   <li>
-                    使用 <strong>Canvas</strong> 與
-                    <strong>GSAP</strong> 製作高互動性動畫，提升頁面體驗
+                    <strong>善用 AI 輔助</strong>開發頁面動態效果，零額外時程成本升級檔期促購氛圍設計
                   </li>
-                  <li>導入 AI 工具加速素材生成與開發流程，提升設計效率。</li>
                 </ul>
                 <div class="timeline-gallery">
                   <img
                     src="img/carrefour01.webp"
+                    srcset="
+                      img/carrefour01-mb.webp  400w,
+                      img/carrefour01.webp    1200w
+                    "
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     alt="家樂福專案1"
+                    class="img-fluid"
                     loading="lazy" />
                   <img
                     src="img/carrefour02.webp"
+                    srcset="
+                      img/carrefour02-mb.webp  400w,
+                      img/carrefour02.webp    1200w
+                    "
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     alt="家樂福專案2"
+                    class="img-fluid"
                     loading="lazy" />
                 </div>
-                <button
+                <!-- <button
                   class="timeline-more-btn"
                   onclick="switchChannel('detail-ecommerce')">
                   看更多專案細節 <i class="fas fa-arrow-right"></i>
-                </button>
+                </button> -->
               </div>
             </div>
             <div class="timeline-row right">
@@ -334,8 +412,16 @@
                   <li>優化活動頁體驗流程與手機端視覺佈局</li>
                 </ul>
                 <div class="timeline-gallery">
-                  <img src="img/trplus01.webp" alt="特力專案1" loading="lazy" />
-                  <img src="img/trplus02.webp" alt="特力專案2" loading="lazy" />
+                  <img
+                    src="img/trplus01.webp"
+                    alt="特力專案1"
+                    class="img-fluid"
+                    loading="lazy" />
+                  <img
+                    src="img/trplus02.webp"
+                    alt="特力專案2"
+                    class="img-fluid"
+                    loading="lazy" />
                 </div>
                 <!-- <button
                   class="timeline-more-btn"
@@ -1991,56 +2077,65 @@
                 <h4>1. 味旅義大利</h4>
                 <div class="detail-img-placeholder">
                   <video
-                    autoplay
                     loop
                     muted
                     playsinline
-                    class="demo-video"
                     preload="none"
-                    data-caption="味旅義大利DEMO">
-                    <source src="img/web-italy-pc.mp4" type="video/mp4" />
+                    class="demo-video"
+                    data-caption="味旅義大利DEMO"
+                    poster="img/web-italy-pc.webp">
+                    <source
+                      data-src="img/web-italy-pc.webm"
+                      type="video/webm" />
                     您的瀏覽器不支援影片播放
                   </video>
                 </div>
                 <h4>2. 世界地球日</h4>
+
                 <div class="detail-img-placeholder">
                   <video
-                    autoplay
                     loop
                     muted
                     playsinline
                     preload="none"
                     class="demo-video"
-                    data-caption="世界地球日DEMO">
-                    <source src="img/web-earthday-pc.mp4" type="video/mp4" />
+                    data-caption="世界地球日DEMO"
+                    poster="img/web-earthday-pc.webp">
+                    <source
+                      data-src="img/web-earthday-pc.webm"
+                      type="video/webm" />
                     您的瀏覽器不支援影片播放
                   </video>
                 </div>
                 <h4>3. 雙11慶</h4>
                 <div class="detail-img-placeholder">
                   <video
-                    autoplay
                     loop
                     muted
                     playsinline
                     preload="none"
                     class="demo-video"
-                    data-caption="雙11慶DEMO">
-                    <source src="img/web-mk1111-pc.mp4" type="video/mp4" />
+                    data-caption="雙11慶DEMO"
+                    poster="img/web-mk1111-pc.webp">
+                    <source
+                      data-src="img/web-mk1111-pc.webm"
+                      type="video/webm" />
                     您的瀏覽器不支援影片播放
                   </video>
                 </div>
                 <h4>4. 聖誕風銀行資訊</h4>
                 <div class="detail-img-placeholder">
                   <video
-                    autoplay
                     loop
                     muted
                     playsinline
                     preload="none"
                     class="demo-video"
-                    data-caption="聖誕風銀行資訊DEMO">
-                    <source src="img/web-bankxmas-pc.mp4" type="video/mp4" />
+                    data-caption="聖誕風銀行資訊DEMO"
+                    poster="img/web-bankxmas-pc.webp">
+                    <source
+                      data-src="img/web-bankxmas-pc.webm"
+                      type="video/webm" />
                     您的瀏覽器不支援影片播放
                   </video>
                 </div>
@@ -2118,7 +2213,6 @@
 
         <video
           id="lightbox-video"
-          autoplay
           loop
           muted
           playsinline
